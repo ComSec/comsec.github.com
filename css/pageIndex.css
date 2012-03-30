@@ -1,0 +1,236 @@
+body {
+	margin: 0px 0px 15px 0px;
+    padding: 0px;
+	background-color: #ffffff;
+	color: #333;
+	font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	font-size:14px;}
+a img{
+	border:0px;
+}
+a:link{font-size:13px;color:#666;text-decoration:none;border:none;}
+a:visited{font-size:13px;color:#666;text-decoration:none;border:none;}
+a:hover{font-size:13px;color:#333;text-decoration:underline;border:none;}
+a:active{font-size:13px;color:#666;text-decoration:none;border:none;}
+
+a.nav:link{font-size:13px;color:#666;text-decoration:none;border:none;}
+a.nav:visited{font-size:13px;color:#666;text-decoration:none;border:none;}
+a.nav:hover{font-size:13px;color:#fff;text-decoration:underline;border:none;}
+a.nav:active{font-size:13px;color:#666;text-decoration:none;border:none;}
+
+.search_note { font-size: 90%; color: #666;}
+			
+#pagecontainer {
+	margin-left:auto;
+	margin-right:auto;
+	width: 779px;
+}
+#headbar{
+	float:left;
+	width:100%;
+	height:87px;
+	border-bottom:1px solid #999;
+}
+#uwlogo{
+	float:left;
+	margin-left:0px;
+	margin-right:0px;
+	font-size:0px;
+	line-height:0px;
+	width:161px;
+	height:85px;
+}
+#searchbox{
+	float:left;
+	width:617px;
+	height:29px;
+	text-align:right;
+	border-bottom:1px solid #999;
+}
+form#search { 
+ 	margin-top: 3px;
+	margin-bottom: 2px;
+	}
+.google {
+	border: 1px solid #666;
+	font-size: 10px;
+	padding: 1px 2px 1px 2px;
+	}
+input.google {
+	border: 1px solid #666;
+	font-size: 10px;
+	padding: 1px 2px 1px 2px;
+	margin-top:1px
+	}
+#wordmark{
+	float:left;
+	width:617px;
+	height:55px;
+	margin-top:1px;
+	font-size:0px;
+	line-height:0px;
+	}
+#show{
+	float:left;
+	width:778px;
+	height:133px;
+	margin-top:4px;
+	border-bottom:1px solid #999;
+	line-height:0px;
+	font-size:0px;
+	}
+#conbg{
+	float:left;
+	width:779px;
+	background:#f5f5f5;
+	}
+#navarea{
+	float:left;
+	width:161px;
+	height:auto;
+	line-height:0px;
+	font-size:0px;
+	}
+#navbar{
+	width:161px;
+	margin-top:3px;
+	margin-right:3px;
+	line-height:0px;
+	font-size:0px;
+	}
+#navbar ul{
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+	}
+#navbar li a{
+	width:161px;
+	height:27px;
+	border-bottom:1px solid #fff;
+	display:block;
+	background:#e0e0e0;
+	line-height:25px;
+	padding-left:4px;
+	}
+#navbar li a:hover{
+	background-color:#999;
+	}
+#contentright{
+	float:left;
+	width:601px !important;
+	width:598px;
+	border-left:1px solid #999;
+	margin-left:8px !important;
+	margin-left:0px;
+	padding-left:8px;
+	background:#fff;
+	}
+#conabouthead{
+	width:597px !important;
+	width:598px;
+	height:26px;
+	margin-top:6px;
+	padding-left:4px;
+	background:#dcdcdc;
+	line-height:26px;
+	font-size:18px;
+	color:#333;
+	}
+#conabout_1{
+	width:597px;
+	margin-top:6px;
+	margin-bottom:6px;
+	padding-left:4px;
+	line-height:18px;
+	color:#666;
+	}
+#conabout_2{
+	width:597px;
+	height:128px;
+	margin-top:6px;
+	margin-bottom:6px;
+	padding-left:4px;
+	line-height:0px;
+	font-size:0px;
+	background:#fffadf;
+	color:#666;
+	}
+#conabout_2 .office{
+	float:left;
+	width:320px;
+	height:75px;
+	margin-top:4px;
+	font-size:14px;
+	line-height:18px;
+	}
+#conabout_2 .lab{
+	float:left;
+	width:270px;
+	height:70px;
+	margin-top:4px;
+	font-size:14px;
+	line-height:18px;
+	}
+#conabout_2 .homepage{
+	width:570px;
+	height:30px;
+	margin-top:4px;
+	font-size:14px;
+	line-height:18px;
+	}
+#conresearchhead{
+	width:597px;
+	height:26px;
+	margin-top:6px;
+	padding-left:4px;
+	background:#dcdcdc;
+	line-height:26px;
+	font-size:18px;
+	color:#333;
+	}
+#conresearch{
+	width:597px;
+	height:194px;
+	}
+#researchwords{
+	float:left;
+	list-style-type:none;
+	list-style-image:url(../images/arrow.gif);
+	margin-top:8px;
+	margin-left:0px;
+	width:395px;
+	line-height:24px;
+	font-size:13px;
+	color:#666;
+	}
+#researchimg{
+	float:left;
+	width:201px;
+	height:194px;
+	margin-top:8px;
+	margin-left:0px;
+	font-size:0px;
+	line-height:0px;
+	background:url(../images/researchimg.jpg) top left no-repeat;
+	}
+#bottom{
+	clear:both;
+	width:778px;
+	height:41px;
+	margin-top:0px;
+	border-top:1px solid #999;
+	background:#fff
+	}
+#bottom .word1{
+	width:500px;
+	height:20px;
+	line-height:20px;
+	font-size:12px;
+	color:#888;
+	font-weight:bold;
+	}
+#bottom .word2{
+	width:700px;
+	height:20px;
+	line-height:20px;
+	font-size:12px;
+	color:#888;
+	}

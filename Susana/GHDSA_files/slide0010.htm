@@ -1,0 +1,194 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:p="urn:schemas-microsoft-com:office:powerpoint"
+xmlns:oa="urn:schemas-microsoft-com:office:activation"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=PowerPoint.Slide>
+<meta name=Generator content="Microsoft PowerPoint 10">
+<link id=Main-File rel=Main-File href="../GHDSA.htm">
+<link rel=Preview href=preview.wmf>
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+p\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+v\:textbox {display:none;}
+</style>
+<![endif]-->
+<title>Gong-Harn Public-key Digital Signature Scheme</title>
+<meta name=Description content="10/8/2003: Design Issues">
+<link rel=Stylesheet href="master04_stylesheet.css">
+<!--[if gte IE 5]>
+<object id=MSOANIM classid="CLSID:A4639D2F-774E-11D3-A490-00C04F6843FB"></object>
+<object id=MSOTIME classid="CLSID:A4639D29-774E-11D3-A490-00C04F6843FB"></object>
+<![endif]-->
+<![if !ppt]>
+<style media=print>
+<!--.sld
+	{left:0px !important;
+	width:6.0in !important;
+	height:4.5in !important;
+	font-size:107% !important;}
+-->
+</style>
+<style>
+<!--
+oa\:* { BEHAVIOR: url(#MSOANIM#ANIM) url(#MSOTIME#TIME) }
+oa\:par,oa\:seq,oa\:iterate { BEHAVIOR:url(#MSOTIME) }
+oa\:video,oa\:audio {BEHAVIOR:url(#MSOTIME) url(#MSOTIME#MEDIA) }
+-->
+</style>
+<script src=script.js></script><script><!--
+if( !IsNts() ) Redirect( "PPTSld" );
+//--></script><script><!--
+g_animItemsToHide=new Array("_x0000_s22531_237_319","_x0000_s22531_175_216","_x0000_s22531_145_175","_x0000_s22531_62_124");
+
+//--></script><!--[if vml]><script>g_vml = 1;
+</script><![endif]--><![endif]><o:shapelayout v:ext="edit">
+ <o:idmap v:ext="edit" data="22"/>
+</o:shapelayout>
+</head>
+
+<body lang=EN-US style='margin:0px;background-color:black'
+onclick="DocumentOnClick()" onresize="_RSW()" onload="LoadSld()"
+onkeypress="_KPH()" oa:clockstart="onstart">
+
+<div id=SlideObj class=sld style='position:absolute;top:0px;left:0px;
+width:534px;height:400px;font-size:16px;background-color:white;clip:rect(0%, 101%, 101%, 0%);
+visibility:hidden'><p:slide coordsize="720,540"
+ colors="#FFFFFF,#000000,#808080,#000000,#BBE0E3,#333399,#009999,#99CC00"
+ masterhref="master04.xml">
+ <p:shaperange href="master04.xml#_x0000_s4097"/><![if !ppt]><p:shaperange
+  href="master04.xml#_x0000_s4103"/><![if !vml]><img border=0
+ v:shapes="_x0000_s4103" src="master04_image003.gif" style='position:absolute;
+ top:0%;left:0%;width:100.37%;height:21.5%'><![endif]><p:shaperange
+  href="master04.xml#_x0000_s4100"/><p:shaperange
+  href="master04.xml#_x0000_s4101"/><p:shaperange
+  href="master04.xml#_x0000_s4104"/><![if !vml]><img border=0
+ v:shapes="_x0000_s4104" src="master04_image004.jpg" style='position:absolute;
+ top:0%;left:1.68%;width:20.78%;height:20.75%'><![endif]><![endif]><p:shaperange
+  href="master04.xml#_x0000_m4098"/><v:shape id="_x0000_s22530" type="#_x0000_m4098"
+  style='position:absolute;left:162pt;top:0;width:558pt;height:111.625pt'>
+  <v:fill o:detectmouseclick="f"/>
+  <v:stroke o:forcedash="f"/>
+  <o:lock v:ext="edit" text="f"/>
+  <p:placeholder type="title"/></v:shape>
+ <div v:shape="_x0000_s22530" class=T style='position:absolute;top:6.0%;
+ left:23.59%;width:75.65%;height:9.25%'>Design Issues</div>
+ <p:shaperange href="master04.xml#_x0000_m4099"/><v:shape id="_x0000_s22531"
+  type="#_x0000_m4099" style='position:absolute;left:36pt;top:126pt;width:9in;
+  height:392pt'>
+  <v:fill o:detectmouseclick="f"/>
+  <v:stroke o:forcedash="f"/>
+  <o:lock v:ext="edit" text="f"/>
+  <p:placeholder type="body" position="1"/><p:animation number="2" delay="0"
+   type="object" effect="checker" direction="horizontal" flag="17408"/></v:shape>
+ <div v:shape="_x0000_s22531" style='position:absolute;top:24.25%;left:5.99%;
+ width:99.81%;height:69.75%'>
+ <div class=B><span style='position:absolute;top:0%;left:3.75%;width:92.87%;
+ height:8.6%'><span class=BB style='position:absolute;left:-4.04%'>•</span>Storage
+ requirement for recursive iteration in </span><span style='position:absolute;
+ top:8.96%;left:3.75%;width:84.61%;height:8.6%'>DSEA algorithm&#13;</span></div>
+ <div id="_x0000_s22531_62_124" class=B1 style='position:absolute;top:19.35%;
+ left:5.06%;width:94.93%;height:15.05%;white-space:nowrap'><span
+ style='position:absolute;top:0%;left:3.16%;width:96.64%;height:50.0%'><span
+ class=B1B style='position:absolute;left:-3.27%'>–</span>Only six sequence
+ terms need to be kept after each </span><span style='position:absolute;
+ top:52.38%;left:3.16%;width:84.38%;height:50.0%'>iteration.&#13;</span></div>
+ <div class=B style='position:absolute;top:36.55%;left:0%;width:88.36%;
+ height:8.6%'><span style='position:absolute;top:0%;left:4.24%;width:95.75%;
+ height:100.0%'><span class=BB style='position:absolute;left:-4.43%'>•</span>Delta
+ cannot be zero&#13;</span></div>
+ <div id="_x0000_s22531_145_175" class=B1 style='position:absolute;top:46.95%;
+ left:5.06%;width:83.3%;height:7.52%;white-space:nowrap'><span
+ style='position:absolute;top:0%;left:3.6%;width:96.17%;height:100.0%'><span
+ class=B1B style='position:absolute;left:-3.74%'>–</span>k cannot be either p -
+ 1 or p&#13;</span></div>
+ <div id="_x0000_s22531_175_216" class=B1 style='position:absolute;top:56.27%;
+ left:5.06%;width:83.3%;height:7.52%;white-space:nowrap'><span
+ style='position:absolute;top:0%;left:3.6%;width:96.17%;height:100.0%'><span
+ class=B1B style='position:absolute;left:-3.74%'>–</span>Both a and b should be
+ non-zero integers&#13;</span></div>
+ <div class=B style='position:absolute;top:65.59%;left:0%;width:88.36%;
+ height:8.6%'><span style='position:absolute;top:0%;left:4.24%;width:95.75%;
+ height:100.0%'><span class=BB style='position:absolute;left:-4.43%'>•</span>Invertible
+ Matrix M<span style='font-size:67%;position:relative;top:.37em;mso-text-raise:
+ -25%'>0&#13;</span></span></div>
+ <div id="_x0000_s22531_237_319" class=B1 style='position:absolute;top:75.98%;
+ left:5.06%;width:83.3%;height:15.41%;white-space:nowrap'><span
+ style='position:absolute;top:0%;left:3.6%;width:96.17%;height:48.83%'><span
+ class=B1B style='position:absolute;left:-3.74%'>–</span>This can be guaranteed
+ by choosing a and b </span><span style='position:absolute;top:46.51%;
+ left:3.6%;width:96.17%;height:53.48%'>correspondingly such that det(M<span
+ style='font-size:67%;position:relative;top:.37em;mso-text-raise:-25%'>0</span>)
+ <span style='font-family:Symbol;mso-char-type:symbol'>¹</span> 0.&#13;</span></div>
+ <div class=B1 style='position:absolute;top:92.83%;left:5.06%;width:83.3%;
+ height:7.52%'><span style='position:absolute;top:0%;left:3.6%;width:96.17%;
+ height:100.0%'><span style='visibility:hidden'><span class=B1B
+ style='position:absolute;left:-3.74%'>–</span></span><span style='mso-special-format:
+ lastCR;display:none'>&#13;</span></span></div>
+ </div>
+</p:slide></div>
+
+<p:animation number="1270487253"/><oa:par id="TimeNode0" dur="indefinite"
+ restart="never" p:nodeType="timingRoot">
+ <oa:seq id="TimeNode1" dur="indefinite" prev="document.onpptprev"
+  next="document.onpptnext" concurrent="enabled" nextAction="seek"
+  p:nodeType="mainSeq">
+  <oa:par id="TimeNode2" begin="indefinite" fill="hold">
+   <oa:par id="TimeNode3" begin="0.0" fill="hold">
+    <oa:par id="TimeNode4" o:presetID="ppt_5" o:presetClass="entrance"
+     o:presetSubType="0xA" begin="0.0" fill="hold" p:nodeType="clickEffect">
+     <oa:set id="TimeNode5" begin="0.0" dur="0.001" fill="hold"
+      targetElement="_x0000_s22531_62_124" attributeName="style.visibility"
+      to="visible"/>
+     <oa:animateFilter id="TimeNode6" dur="0.5"
+      targetElement="_x0000_s22531_62_124" transition="in"
+      filter="checkerboard(across)"/>
+    </oa:par>
+   </oa:par>
+  </oa:par>
+  <oa:par id="TimeNode7" begin="indefinite" fill="hold">
+   <oa:par id="TimeNode8" begin="0.0" fill="hold">
+    <oa:par id="TimeNode9" o:presetID="ppt_5" o:presetClass="entrance"
+     o:presetSubType="0xA" begin="0.0" fill="hold" p:nodeType="clickEffect">
+     <oa:set id="TimeNode10" begin="0.0" dur="0.001" fill="hold"
+      targetElement="_x0000_s22531_145_175" attributeName="style.visibility"
+      to="visible"/>
+     <oa:animateFilter id="TimeNode11" dur="0.5"
+      targetElement="_x0000_s22531_145_175" transition="in"
+      filter="checkerboard(across)"/>
+    </oa:par>
+    <oa:par id="TimeNode12" o:presetID="ppt_5" o:presetClass="entrance"
+     o:presetSubType="0xA" begin="0.0" fill="hold" p:nodeType="withEffect">
+     <oa:set id="TimeNode13" begin="0.0" dur="0.001" fill="hold"
+      targetElement="_x0000_s22531_175_216" attributeName="style.visibility"
+      to="visible"/>
+     <oa:animateFilter id="TimeNode14" dur="0.5"
+      targetElement="_x0000_s22531_175_216" transition="in"
+      filter="checkerboard(across)"/>
+    </oa:par>
+   </oa:par>
+  </oa:par>
+  <oa:par id="TimeNode15" begin="indefinite" fill="hold">
+   <oa:par id="TimeNode16" begin="0.0" fill="hold">
+    <oa:par id="TimeNode17" o:presetID="ppt_5" o:presetClass="entrance"
+     o:presetSubType="0xA" begin="0.0" fill="hold" p:nodeType="clickEffect">
+     <oa:set id="TimeNode18" begin="0.0" dur="0.001" fill="hold"
+      targetElement="_x0000_s22531_237_319" attributeName="style.visibility"
+      to="visible"/>
+     <oa:animateFilter id="TimeNode19" dur="0.5"
+      targetElement="_x0000_s22531_237_319" transition="in"
+      filter="checkerboard(across)"/>
+    </oa:par>
+   </oa:par>
+  </oa:par>
+ </oa:seq>
+</oa:par>
+</body>
+
+</html>

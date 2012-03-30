@@ -1,0 +1,325 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:p="urn:schemas-microsoft-com:office:powerpoint"
+xmlns:oa="urn:schemas-microsoft-com:office:activation"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=PowerPoint.Slide>
+<meta name=Generator content="Microsoft PowerPoint 10">
+<link id=Main-File rel=Main-File href="../GHDSA.htm">
+<link rel=Preview href=preview.wmf>
+<link rel=OLE-Object-Data href=oledata.mso>
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+p\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+v\:textbox {display:none;}
+</style>
+<![endif]-->
+<title>Gong-Harn Public-key Digital Signature Scheme</title>
+<meta name=Description content="10/8/2003: Computation of s±(k+v) ">
+<link rel=Stylesheet href="master04_stylesheet.css">
+<!--[if gte IE 5]>
+<object id=MSOANIM classid="CLSID:A4639D2F-774E-11D3-A490-00C04F6843FB"></object>
+<object id=MSOTIME classid="CLSID:A4639D29-774E-11D3-A490-00C04F6843FB"></object>
+<![endif]-->
+<![if !ppt]>
+<style media=print>
+<!--.sld
+	{left:0px !important;
+	width:6.0in !important;
+	height:4.5in !important;
+	font-size:107% !important;}
+-->
+</style>
+<style>
+<!--
+oa\:* { BEHAVIOR: url(#MSOANIM#ANIM) url(#MSOTIME#TIME) }
+oa\:par,oa\:seq,oa\:iterate { BEHAVIOR:url(#MSOTIME) }
+oa\:video,oa\:audio {BEHAVIOR:url(#MSOTIME) url(#MSOTIME#MEDIA) }
+-->
+</style>
+<script src=script.js></script><script><!--
+if( !IsNts() ) Redirect( "PPTSld" );
+//--></script><script><!--
+g_animItemsToHide=new Array("_x0000_s38947_AllText","_x0000_s38947");
+
+//--></script><!--[if vml]><script>g_vml = 1;
+</script><![endif]--><![endif]><o:shapelayout v:ext="edit">
+ <o:idmap v:ext="edit" data="38"/>
+ <o:regrouptable v:ext="edit">
+  <o:entry new="1" old="0"/>
+  <o:entry new="2" old="0"/>
+ </o:regrouptable>
+</o:shapelayout>
+</head>
+
+<body lang=EN-US style='margin:0px;background-color:black'
+onclick="DocumentOnClick()" onresize="_RSW()" onload="LoadSld()"
+onkeypress="_KPH()" oa:clockstart="onstart">
+
+<div id=SlideObj class=sld style='position:absolute;top:0px;left:0px;
+width:534px;height:400px;font-size:16px;background-color:white;clip:rect(0%, 101%, 101%, 0%);
+visibility:hidden'><p:slide coordsize="720,540"
+ colors="#FFFFFF,#000000,#808080,#000000,#BBE0E3,#333399,#009999,#99CC00"
+ masterhref="master04.xml">
+ <p:shaperange href="master04.xml#_x0000_s4097"/><![if !ppt]><p:shaperange
+  href="master04.xml#_x0000_s4103"/><![if !vml]><img border=0
+ v:shapes="_x0000_s4103" src="master04_image003.gif" style='position:absolute;
+ top:0%;left:0%;width:100.37%;height:21.5%'><![endif]><p:shaperange
+  href="master04.xml#_x0000_s4100"/><p:shaperange
+  href="master04.xml#_x0000_s4101"/><p:shaperange
+  href="master04.xml#_x0000_s4104"/><![if !vml]><img border=0
+ v:shapes="_x0000_s4104" src="master04_image004.jpg" style='position:absolute;
+ top:0%;left:1.68%;width:20.78%;height:20.75%'><![endif]><![endif]><p:shaperange
+  href="master04.xml#_x0000_m4098"/><v:shape id="_x0000_s38914" type="#_x0000_m4098"
+  style='position:absolute;left:162pt;top:0;width:558pt;height:111.625pt'>
+  <v:fill o:detectmouseclick="f"/>
+  <v:stroke o:forcedash="f"/>
+  <o:lock v:ext="edit" text="f"/>
+  <p:placeholder type="title"/></v:shape><p:shaperange
+  href="master04.xml#_x0000_m4099"/><v:shape id="_x0000_s38915" type="#_x0000_m4099"
+  style='position:absolute;left:36pt;top:126pt;width:9in;height:392pt'>
+  <v:fill o:detectmouseclick="f"/>
+  <v:stroke o:forcedash="f"/>
+  <o:lock v:ext="edit" text="f"/>
+  <p:placeholder type="body" position="1"/></v:shape><v:rect id="_x0000_s38916"
+  style='position:absolute;left:0;top:241.875pt;width:10in;height:0;
+  mso-wrap-style:none;v-text-anchor:middle' filled="f" fillcolor="#bbe0e3 [4]"
+  stroked="f" strokecolor="black [1]">
+  <v:fill color2="white [0]"/>
+  <v:shadow color="gray [2]"/>
+  <v:textbox style='mso-fit-shape-to-text:t'/>
+ </v:rect><v:rect id="_x0000_s38917" style='position:absolute;left:0;top:241.875pt;
+  width:10in;height:0;mso-wrap-style:none;v-text-anchor:middle' filled="f"
+  fillcolor="#bbe0e3 [4]" stroked="f" strokecolor="black [1]">
+  <v:fill color2="white [0]"/>
+  <v:shadow color="gray [2]"/>
+  <v:textbox style='mso-fit-shape-to-text:t'/>
+ </v:rect><v:rect id="_x0000_s38918" style='position:absolute;left:0;top:241.875pt;
+  width:10in;height:0;mso-wrap-style:none;v-text-anchor:middle' filled="f"
+  fillcolor="#bbe0e3 [4]" stroked="f" strokecolor="black [1]">
+  <v:fill color2="white [0]"/>
+  <v:shadow color="gray [2]"/>
+  <v:textbox style='mso-fit-shape-to-text:t'/>
+ </v:rect><v:rect id="_x0000_s38919" style='position:absolute;left:0;top:260.625pt;
+  width:10in;height:0;mso-wrap-style:none;v-text-anchor:middle' filled="f"
+  fillcolor="#bbe0e3 [4]" stroked="f" strokecolor="black [1]">
+  <v:fill color2="white [0]"/>
+  <v:shadow color="gray [2]"/>
+  <v:textbox style='mso-fit-shape-to-text:t'/>
+ </v:rect><v:rect id="_x0000_s38921" style='position:absolute;left:0;top:259.875pt;
+  width:10in;height:0;mso-wrap-style:none;v-text-anchor:middle' filled="f"
+  fillcolor="#bbe0e3 [4]" stroked="f" strokecolor="black [1]">
+  <v:fill color2="white [0]"/>
+  <v:shadow color="gray [2]"/>
+  <v:textbox style='mso-fit-shape-to-text:t'/>
+ </v:rect><v:rect id="_x0000_s38923" style='position:absolute;left:0;top:261pt;
+  width:10in;height:0;mso-wrap-style:none;v-text-anchor:middle' filled="f"
+  fillcolor="#bbe0e3 [4]" stroked="f" strokecolor="black [1]">
+  <v:fill color2="white [0]"/>
+  <v:shadow color="gray [2]"/>
+  <v:textbox style='mso-fit-shape-to-text:t'/>
+ </v:rect><v:rect id="_x0000_s38925" style='position:absolute;left:0;top:238.875pt;
+  width:10in;height:0;mso-wrap-style:none;v-text-anchor:middle' filled="f"
+  fillcolor="#bbe0e3 [4]" stroked="f" strokecolor="black [1]">
+  <v:fill color2="white [0]"/>
+  <v:shadow color="gray [2]"/>
+  <v:textbox style='mso-fit-shape-to-text:t'/>
+ </v:rect><v:rect id="_x0000_s38927" style='position:absolute;left:0;top:261pt;
+  width:10in;height:0;mso-wrap-style:none;v-text-anchor:middle' filled="f"
+  fillcolor="#bbe0e3 [4]" stroked="f" strokecolor="black [1]">
+  <v:fill color2="white [0]"/>
+  <v:shadow color="gray [2]"/>
+  <v:textbox style='mso-fit-shape-to-text:t'/>
+ </v:rect><v:rect id="_x0000_s38928" style='position:absolute;left:0;top:261pt;
+  width:10in;height:0;mso-wrap-style:none;v-text-anchor:middle' filled="f"
+  fillcolor="#bbe0e3 [4]" stroked="f" strokecolor="black [1]">
+  <v:fill color2="white [0]"/>
+  <v:shadow color="gray [2]"/>
+  <v:textbox style='mso-fit-shape-to-text:t'/>
+ </v:rect><v:rect id="_x0000_s38932" style='position:absolute;left:0;top:235.875pt;
+  width:10in;height:0;mso-wrap-style:none;v-text-anchor:middle' filled="f"
+  fillcolor="#bbe0e3 [4]" stroked="f" strokecolor="black [1]">
+  <v:fill color2="white [0]"/>
+  <v:shadow color="gray [2]"/>
+  <v:textbox style='mso-fit-shape-to-text:t'/>
+ </v:rect><v:rect id="_x0000_s38933" style='position:absolute;left:0;top:260.625pt;
+  width:10in;height:0;mso-wrap-style:none;v-text-anchor:middle' filled="f"
+  fillcolor="#bbe0e3 [4]" stroked="f" strokecolor="black [1]">
+  <v:fill color2="white [0]"/>
+  <v:shadow color="gray [2]"/>
+  <v:textbox style='mso-fit-shape-to-text:t'/>
+ </v:rect><v:rect id="_x0000_s38934" style='position:absolute;left:0;top:241.875pt;
+  width:10in;height:0;mso-wrap-style:none;v-text-anchor:middle' filled="f"
+  fillcolor="#bbe0e3 [4]" stroked="f" strokecolor="black [1]">
+  <v:fill color2="white [0]"/>
+  <v:shadow color="gray [2]"/>
+  <v:textbox style='mso-fit-shape-to-text:t'/>
+ </v:rect><v:rect id="_x0000_s38935" style='position:absolute;left:0;top:241.875pt;
+  width:10in;height:.125pt;mso-wrap-style:none;v-text-anchor:middle' filled="f"
+  fillcolor="#bbe0e3 [4]" stroked="f" strokecolor="black [1]">
+  <v:fill color2="white [0]"/>
+  <v:shadow color="gray [2]"/>
+  <v:textbox style='mso-fit-shape-to-text:t'/>
+ </v:rect>
+ <div v:shape="_x0000_s38914" class=T style='position:absolute;top:6.0%;
+ left:23.59%;width:75.65%;height:9.25%'>Computation of s<span style='font-family:
+ Symbol;font-size:66%;position:relative;top:.37em;mso-text-raise:-25%;
+ mso-char-type:symbol'>±</span><span style='font-size:66%;position:relative;
+ top:.37em;mso-text-raise:-25%'>(k+v)</span><span
+ style='mso-spacerun:yes'> </span></div>
+ <div v:shape="_x0000_s38915" style='tab-stops:2.5069in 5.7465in'>
+ <div class=B2 style='mso-margin-left-alt:1042;mso-text-indent-alt:754'></div>
+ <div class=B3 style='mso-margin-left-alt:1354;mso-text-indent-alt:1114'></div>
+ <div class=B4 style='mso-margin-left-alt:1666;mso-text-indent-alt:1426'></div>
+ <div class=B style='mso-margin-left-alt:219;position:absolute;top:24.25%;
+ left:5.99%;width:100.74%;height:6.0%'><span style='position:absolute;
+ top:0%;left:3.71%;width:96.28%;height:100.0%'><span style='mso-special-format:
+ bullet;position:absolute;left:-3.86%'>•</span>Procedure for finding s<span
+ style='font-size:67%;position:relative;top:.37em;mso-text-raise:-25%'>(k+v)</span><span
+ style='mso-spacerun:yes'> </span>term using <u>s</u><span style='font-size:
+ 67%;position:relative;top:.37em;mso-text-raise:-25%'>k-1</span><span
+ style='mso-spacerun:yes'> </span>state&#13;</span></div>
+ <div class=B1 style='mso-margin-left-alt:503;mso-text-indent-alt:292;
+ position:absolute;top:31.5%;left:11.04%;width:83.14%;height:5.25%'><span
+ style='position:absolute;top:0%;left:4.5%;width:95.49%;height:100.0%'><span
+ style='mso-special-format:"numbullet3\,1";position:absolute;left:-4.71%'>1.</span>Construct
+ Matrix M<span style='font-size:67%;position:relative;top:.37em;mso-text-raise:
+ -25%'>0</span><span style='mso-spacerun:yes'> </span>and compute M<span
+ style='font-size:67%;position:relative;top:.37em;mso-text-raise:-25%'>0</span><span
+ style='font-size:67%;position:relative;top:-.45em;mso-text-raise:30%'>-1&#13;</span></span></div>
+ <div class=B1 style='mso-margin-left-alt:503;mso-text-indent-alt:292'><span
+ style='position:absolute;top:38.0%;left:14.79%;width:93.25%;height:5.25%'><span
+ style='mso-special-format:"numbullet3\,1";position:absolute;left:-4.01%'>2.</span>Compute
+ (s<span style='font-size:67%;position:relative;top:.37em;mso-text-raise:-25%'>v-1</span>,
+ s<span style='font-size:67%;position:relative;top:.37em;mso-text-raise:-25%'>v</span>,
+ s<span style='font-size:67%;position:relative;top:.37em;mso-text-raise:-25%'>v+1</span>)
+ terms generated by f(x) using </span><span style='position:absolute;
+ top:43.25%;left:14.79%;width:79.4%;height:5.25%'>DSEA algorithm &#13;</span></div>
+ <div class=B1 style='mso-margin-left-alt:503;mso-text-indent-alt:292;
+ position:absolute;top:49.75%;left:11.04%;width:96.25%;height:5.25%'><span
+ style='position:absolute;top:0%;left:3.89%;width:96.1%;height:100.0%'><span
+ style='mso-special-format:"numbullet3\,1";position:absolute;left:-4.04%'>3.</span>Compute
+ s<span style='font-size:67%;position:relative;top:.37em;mso-text-raise:-25%'>v-2</span><span
+ style='mso-spacerun:yes'> </span>and s<span style='font-size:67%;position:
+ relative;top:.37em;mso-text-raise:-25%'>v+2</span><span
+ style='mso-spacerun:yes'> </span>terms and construct Matrix M<span
+ style='font-size:67%;position:relative;top:.37em;mso-text-raise:-25%'>v&#13;</span></span></div>
+ <div class=B1 style='mso-margin-left-alt:503;mso-text-indent-alt:292;
+ position:absolute;top:56.0%;left:11.04%;width:83.14%;height:5.25%'><span
+ style='position:absolute;top:0%;left:4.5%;width:95.49%;height:100.0%'><span
+ style='mso-special-format:"numbullet3\,1";position:absolute;left:-4.71%'>4.</span>Compute
+ s<span style='font-size:67%;position:relative;top:.37em;mso-text-raise:-25%'>(k+v)</span><span
+ style='mso-spacerun:yes'> </span>term by:&#13;</span></div>
+ <div class=B1 style='mso-margin-left-alt:503;mso-text-indent-alt:292;
+ position:absolute;top:62.5%;left:11.04%;width:83.14%;height:5.25%'><span
+ style='position:absolute;top:0%;left:4.5%;width:95.49%;height:100.0%'><span
+ style='visibility:hidden'><span style='mso-special-format:"numbullet3\,1";
+ position:absolute;left:-4.71%'>5.</span></span>&#13;</span></div>
+ <div class=B1 style='mso-margin-left-alt:503;mso-text-indent-alt:292;
+ position:absolute;top:68.75%;left:11.04%;width:83.14%;height:5.25%'><span
+ style='mso-special-format:nobullet;display:none'>•</span><span
+ style='mso-tab-count:1;width:4.4%'> </span>&#13;</div>
+ <div class=B1 style='mso-margin-left-alt:503;mso-text-indent-alt:292'><span
+ style='position:absolute;top:75.25%;left:11.04%;width:99.25%;height:5.25%'><span
+ style='mso-special-format:nobullet;display:none'>•</span><span
+ style='mso-tab-count:1;width:3.69%'> </span>In particular, the s<span
+ style='font-size:67%;position:relative;top:.37em;mso-text-raise:-25%'>k+v</span><span
+ style='mso-spacerun:yes'> </span>term is equal to <u>s</u><span
+ style='font-size:67%;position:relative;top:.37em;mso-text-raise:-25%'>k-1</span><span
+ style='mso-spacerun:yes'> </span>multiplied by </span><span style='position:
+ absolute;top:80.5%;left:14.79%;width:79.4%;height:5.25%'>the middle column of</span></div>
+ </div>
+ <v:shape id="_x0000_s38937" type="#_x0000_t75" style='position:absolute;
+  left:215.875pt;top:342.125pt;width:300.875pt;height:36.75pt' fillcolor="window">
+  <v:imagedata src="slide0022_image077.wmz" o:title=""/>
+ </v:shape><o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_s38937"
+  DrawAspect="Content" ObjectID="236">
+  <p:oleclientdata subtype="equation" menuname="Equation"
+   clipboardname="Microsoft Equation 3.0"/></o:OLEObject>
+ <![if !vml]><img border=0 v:shapes="_x0000_s38937" src="slide0022_image078.gif"
+ style='position:absolute;top:63.25%;left:29.96%;width:41.76%;height:6.75%'><![endif]><v:shape
+  id="_x0000_s38938" type="#_x0000_t75" style='position:absolute;left:329.75pt;
+  top:433.25pt;width:100.875pt;height:36.75pt' fillcolor="window">
+  <v:imagedata src="slide0022_image079.wmz" o:title=""/>
+ </v:shape><o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_s38938"
+  DrawAspect="Content" ObjectID="232">
+  <p:oleclientdata subtype="equation" menuname="Equation"
+   clipboardname="Microsoft Equation 3.0"/></o:OLEObject>
+ <![if !vml]><img border=0 v:shapes="_x0000_s38938" src="slide0022_image080.gif"
+ style='position:absolute;top:80.25%;left:45.88%;width:14.04%;height:6.75%'><![endif]><v:group
+  id="_x0000_s38947" style='position:absolute;left:520.25pt;top:173.25pt;
+  width:199.5pt;height:28.875pt' coordorigin="4162,1386" coordsize="1596,231">
+  <v:shapetype id="_x0000_t202" coordsize="21600,21600" o:spt="202" path="m,l,21600r21600,l21600,xe">
+   <v:stroke joinstyle="miter"/>
+   <v:path gradientshapeok="t" o:connecttype="rect"/>
+  </v:shapetype><v:shape id="_x0000_s38942" type="#_x0000_t202" style='position:absolute;
+   left:4355;top:1386;width:1403;height:231' o:regroupid="2" filled="f"
+   fillcolor="#bbe0e3 [4]" stroked="f" strokecolor="#f30">
+   <v:fill color2="white [0]"/>
+   <v:shadow color="gray [2]"/>
+   <v:textbox style='mso-fit-shape-to-text:t'/>
+  </v:shape><v:line id="_x0000_s38945" style='position:absolute;flip:x' from="4162,1507"
+   to="4380,1507" o:regroupid="2" strokecolor="#f30">
+   <v:stroke endarrow="block"/>
+   <v:shadow color="gray [2]"/>
+  </v:line><p:animation number="2" delay="0" type="object" effect="fly"
+   direction="right" flag="17408"/></v:group><![if !ppt]>
+ <div id="_x0000_s38947_AllText" style='position:absolute;top:32.0%;left:72.09%;
+ width:30.71%;height:5.75%;white-space:nowrap'><![endif]><![if !vml]><img
+ border=0 v:shapes="_x0000_s38947,_x0000_s38942,_x0000_s38945"
+ src="slide0022_image081.gif" style='position:absolute;top:0%;left:0%;
+ width:91.46%;height:100.0%'><![endif]>
+ <div v:shape="_x0000_s38942" class=O style='mso-line-spacing:"100 50 0";
+ position:absolute;top:17.39%;left:14.63%;width:85.36%;height:69.56%'><span
+ style='color:#FF3300'>Can be done offline</span></div>
+ <![if !ppt]></div>
+ <![endif]></p:slide></div>
+
+<p:animation number="-132412719"/><oa:par id="TimeNode0" dur="indefinite"
+ restart="never" p:nodeType="timingRoot">
+ <oa:seq id="TimeNode1" dur="indefinite" prev="document.onpptprev"
+  next="document.onpptnext" concurrent="enabled" nextAction="seek"
+  p:nodeType="mainSeq">
+  <oa:par id="TimeNode2" begin="indefinite" fill="hold">
+   <oa:par id="TimeNode3" begin="0.0" fill="hold">
+    <oa:par id="TimeNode4" o:presetID="ppt_2" o:presetClass="entrance"
+     o:presetSubType="0x2" begin="0.0" fill="hold" p:nodeType="clickEffect">
+     <oa:set id="TimeNode5" begin="0.0" dur="0.001" fill="hold"
+      targetElement="_x0000_s38947" attributeName="style.visibility"
+      to="visible"/>
+     <oa:animate id="TimeNode6" dur="0.5" fill="hold"
+      targetElement="_x0000_s38947" additive="base" attributeName="ppt_x"
+      calcmode="linear" valueType="number" keyTimes="0.0;1.0"
+      values="1+#ppt_w/2;#ppt_x"/>
+     <oa:animate id="TimeNode7" dur="0.5" fill="hold"
+      targetElement="_x0000_s38947" additive="base" attributeName="ppt_y"
+      calcmode="linear" valueType="number" keyTimes="0.0;1.0"
+      values="#ppt_y;#ppt_y"/>
+    </oa:par>
+    <![if !ppt]><oa:par id="TimeNode8" o:presetID="ppt_2" o:presetClass="entrance"
+     o:presetSubType="0x2" begin="0.0" fill="hold" p:nodeType="withEffect">
+     <oa:set id="TimeNode9" begin="0.0" dur="0.001" fill="hold"
+      targetElement="_x0000_s38947_AllText" attributeName="style.visibility"
+      to="visible"/>
+     <oa:animate id="TimeNode10" dur="0.5" fill="hold"
+      targetElement="_x0000_s38947_AllText" additive="base"
+      attributeName="ppt_x" calcmode="linear" valueType="number"
+      keyTimes="0.0;1.0" values="1+#ppt_w/2;#ppt_x"/>
+     <oa:animate id="TimeNode11" dur="0.5" fill="hold"
+      targetElement="_x0000_s38947_AllText" additive="base"
+      attributeName="ppt_y" calcmode="linear" valueType="number"
+      keyTimes="0.0;1.0" values="#ppt_y;#ppt_y"/>
+    </oa:par>
+    <![endif]></oa:par>
+  </oa:par>
+ </oa:seq>
+</oa:par>
+</body>
+
+</html>

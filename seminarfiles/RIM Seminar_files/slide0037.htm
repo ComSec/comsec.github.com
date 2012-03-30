@@ -1,0 +1,577 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:p="urn:schemas-microsoft-com:office:powerpoint"
+xmlns:oa="urn:schemas-microsoft-com:office:activation"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=PowerPoint.Slide>
+<meta name=Generator content="Microsoft PowerPoint 10">
+<link id=Main-File rel=Main-File href="../RIM%20Seminar.htm">
+<link rel=Preview href=preview.wmf>
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+p\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+v\:textbox {display:none;}
+</style>
+<![endif]-->
+<title>Gong-Harn Public-key Digital Signature Scheme</title>
+<meta name=Description content="6/2/2004: Motivations">
+<link rel=Stylesheet href="master04_stylesheet.css">
+<!--[if gte IE 5]>
+<object id=MSOANIM classid="CLSID:A4639D2F-774E-11D3-A490-00C04F6843FB"></object>
+<object id=MSOTIME classid="CLSID:A4639D29-774E-11D3-A490-00C04F6843FB"></object>
+<![endif]-->
+<![if !ppt]>
+<style media=print>
+<!--.sld
+	{left:0px !important;
+	width:6.0in !important;
+	height:4.5in !important;
+	font-size:107% !important;}
+-->
+</style>
+<style>
+<!--
+oa\:* { BEHAVIOR: url(#MSOANIM#ANIM) url(#MSOTIME#TIME) }
+oa\:par,oa\:seq,oa\:iterate { BEHAVIOR:url(#MSOTIME) }
+oa\:video,oa\:audio {BEHAVIOR:url(#MSOTIME) url(#MSOTIME#MEDIA) }
+-->
+</style>
+<script src=script.js></script><script><!--
+if( !IsNts() ) Redirect( "PPTSld" );
+//--></script><script><!--
+g_animItemsToHide=new Array("_x0000_s57538");
+
+//--></script><!--[if vml]><script>g_vml = 1;
+</script><![endif]--><![endif]><o:shapelayout v:ext="edit">
+ <o:idmap v:ext="edit" data="56"/>
+</o:shapelayout>
+</head>
+
+<body lang=EN-US style='margin:0px;background-color:black'
+onclick="DocumentOnClick()" onresize="_RSW()" onload="LoadSld()"
+onkeypress="_KPH()" oa:clockstart="onstart">
+
+<div id=SlideObj class=sld style='position:absolute;top:0px;left:0px;
+width:534px;height:400px;font-size:16px;background-color:white;clip:rect(0%, 101%, 101%, 0%);
+visibility:hidden'><p:slide coordsize="720,540"
+ colors="#FFFFFF,#000000,#808080,#000000,#BBE0E3,#333399,#009999,#99CC00"
+ masterhref="master04.xml">
+ <p:shaperange href="master04.xml#_x0000_s4097"/><![if !ppt]><p:shaperange
+  href="master04.xml#_x0000_s4103"/><![if !vml]><img border=0
+ v:shapes="_x0000_s4103" src="master04_image001.gif" style='position:absolute;
+ top:0%;left:0%;width:100.37%;height:21.5%'><![endif]><p:shaperange
+  href="master04.xml#_x0000_s4100"/><p:shaperange
+  href="master04.xml#_x0000_s4101"/><![endif]><v:rect id="_x0000_s57538"
+  style='position:absolute;left:36.375pt;top:351.625pt;width:647.25pt;height:60.5pt;
+  v-text-anchor:middle' fillcolor="#fafbc9" stroked="f" strokecolor="black [1]">
+  <v:shadow color="gray [2]"/>
+  <v:textbox style='mso-fit-shape-to-text:t'/>
+  <p:animation number="2" delay="0" type="object" effect="cut"
+   direction="noBlack" flag="17408"/></v:rect><![if !vml]><img border=0
+ v:shapes="_x0000_s57538" src="slide0037_image002.gif" style='position:absolute;
+ top:65.0%;left:5.05%;width:90.26%;height:11.5%'><![endif]><p:shaperange
+  href="master04.xml#_x0000_m4098"/><v:shape id="_x0000_s57346" type="#_x0000_m4098"
+  style='position:absolute;left:36.375pt;top:0;width:647.25pt;height:111.625pt'>
+  <v:fill o:detectmouseclick="f"/>
+  <v:stroke o:forcedash="f"/>
+  <o:lock v:ext="edit" text="f"/>
+  <p:placeholder type="title"/></v:shape><p:shaperange
+  href="master04.xml#_x0000_m4099"/><v:shape id="_x0000_s57347" type="#_x0000_m4099"
+  style='position:absolute;left:36pt;top:126pt;width:9in;height:98.625pt'>
+  <v:fill o:detectmouseclick="f"/>
+  <v:stroke o:forcedash="f"/>
+  <o:lock v:ext="edit" text="f"/>
+  <p:placeholder type="body" position="1"/></v:shape>
+ <div v:shape="_x0000_s57346" class=T style='position:absolute;top:6.0%;
+ left:5.99%;width:88.01%;height:9.25%'>Motivations</div>
+ <div v:shape="_x0000_s57347">
+ <div class=B style='mso-line-spacing:"90 20 0"'><span style='position:absolute;
+ top:24.0%;left:9.73%;width:89.32%;height:4.5%'><span style='font-size:71%'><span
+ style='mso-special-format:bullet;position:absolute;left:-4.19%'>•</span></span><span
+ style='font-size:71%'>Cryptosystems that use characteristic sequences have
+ small </span></span><span style='position:absolute;top:28.0%;left:9.73%;
+ width:97.94%;height:4.5%'><span style='font-size:71%'>modulus and high
+ computations speed compared to some existing </span></span><span
+ style='position:absolute;top:32.0%;left:9.73%;width:84.45%;height:4.5%'><span
+ style='font-size:71%'>systems with same degree of security.&#13;</span></span></div>
+ <div class=B1 style='mso-line-spacing:"90 20 0";position:absolute;top:36.75%;
+ left:11.04%;width:83.14%;height:4.0%'><span style='position:absolute;
+ top:0%;left:3.6%;width:96.17%;height:100.0%'><span style='font-size:75%'><span
+ style='mso-special-format:bullet;position:absolute;left:-3.74%'>–</span></span><span
+ style='font-size:75%'>This is desirable for constrained devices!&#13;</span></span></div>
+ <div class=B style='mso-line-spacing:"90 20 0";position:absolute;top:41.25%;
+ left:5.99%;width:88.2%;height:4.5%'><span style='position:absolute;top:0%;
+ left:4.24%;width:95.75%;height:100.0%'><span style='font-size:71%;visibility:
+ hidden'><span style='mso-special-format:bullet;position:absolute;left:-4.43%'>•</span></span><span
+ style='font-size:71%;mso-special-format:lastCR;display:none'>&#13;</span></span></div>
+ </div>
+ <v:group id="_x0000_s57545" style='position:absolute;left:36.375pt;top:230.625pt;
+  width:647pt;height:294.5pt' coordorigin="291,1894" coordsize="5176,2356"
+  o:tableproperties="1" o:tablelimits="61.25pt 56.5pt 58.75pt 44.5pt 65pt">
+  <o:lock v:ext="edit" rotation="t"/>
+  <v:rect id="_x0000_s57511" style='position:absolute;left:4211;top:3335;
+   width:1256;height:365' filled="f" fillcolor="#bbe0e3 [4]" stroked="f"
+   strokecolor="black [1]">
+   <v:fill color2="white [0]" alignshape="f" o:detectmouseclick="t"/>
+   <v:shadow color="gray [2]"/>
+  </v:rect><v:rect id="_x0000_s57509" style='position:absolute;left:2493;top:3335;
+   width:1718;height:365' filled="f" fillcolor="#bbe0e3 [4]" stroked="f"
+   strokecolor="black [1]">
+   <v:fill color2="white [0]" alignshape="f" o:detectmouseclick="t"/>
+   <v:shadow color="gray [2]"/>
+  </v:rect><v:rect id="_x0000_s57507" style='position:absolute;left:1646;top:3335;
+   width:847;height:365' filled="f" fillcolor="#bbe0e3 [4]" stroked="f"
+   strokecolor="black [1]">
+   <v:fill color2="white [0]" alignshape="f" o:detectmouseclick="t"/>
+   <v:shadow color="gray [2]"/>
+  </v:rect><v:rect id="_x0000_s57505" style='position:absolute;left:763;top:3335;
+   width:883;height:365' filled="f" fillcolor="#bbe0e3 [4]" stroked="f"
+   strokecolor="black [1]">
+   <v:fill color2="white [0]" alignshape="f" o:detectmouseclick="t"/>
+   <v:shadow color="gray [2]"/>
+  </v:rect><v:rect id="_x0000_s57503" style='position:absolute;left:291;top:3335;
+   width:472;height:365' filled="f" fillcolor="#bbe0e3 [4]" stroked="f"
+   strokecolor="black [1]">
+   <v:fill color2="white [0]" alignshape="f" o:detectmouseclick="t"/>
+   <v:shadow color="gray [2]"/>
+  </v:rect><v:rect id="_x0000_s57499" style='position:absolute;left:4211;top:3700;
+   width:1256;height:550' filled="f" fillcolor="#bbe0e3 [4]" stroked="f"
+   strokecolor="black [1]">
+   <v:fill color2="white [0]" alignshape="f" o:detectmouseclick="t"/>
+   <v:shadow color="gray [2]"/>
+  </v:rect><v:rect id="_x0000_s57497" style='position:absolute;left:2493;top:3700;
+   width:1718;height:550' filled="f" fillcolor="#bbe0e3 [4]" stroked="f"
+   strokecolor="black [1]">
+   <v:fill color2="white [0]" alignshape="f" o:detectmouseclick="t"/>
+   <v:shadow color="gray [2]"/>
+  </v:rect><v:rect id="_x0000_s57495" style='position:absolute;left:1646;top:3700;
+   width:847;height:550' filled="f" fillcolor="#bbe0e3 [4]" stroked="f"
+   strokecolor="black [1]">
+   <v:fill color2="white [0]" alignshape="f" o:detectmouseclick="t"/>
+   <v:shadow color="gray [2]"/>
+  </v:rect><v:rect id="_x0000_s57493" style='position:absolute;left:763;top:3700;
+   width:883;height:550' filled="f" fillcolor="#bbe0e3 [4]" stroked="f"
+   strokecolor="black [1]">
+   <v:fill color2="white [0]" alignshape="f" o:detectmouseclick="t"/>
+   <v:shadow color="gray [2]"/>
+  </v:rect><v:rect id="_x0000_s57491" style='position:absolute;left:291;top:3700;
+   width:472;height:550' filled="f" fillcolor="#bbe0e3 [4]" stroked="f"
+   strokecolor="black [1]">
+   <v:fill color2="white [0]" alignshape="f" o:detectmouseclick="t"/>
+   <v:shadow color="gray [2]"/>
+  </v:rect><v:rect id="_x0000_s57417" style='position:absolute;left:4211;top:2413;
+   width:1256;height:452' filled="f" fillcolor="#bbe0e3 [4]" stroked="f"
+   strokecolor="black [1]">
+   <v:fill color2="white [0]" alignshape="f" o:detectmouseclick="t"/>
+   <v:shadow color="gray [2]"/>
+  </v:rect><v:rect id="_x0000_s57415" style='position:absolute;left:2493;top:2413;
+   width:1718;height:452' filled="f" fillcolor="#bbe0e3 [4]" stroked="f"
+   strokecolor="black [1]">
+   <v:fill color2="white [0]" alignshape="f" o:detectmouseclick="t"/>
+   <v:shadow color="gray [2]"/>
+  </v:rect><v:rect id="_x0000_s57413" style='position:absolute;left:1646;top:2413;
+   width:847;height:452' filled="f" fillcolor="#bbe0e3 [4]" stroked="f"
+   strokecolor="black [1]">
+   <v:fill color2="white [0]" alignshape="f" o:detectmouseclick="t"/>
+   <v:shadow color="gray [2]"/>
+  </v:rect><v:rect id="_x0000_s57411" style='position:absolute;left:763;top:2413;
+   width:883;height:452' filled="f" fillcolor="#bbe0e3 [4]" stroked="f"
+   strokecolor="black [1]">
+   <v:fill color2="white [0]" alignshape="f" o:detectmouseclick="t"/>
+   <v:shadow color="gray [2]"/>
+  </v:rect><v:rect id="_x0000_s57409" style='position:absolute;left:291;top:2413;
+   width:472;height:452' filled="f" fillcolor="#bbe0e3 [4]" stroked="f"
+   strokecolor="black [1]">
+   <v:fill color2="white [0]" alignshape="f" o:detectmouseclick="t"/>
+   <v:shadow color="gray [2]"/>
+  </v:rect><v:rect id="_x0000_s57402" style='position:absolute;left:2493;top:2865;
+   width:1718;height:470' filled="f" fillcolor="#bbe0e3 [4]" stroked="f"
+   strokecolor="black [1]">
+   <v:fill color2="white [0]" alignshape="f" o:detectmouseclick="t"/>
+   <v:shadow color="gray [2]"/>
+  </v:rect><v:rect id="_x0000_s57400" style='position:absolute;left:2493;top:1894;
+   width:1718;height:519' filled="f" fillcolor="#bbe0e3 [4]" stroked="f"
+   strokecolor="black [1]">
+   <v:fill color2="white [0]" alignshape="f" o:detectmouseclick="t"/>
+   <v:shadow color="gray [2]"/>
+  </v:rect><v:rect id="_x0000_s57379" style='position:absolute;left:4211;top:2865;
+   width:1256;height:470' filled="f" fillcolor="#bbe0e3 [4]" stroked="f"
+   strokecolor="black [1]">
+   <v:fill color2="white [0]" alignshape="f" o:detectmouseclick="t"/>
+   <v:shadow color="gray [2]"/>
+  </v:rect><v:rect id="_x0000_s57378" style='position:absolute;left:1646;top:2865;
+   width:847;height:470' filled="f" fillcolor="#bbe0e3 [4]" stroked="f"
+   strokecolor="black [1]">
+   <v:fill color2="white [0]" alignshape="f" o:detectmouseclick="t"/>
+   <v:shadow color="gray [2]"/>
+  </v:rect><v:rect id="_x0000_s57377" style='position:absolute;left:763;top:2865;
+   width:883;height:470' filled="f" fillcolor="#bbe0e3 [4]" stroked="f"
+   strokecolor="black [1]">
+   <v:fill color2="white [0]" alignshape="f" o:detectmouseclick="t"/>
+   <v:shadow color="gray [2]"/>
+  </v:rect><v:rect id="_x0000_s57376" style='position:absolute;left:291;top:2865;
+   width:472;height:470' filled="f" fillcolor="#bbe0e3 [4]" stroked="f"
+   strokecolor="black [1]">
+   <v:fill color2="white [0]" alignshape="f" o:detectmouseclick="t"/>
+   <v:shadow color="gray [2]"/>
+  </v:rect><v:rect id="_x0000_s57375" style='position:absolute;left:4211;top:1894;
+   width:1256;height:519' filled="f" fillcolor="#bbe0e3 [4]" stroked="f"
+   strokecolor="black [1]">
+   <v:fill color2="white [0]" alignshape="f" o:detectmouseclick="t"/>
+   <v:shadow color="gray [2]"/>
+  </v:rect><v:rect id="_x0000_s57374" style='position:absolute;left:1646;top:1894;
+   width:847;height:519' filled="f" fillcolor="#bbe0e3 [4]" stroked="f"
+   strokecolor="black [1]">
+   <v:fill color2="white [0]" alignshape="f" o:detectmouseclick="t"/>
+   <v:shadow color="gray [2]"/>
+  </v:rect><v:rect id="_x0000_s57373" style='position:absolute;left:763;top:1894;
+   width:883;height:519' filled="f" fillcolor="#bbe0e3 [4]" stroked="f"
+   strokecolor="black [1]">
+   <v:fill color2="white [0]" alignshape="f" o:detectmouseclick="t"/>
+   <v:shadow color="gray [2]"/>
+  </v:rect><v:rect id="_x0000_s57372" style='position:absolute;left:291;top:1894;
+   width:472;height:519' filled="f" fillcolor="#bbe0e3 [4]" stroked="f"
+   strokecolor="black [1]">
+   <v:fill color2="white [0]" alignshape="f" o:detectmouseclick="t"/>
+   <v:shadow color="gray [2]"/>
+  </v:rect><v:line id="_x0000_s57388" style='position:absolute' from="291,1894"
+   to="5467,1894" strokecolor="black [1]" strokeweight="2.25pt">
+   <v:stroke endcap="square" imagealignshape="f"/>
+   <v:shadow color="gray [2]"/>
+  </v:line><v:line id="_x0000_s57389" style='position:absolute' from="291,2413"
+   to="5467,2413" strokecolor="black [1]" strokeweight="1pt">
+   <v:stroke imagealignshape="f"/>
+   <v:shadow color="gray [2]"/>
+  </v:line><v:line id="_x0000_s57390" style='position:absolute' from="291,3335"
+   to="5467,3335" strokecolor="black [1]" strokeweight="1pt">
+   <v:stroke imagealignshape="f"/>
+   <v:shadow color="gray [2]"/>
+  </v:line><v:line id="_x0000_s57392" style='position:absolute' from="291,4250"
+   to="5467,4250" strokecolor="black [1]" strokeweight="2.25pt">
+   <v:stroke endcap="square" imagealignshape="f"/>
+   <v:shadow color="gray [2]"/>
+  </v:line><v:line id="_x0000_s57393" style='position:absolute' from="291,1894"
+   to="291,4250" strokecolor="black [1]" strokeweight="2.25pt">
+   <v:stroke endcap="square" imagealignshape="f"/>
+   <v:shadow color="gray [2]"/>
+  </v:line><v:line id="_x0000_s57394" style='position:absolute' from="763,1894"
+   to="763,4250" strokecolor="black [1]" strokeweight="1pt">
+   <v:stroke imagealignshape="f"/>
+   <v:shadow color="gray [2]"/>
+  </v:line><v:line id="_x0000_s57395" style='position:absolute' from="1646,1894"
+   to="1646,4250" strokecolor="black [1]" strokeweight="1pt">
+   <v:stroke imagealignshape="f"/>
+   <v:shadow color="gray [2]"/>
+  </v:line><v:line id="_x0000_s57396" style='position:absolute' from="2493,1894"
+   to="2493,4250" strokecolor="black [1]" strokeweight="1pt">
+   <v:stroke imagealignshape="f"/>
+   <v:shadow color="gray [2]"/>
+  </v:line><v:line id="_x0000_s57397" style='position:absolute' from="5467,1894"
+   to="5467,4250" strokecolor="black [1]" strokeweight="2.25pt">
+   <v:stroke endcap="square" imagealignshape="f"/>
+   <v:shadow color="gray [2]"/>
+  </v:line><v:line id="_x0000_s57401" style='position:absolute' from="4211,1894"
+   to="4211,4250" strokecolor="black [1]" strokeweight="1pt">
+   <v:stroke imagealignshape="f"/>
+   <v:shadow color="gray [2]"/>
+  </v:line><v:line id="_x0000_s57410" style='position:absolute' from="291,2865"
+   to="5467,2865" strokecolor="black [1]" strokeweight="1pt">
+   <v:stroke imagealignshape="f"/>
+   <v:shadow color="gray [2]"/>
+  </v:line><v:line id="_x0000_s57504" style='position:absolute;
+   mso-wrap-style:none;v-text-anchor:middle' from="291,3700" to="5467,3700"
+   strokecolor="black [1]" strokeweight="1pt">
+   <v:stroke imagealignshape="f"/>
+   <v:shadow color="gray [2]"/>
+  </v:line></v:group><![if !vml]><img border=0
+ v:shapes="_x0000_s57545,_x0000_s57511,_x0000_s57509,_x0000_s57507,_x0000_s57505,_x0000_s57503,_x0000_s57499,_x0000_s57497,_x0000_s57495,_x0000_s57493,_x0000_s57491,_x0000_s57417,_x0000_s57415,_x0000_s57413,_x0000_s57411,_x0000_s57409,_x0000_s57402,_x0000_s57400,_x0000_s57379,_x0000_s57378,_x0000_s57377,_x0000_s57376,_x0000_s57375,_x0000_s57374,_x0000_s57373,_x0000_s57372,_x0000_s57388,_x0000_s57389,_x0000_s57390,_x0000_s57392,_x0000_s57393,_x0000_s57394,_x0000_s57395,_x0000_s57396,_x0000_s57397,_x0000_s57401,_x0000_s57410,_x0000_s57504"
+ src="slide0037_image003.gif" style='position:absolute;top:42.5%;left:4.86%;
+ width:90.44%;height:55.25%'><![endif]>
+ <div v:shape="_x0000_s57511">
+ <div class=Tbl1 style='mso-margin-left-alt:288'></div>
+ <div class=Tbl2 style='mso-margin-left-alt:576'></div>
+ <div class=Tbl3 style='mso-margin-left-alt:864'></div>
+ <div class=Tbl4 style='mso-margin-left-alt:1152'></div>
+ <div class=Tbl style='mso-margin-left-alt:0;position:absolute;top:77.0%;
+ left:74.15%;width:20.03%;height:3.5%'><span style='font-size:67%'>GF(</span><span
+ style='font-size:67%'><i>q</i></span><span style='font-size:44%;position:relative;
+ top:-.45em;mso-text-raise:30%'><i>3</i></span><span style='font-size:67%'>)</span></div>
+ </div>
+ <div v:shape="_x0000_s57509">
+ <div class=Tbl1 style='mso-margin-left-alt:288'></div>
+ <div class=Tbl2 style='mso-margin-left-alt:576'></div>
+ <div class=Tbl3 style='mso-margin-left-alt:864'></div>
+ <div class=Tbl4 style='mso-margin-left-alt:1152'></div>
+ <div class=Tbl style='mso-margin-left-alt:0'><span style='position:absolute;
+ top:77.0%;left:44.19%;width:32.02%;height:3.5%'><span style='font-size:67%'>3</span><span
+ style='font-size:44%;position:relative;top:-.45em;mso-text-raise:30%'>rd</span><span
+ style='font-size:67%'><span style='mso-spacerun:yes'> </span>order over GF(</span><span
+ style='font-size:67%'><i>q</i></span><span style='font-size:67%'>) where </span></span><span
+ style='position:absolute;top:80.5%;left:44.19%;width:27.9%;height:3.5%'><span
+ style='font-size:67%'><i>q</i></span><span style='font-size:67%'> = </span><span
+ style='font-size:67%'><i>p</i></span><span style='font-size:44%;position:relative;
+ top:-.45em;mso-text-raise:30%'><i>2</i></span></span></div>
+ </div>
+ <div v:shape="_x0000_s57507">
+ <div class=Tbl1 style='mso-margin-left-alt:288'></div>
+ <div class=Tbl2 style='mso-margin-left-alt:576'></div>
+ <div class=Tbl3 style='mso-margin-left-alt:864'></div>
+ <div class=Tbl4 style='mso-margin-left-alt:1152'></div>
+ <div class=Tbl style='mso-margin-left-alt:0;position:absolute;top:77.0%;
+ left:29.58%;width:12.92%;height:3.5%'><span style='font-size:67%'>XTR</span></div>
+ </div>
+ <div v:shape="_x0000_s57505">
+ <div class=Tbl1 style='mso-margin-left-alt:288'></div>
+ <div class=Tbl2 style='mso-margin-left-alt:576'></div>
+ <div class=Tbl3 style='mso-margin-left-alt:864'></div>
+ <div class=Tbl4 style='mso-margin-left-alt:1152'></div>
+ <div class=Tbl style='mso-margin-left-alt:0'><span style='position:absolute;
+ top:77.0%;left:14.23%;width:14.23%;height:3.5%'><span style='font-size:67%'>Lenstra
+ and </span></span><span style='position:absolute;top:80.5%;left:14.23%;
+ width:13.48%;height:3.5%'><span style='font-size:67%'>Verheul</span></span></div>
+ </div>
+ <div v:shape="_x0000_s57503">
+ <div class=Tbl1 style='mso-margin-left-alt:288'></div>
+ <div class=Tbl2 style='mso-margin-left-alt:576'></div>
+ <div class=Tbl3 style='mso-margin-left-alt:864'></div>
+ <div class=Tbl4 style='mso-margin-left-alt:1152'></div>
+ <div class=Tbl style='mso-margin-left-alt:0;position:absolute;top:77.0%;
+ left:5.99%;width:6.36%;height:3.5%'><span style='font-size:67%'>2000</span></div>
+ </div>
+ <div v:shape="_x0000_s57499">
+ <div class=Tbl1 style='mso-margin-left-alt:288'></div>
+ <div class=Tbl2 style='mso-margin-left-alt:576'></div>
+ <div class=Tbl3 style='mso-margin-left-alt:864'></div>
+ <div class=Tbl4 style='mso-margin-left-alt:1152'></div>
+ <div class=Tbl style='mso-margin-left-alt:0;position:absolute;top:85.5%;
+ left:74.15%;width:20.03%;height:3.5%'><span style='font-size:67%'>GF(</span><span
+ style='font-size:67%'><i>q</i></span><span style='font-size:44%;position:relative;
+ top:-.45em;mso-text-raise:30%'><i>5</i></span><span style='font-size:67%'>)&#13;</span></div>
+ <div class=Tbl style='mso-margin-left-alt:0;position:absolute;top:89.75%;
+ left:74.15%;width:20.03%;height:3.5%'><span style='font-size:67%;mso-special-format:
+ lastCR;display:none'>&#13;</span></div>
+ </div>
+ <div v:shape="_x0000_s57497">
+ <div class=Tbl1 style='mso-margin-left-alt:288'></div>
+ <div class=Tbl2 style='mso-margin-left-alt:576'></div>
+ <div class=Tbl3 style='mso-margin-left-alt:864'></div>
+ <div class=Tbl4 style='mso-margin-left-alt:1152'></div>
+ <div class=Tbl style='mso-margin-left-alt:0'><span style='position:absolute;
+ top:85.5%;left:44.19%;width:31.83%;height:3.5%'><span style='font-size:67%'><i>5</i></span><span
+ style='font-size:44%;position:relative;top:-.45em;mso-text-raise:30%'><i>th</i></span><span
+ style='font-size:67%'><i><span style='mso-spacerun:yes'> </span>order over
+ GF(q) where </i></span></span><span style='position:absolute;top:89.0%;
+ left:44.19%;width:27.9%;height:3.5%'><span style='font-size:67%'><i>q</i></span><span
+ style='font-size:67%'> = </span><span style='font-size:67%'><i>p</i></span><span
+ style='font-size:67%'> or </span><span style='font-size:67%'><i>p</i></span><span
+ style='font-size:44%;position:relative;top:-.45em;mso-text-raise:30%'><i>2&#13;</i></span></span></div>
+ <div class=Tbl style='mso-margin-left-alt:0;position:absolute;top:93.25%;
+ left:44.19%;width:27.9%;height:3.5%'><span style='font-size:67%;mso-special-format:
+ lastCR;display:none'><i>&#13;</i></span></div>
+ </div>
+ <div v:shape="_x0000_s57495">
+ <div class=Tbl1 style='mso-margin-left-alt:288'></div>
+ <div class=Tbl2 style='mso-margin-left-alt:576'></div>
+ <div class=Tbl3 style='mso-margin-left-alt:864'></div>
+ <div class=Tbl4 style='mso-margin-left-alt:1152'></div>
+ <div class=Tbl style='mso-margin-left-alt:0'><span style='position:absolute;
+ top:85.5%;left:29.58%;width:12.92%;height:3.5%'><span style='font-size:67%'>Analogues
+ </span></span><span style='position:absolute;top:89.0%;left:29.58%;width:12.92%;
+ height:3.5%'><span style='font-size:67%'>to GH and </span></span><span
+ style='position:absolute;top:92.5%;left:29.58%;width:12.92%;height:3.5%'><span
+ style='font-size:67%'>XTR</span></span></div>
+ </div>
+ <div v:shape="_x0000_s57493">
+ <div class=Tbl1 style='mso-margin-left-alt:288'></div>
+ <div class=Tbl2 style='mso-margin-left-alt:576'></div>
+ <div class=Tbl3 style='mso-margin-left-alt:864'></div>
+ <div class=Tbl4 style='mso-margin-left-alt:1152'></div>
+ <div class=Tbl style='mso-margin-left-alt:0'><span style='position:absolute;
+ top:85.5%;left:14.23%;width:14.23%;height:3.5%'><span style='font-size:67%'>Giuliani
+ and </span></span><span style='position:absolute;top:89.0%;left:14.23%;
+ width:13.48%;height:3.5%'><span style='font-size:67%'>Gong</span></span></div>
+ </div>
+ <div v:shape="_x0000_s57491">
+ <div class=Tbl1 style='mso-margin-left-alt:288'></div>
+ <div class=Tbl2 style='mso-margin-left-alt:576'></div>
+ <div class=Tbl3 style='mso-margin-left-alt:864'></div>
+ <div class=Tbl4 style='mso-margin-left-alt:1152'></div>
+ <div class=Tbl style='mso-margin-left-alt:0;position:absolute;top:85.5%;
+ left:5.99%;width:6.36%;height:3.5%'><span style='font-size:67%'>2003</span></div>
+ </div>
+ <div v:shape="_x0000_s57417">
+ <div class=Tbl1 style='mso-margin-left-alt:288'></div>
+ <div class=Tbl2 style='mso-margin-left-alt:576'></div>
+ <div class=Tbl3 style='mso-margin-left-alt:864'></div>
+ <div class=Tbl4 style='mso-margin-left-alt:1152'></div>
+ <div class=Tbl style='mso-margin-left-alt:0;position:absolute;top:55.5%;
+ left:74.15%;width:20.03%;height:3.5%'><span style='font-size:67%'>GF(</span><span
+ style='font-size:67%'><i>p</i></span><span style='font-size:44%;position:relative;
+ top:-.45em;mso-text-raise:30%'><i>2</i></span><span style='font-size:67%'>)</span></div>
+ </div>
+ <div v:shape="_x0000_s57415">
+ <div class=Tbl1 style='mso-margin-left-alt:288'></div>
+ <div class=Tbl2 style='mso-margin-left-alt:576'></div>
+ <div class=Tbl3 style='mso-margin-left-alt:864'></div>
+ <div class=Tbl4 style='mso-margin-left-alt:1152'></div>
+ <div class=Tbl style='mso-margin-left-alt:0;position:absolute;top:55.5%;
+ left:44.19%;width:27.9%;height:3.5%'><span style='font-size:67%'>2</span><span
+ style='font-size:44%;position:relative;top:-.45em;mso-text-raise:30%'>nd</span><span
+ style='font-size:67%'><span style='mso-spacerun:yes'> </span>order over GF(</span><span
+ style='font-size:67%'><i>p</i></span><span style='font-size:67%'>)</span></div>
+ </div>
+ <div v:shape="_x0000_s57413">
+ <div class=Tbl1 style='mso-margin-left-alt:288'></div>
+ <div class=Tbl2 style='mso-margin-left-alt:576'></div>
+ <div class=Tbl3 style='mso-margin-left-alt:864'></div>
+ <div class=Tbl4 style='mso-margin-left-alt:1152'></div>
+ <div class=Tbl style='mso-margin-left-alt:0;position:absolute;top:55.5%;
+ left:29.58%;width:12.92%;height:3.5%'><span style='font-size:67%'>LUC</span></div>
+ </div>
+ <div v:shape="_x0000_s57411">
+ <div class=Tbl1 style='mso-margin-left-alt:288'></div>
+ <div class=Tbl2 style='mso-margin-left-alt:576'></div>
+ <div class=Tbl3 style='mso-margin-left-alt:864'></div>
+ <div class=Tbl4 style='mso-margin-left-alt:1152'></div>
+ <div class=Tbl style='mso-margin-left-alt:0'><span style='position:absolute;
+ top:55.5%;left:14.23%;width:13.48%;height:3.5%'><span style='font-size:67%'>Smith
+ and </span></span><span style='position:absolute;top:59.25%;left:14.23%;
+ width:13.48%;height:3.5%'><span style='font-size:67%'>Skinner</span></span></div>
+ </div>
+ <div v:shape="_x0000_s57409">
+ <div class=Tbl1 style='mso-margin-left-alt:288'></div>
+ <div class=Tbl2 style='mso-margin-left-alt:576'></div>
+ <div class=Tbl3 style='mso-margin-left-alt:864'></div>
+ <div class=Tbl4 style='mso-margin-left-alt:1152'></div>
+ <div class=Tbl style='mso-margin-left-alt:0;position:absolute;top:55.5%;
+ left:5.99%;width:6.36%;height:3.5%'><span style='font-size:67%'>1994</span></div>
+ </div>
+ <div v:shape="_x0000_s57402">
+ <div class=Tbl1 style='mso-margin-left-alt:288'></div>
+ <div class=Tbl2 style='mso-margin-left-alt:576'></div>
+ <div class=Tbl3 style='mso-margin-left-alt:864'></div>
+ <div class=Tbl4 style='mso-margin-left-alt:1152'></div>
+ <div class=Tbl style='mso-margin-left-alt:0'><span style='position:absolute;
+ top:66.0%;left:44.19%;width:32.02%;height:3.5%'><span style='font-size:67%'>3</span><span
+ style='font-size:44%;position:relative;top:-.45em;mso-text-raise:30%'>rd</span><span
+ style='font-size:67%'><span style='mso-spacerun:yes'> </span>order over GF(</span><span
+ style='font-size:67%'><i>q</i></span><span style='font-size:67%'>) where </span></span><span
+ style='position:absolute;top:69.75%;left:44.19%;width:27.9%;height:3.5%'><span
+ style='font-size:67%'><i>q</i></span><span style='font-size:67%'> = </span><span
+ style='font-size:67%'><i>p</i></span><span style='font-size:67%'> or </span><span
+ style='font-size:67%'><i>p</i></span><span style='font-size:44%;position:relative;
+ top:-.45em;mso-text-raise:30%'><i>2</i></span></span></div>
+ </div>
+ <div v:shape="_x0000_s57400">
+ <div class=Tbl1 style='mso-margin-left-alt:288'></div>
+ <div class=Tbl2 style='mso-margin-left-alt:576'></div>
+ <div class=Tbl3 style='mso-margin-left-alt:864'></div>
+ <div class=Tbl4 style='mso-margin-left-alt:1152'></div>
+ <div class=Tbl style='mso-margin-left-alt:0;position:absolute;top:43.5%;
+ left:44.19%;width:29.21%;height:3.5%'><span style='font-size:67%'>Characteristic
+ Sequence&#13;</span></div>
+ <div class=Tbl style='mso-margin-left-alt:0;position:absolute;top:47.75%;
+ left:44.19%;width:27.9%;height:3.5%'><span style='font-size:67%'>(</span><span
+ style='font-size:67%'><i>p</i></span><span style='font-size:67%'> is prime
+ number)</span></div>
+ </div>
+ <div v:shape="_x0000_s57379">
+ <div class=Tbl1 style='mso-margin-left-alt:288'></div>
+ <div class=Tbl2 style='mso-margin-left-alt:576'></div>
+ <div class=Tbl3 style='mso-margin-left-alt:864'></div>
+ <div class=Tbl4 style='mso-margin-left-alt:1152'></div>
+ <div class=Tbl style='mso-margin-left-alt:0;position:absolute;top:66.0%;
+ left:74.15%;width:20.03%;height:3.5%'><span style='font-size:67%'>GF(</span><span
+ style='font-size:67%'><i>q</i></span><span style='font-size:44%;position:relative;
+ top:-.45em;mso-text-raise:30%'><i>3</i></span><span style='font-size:67%'>) </span></div>
+ </div>
+ <div v:shape="_x0000_s57378">
+ <div class=Tbl1 style='mso-margin-left-alt:288'></div>
+ <div class=Tbl2 style='mso-margin-left-alt:576'></div>
+ <div class=Tbl3 style='mso-margin-left-alt:864'></div>
+ <div class=Tbl4 style='mso-margin-left-alt:1152'></div>
+ <div class=Tbl style='mso-margin-left-alt:0;position:absolute;top:66.0%;
+ left:29.58%;width:12.92%;height:3.5%'><span style='font-size:67%'>GH-PKC</span></div>
+ </div>
+ <div v:shape="_x0000_s57377">
+ <div class=Tbl1 style='mso-margin-left-alt:288'></div>
+ <div class=Tbl2 style='mso-margin-left-alt:576'></div>
+ <div class=Tbl3 style='mso-margin-left-alt:864'></div>
+ <div class=Tbl4 style='mso-margin-left-alt:1152'></div>
+ <div class=Tbl style='mso-margin-left-alt:0'><span style='position:absolute;
+ top:66.0%;left:14.23%;width:13.48%;height:3.5%'><span style='font-size:67%'>Gong
+ and </span></span><span style='position:absolute;top:69.75%;left:14.23%;
+ width:13.48%;height:3.5%'><span style='font-size:67%'>Harn</span></span></div>
+ </div>
+ <div v:shape="_x0000_s57376">
+ <div class=Tbl1 style='mso-margin-left-alt:288'></div>
+ <div class=Tbl2 style='mso-margin-left-alt:576'></div>
+ <div class=Tbl3 style='mso-margin-left-alt:864'></div>
+ <div class=Tbl4 style='mso-margin-left-alt:1152'></div>
+ <div class=Tbl style='mso-margin-left-alt:0;position:absolute;top:66.0%;
+ left:5.99%;width:6.36%;height:3.5%'><span style='font-size:67%'>1999</span></div>
+ </div>
+ <div v:shape="_x0000_s57375">
+ <div class=Tbl1 style='mso-margin-left-alt:288'></div>
+ <div class=Tbl2 style='mso-margin-left-alt:576'></div>
+ <div class=Tbl3 style='mso-margin-left-alt:864'></div>
+ <div class=Tbl4 style='mso-margin-left-alt:1152'></div>
+ <div class=Tbl style='mso-margin-left-alt:0'><span style='position:absolute;
+ top:43.5%;left:74.15%;width:20.41%;height:3.5%'><span style='font-size:67%'>Security
+ is based </span></span><span style='position:absolute;top:47.25%;left:74.15%;
+ width:20.03%;height:3.5%'><span style='font-size:67%'>on solving DL </span></span><span
+ style='position:absolute;top:50.75%;left:74.15%;width:20.03%;height:3.5%'><span
+ style='font-size:67%'>problem in field</span></span></div>
+ </div>
+ <div v:shape="_x0000_s57374">
+ <div class=Tbl1 style='mso-margin-left-alt:288'></div>
+ <div class=Tbl2 style='mso-margin-left-alt:576'></div>
+ <div class=Tbl3 style='mso-margin-left-alt:864'></div>
+ <div class=Tbl4 style='mso-margin-left-alt:1152'></div>
+ <div class=Tbl style='mso-margin-left-alt:0;position:absolute;top:43.5%;
+ left:29.58%;width:12.92%;height:3.5%'><span style='font-size:67%'>Name</span></div>
+ </div>
+ <div v:shape="_x0000_s57373">
+ <div class=Tbl1 style='mso-margin-left-alt:288'></div>
+ <div class=Tbl2 style='mso-margin-left-alt:576'></div>
+ <div class=Tbl3 style='mso-margin-left-alt:864'></div>
+ <div class=Tbl4 style='mso-margin-left-alt:1152'></div>
+ <div class=Tbl style='mso-margin-left-alt:0;position:absolute;top:43.5%;
+ left:14.23%;width:15.16%;height:3.5%'><span style='font-size:67%'>Proposed by</span></div>
+ </div>
+ <div v:shape="_x0000_s57372">
+ <div class=Tbl1 style='mso-margin-left-alt:288'></div>
+ <div class=Tbl2 style='mso-margin-left-alt:576'></div>
+ <div class=Tbl3 style='mso-margin-left-alt:864'></div>
+ <div class=Tbl4 style='mso-margin-left-alt:1152'></div>
+ <div class=Tbl style='mso-margin-left-alt:0;position:absolute;top:43.5%;
+ left:5.99%;width:6.36%;height:3.5%'><span style='font-size:67%'>Year</span></div>
+ </div>
+</p:slide></div>
+
+<p:animation number="-1868195476"/><oa:par id="TimeNode0" dur="indefinite"
+ restart="never" p:nodeType="timingRoot">
+ <oa:seq id="TimeNode1" dur="indefinite" prev="document.onpptprev"
+  next="document.onpptnext" concurrent="enabled" nextAction="seek"
+  p:nodeType="mainSeq">
+  <oa:par id="TimeNode2" begin="indefinite" fill="hold">
+   <oa:par id="TimeNode3" begin="0.0" fill="hold">
+    <oa:par id="TimeNode4" o:presetID="ppt_1" o:presetClass="entrance"
+     o:presetSubType="0x0" begin="0.0" fill="hold" p:nodeType="clickEffect">
+     <oa:set id="TimeNode5" begin="0.0" dur="0.001" fill="hold"
+      targetElement="_x0000_s57538" attributeName="style.visibility"
+      to="visible"/>
+    </oa:par>
+   </oa:par>
+  </oa:par>
+ </oa:seq>
+</oa:par>
+</body>
+
+</html>

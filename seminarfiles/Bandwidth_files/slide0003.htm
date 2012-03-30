@@ -1,0 +1,205 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:p="urn:schemas-microsoft-com:office:powerpoint"
+xmlns:oa="urn:schemas-microsoft-com:office:activation"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=PowerPoint.Slide>
+<meta name=Generator content="Microsoft PowerPoint 10">
+<link id=Main-File rel=Main-File href="../Bandwidth.htm">
+<link rel=Preview href=preview.wmf>
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+p\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+v\:textbox {display:none;}
+</style>
+<![endif]-->
+<title>Bandwidth Savings in Finite Fields and the PASS Protocol</title>
+<meta name=Description content="6/2/2004: Diffie-Hellman Key Agreement">
+<link rel=Stylesheet href="master27_stylesheet.css">
+<![if !ppt]>
+<style media=print>
+<!--.sld
+	{left:0px !important;
+	width:6.0in !important;
+	height:4.5in !important;
+	font-size:107% !important;}
+-->
+</style>
+<script src=script.js></script><script><!--
+if( !IsNts() ) Redirect( "PPTSld" );
+//--></script><!--[if vml]><script>g_vml = 1;
+</script><![endif]--><![endif]><o:shapelayout v:ext="edit">
+ <o:idmap v:ext="edit" data="40"/>
+</o:shapelayout>
+</head>
+
+<body lang=EN-US style='margin:0px;background-color:black'
+onclick="DocumentOnClick()" onresize="_RSW()" onload="LoadSld()"
+onkeypress="_KPH()">
+
+<div id=SlideObj class=sld style='position:absolute;top:0px;left:0px;
+width:534px;height:400px;font-size:16px;background-color:white;clip:rect(0%, 101%, 101%, 0%);
+visibility:hidden'><p:slide coordsize="720,540"
+ colors="#FFFFFF,#000000,#1C1C1C,#333399,#00E4A8,#FFCF01,#FF0000,#3333CC"
+ masterhref="master27.xml">
+ <p:shaperange href="master27.xml#_x0000_s36865"/><![if !ppt]><p:shaperange
+  href="master27.xml#_x0000_s36866"/><![if !vml]><img border=0
+ v:shapes="_x0000_s36866,_x0000_s36867,_x0000_s36868,_x0000_s36869"
+ src="master27_image002.gif" style='position:absolute;top:16.0%;left:4.49%;
+ width:9.73%;height:13.5%'><![endif]><p:shaperange
+  href="master27.xml#_x0000_s36870"/><![if !vml]><img border=0
+ v:shapes="_x0000_s36870" src="master27_image003.gif" style='position:absolute;
+ top:21.0%;left:1.31%;width:6.36%;height:6.5%'><![endif]><p:shaperange
+  href="master27.xml#_x0000_s36871"/><![if !vml]><img border=0
+ v:shapes="_x0000_s36871" src="master27_image004.gif" style='position:absolute;
+ top:14.5%;left:8.42%;width:.74%;height:15.75%'><![endif]><p:shaperange
+  href="master27.xml#_x0000_s36872"/><![if !vml]><img border=0
+ v:shapes="_x0000_s36872" src="master27_image005.gif" style='position:absolute;
+ top:26.0%;left:4.86%;width:90.26%;height:1.0%'><![endif]><p:shaperange
+  href="master27.xml#_x0000_s36875"/><p:shaperange
+  href="master27.xml#_x0000_s36876"/><![endif]><p:shaperange
+  href="master27.xml#_x0000_m36873"/><v:shape id="_x0000_s40962" type="#_x0000_m36873"
+  style='position:absolute;left:90.625pt;top:16.875pt;width:613.625pt;height:115.125pt'
+  o:userdrawn="f">
+  <v:fill o:detectmouseclick="f"/>
+  <v:stroke o:forcedash="f"/>
+  <o:lock v:ext="edit" text="f"/>
+  <p:placeholder type="title"/></v:shape><v:shapetype id="_x0000_t202"
+  coordsize="21600,21600" o:spt="202" path="m,l,21600r21600,l21600,xe">
+  <v:stroke joinstyle="miter"/>
+  <v:path gradientshapeok="t" o:connecttype="rect"/>
+ </v:shapetype><v:shape id="_x0000_s40970" type="#_x0000_t202" style='position:absolute;
+  left:138pt;top:210pt;width:96pt;height:45.625pt' filled="f" fillcolor="#00e4a8 [4]"
+  stroked="f" strokecolor="black [1]">
+  <v:fill color2="white [0]"/>
+  <v:shadow color="#1c1c1c [2]"/>
+  <v:textbox style='mso-fit-shape-to-text:t'/>
+ </v:shape><v:shape id="_x0000_s40971" type="#_x0000_t202" style='position:absolute;
+  left:7in;top:210pt;width:78pt;height:45.625pt' filled="f" fillcolor="#00e4a8 [4]"
+  stroked="f" strokecolor="black [1]">
+  <v:fill color2="white [0]"/>
+  <v:shadow color="#1c1c1c [2]"/>
+  <v:textbox style='mso-fit-shape-to-text:t'/>
+ </v:shape><v:line id="_x0000_s40974" style='position:absolute' from="276pt,300pt"
+  to="438pt,300pt" strokecolor="black [1]">
+  <v:stroke endarrow="block"/>
+  <v:shadow color="#1c1c1c [2]"/>
+ </v:line><![if !vml]><img border=0 v:shapes="_x0000_s40974"
+ src="slide0003_image006.gif" style='position:absolute;top:55.0%;left:38.2%;
+ width:22.84%;height:1.75%'><![endif]>
+ <div v:shape="_x0000_s40962" class=T style='position:absolute;top:14.0%;
+ left:13.67%;width:97.75%;height:10.0%'>Diffie-Hellman Key Agreement</div>
+ <div v:shape="_x0000_s40970" class=O style='mso-line-spacing:"100 50 0";
+ mso-char-wrap:0;mso-kinsoku-overflow:0;position:absolute;top:39.5%;left:20.22%;
+ width:11.42%;height:7.5%'><span style='font-family:Tahoma;font-size:178%'><u>Alice</u></span></div>
+ <div v:shape="_x0000_s40971" class=O style='mso-line-spacing:"100 50 0";
+ mso-char-wrap:0;mso-kinsoku-overflow:0;position:absolute;top:39.5%;left:70.97%;
+ width:9.17%;height:7.5%'><span style='font-family:Tahoma;font-size:178%'><u>Bob</u></span></div>
+ <v:line id="_x0000_s40975" style='position:absolute;flip:x' from="282pt,384pt"
+  to="438pt,384pt" strokecolor="black [1]">
+  <v:stroke endarrow="block"/>
+  <v:shadow color="#1c1c1c [2]"/>
+ </v:line><v:shape id="_x0000_s40976" type="#_x0000_t202" style='position:absolute;
+  left:324pt;top:252pt;width:40.5pt;height:40.875pt;mso-wrap-style:none;
+  v-text-anchor:top-baseline' filled="f" fillcolor="#00e4a8 [4]" stroked="f"
+  strokecolor="black [1]">
+  <v:fill color2="white [0]"/>
+  <v:shadow color="#1c1c1c [2]"/>
+  <v:textbox style='mso-fit-shape-to-text:t'/>
+ </v:shape><v:shape id="_x0000_s40977" type="#_x0000_t202" style='position:absolute;
+  left:324pt;top:336pt;width:40pt;height:40.875pt;mso-wrap-style:none;
+  v-text-anchor:top-baseline' filled="f" fillcolor="#00e4a8 [4]" stroked="f"
+  strokecolor="black [1]">
+  <v:fill color2="white [0]"/>
+  <v:shadow color="#1c1c1c [2]"/>
+  <v:textbox style='mso-fit-shape-to-text:t'/>
+ </v:shape><v:shape id="_x0000_s40979" type="#_x0000_t202" style='position:absolute;
+  left:126pt;top:390pt;width:124.875pt;height:64.75pt;mso-wrap-style:none;
+  v-text-anchor:top-baseline' filled="f" fillcolor="#00e4a8 [4]" stroked="f"
+  strokecolor="black [1]">
+  <v:fill color2="white [0]"/>
+  <v:shadow color="#1c1c1c [2]"/>
+  <v:textbox style='mso-fit-shape-to-text:t'/>
+ </v:shape><v:shape id="_x0000_s40980" type="#_x0000_t202" style='position:absolute;
+  left:480pt;top:390pt;width:124.875pt;height:64.75pt;mso-wrap-style:none;
+  v-text-anchor:top-baseline' filled="f" fillcolor="#00e4a8 [4]" stroked="f"
+  strokecolor="black [1]">
+  <v:fill color2="white [0]"/>
+  <v:shadow color="#1c1c1c [2]"/>
+  <v:textbox style='mso-fit-shape-to-text:t'/>
+ </v:shape><v:shape id="_x0000_s40981" type="#_x0000_t202" style='position:absolute;
+  left:138pt;top:4in;width:90pt;height:64.75pt' filled="f" fillcolor="#00e4a8 [4]"
+  stroked="f" strokecolor="black [1]">
+  <v:fill color2="white [0]"/>
+  <v:shadow color="#1c1c1c [2]"/>
+  <v:textbox style='mso-fit-shape-to-text:t'/>
+ </v:shape><v:shape id="_x0000_s40982" type="#_x0000_t202" style='position:absolute;
+  left:498pt;top:4in;width:90pt;height:64.75pt' filled="f" fillcolor="#00e4a8 [4]"
+  stroked="f" strokecolor="black [1]">
+  <v:fill color2="white [0]"/>
+  <v:shadow color="#1c1c1c [2]"/>
+  <v:textbox style='mso-fit-shape-to-text:t'/>
+ </v:shape><![if !vml]><img border=0 v:shapes="_x0000_s40975"
+ src="slide0003_image007.gif" style='position:absolute;top:70.5%;left:39.13%;
+ width:22.09%;height:1.75%'><![endif]>
+ <div v:shape="_x0000_s40976" class=O style='mso-char-wrap:0;mso-kinsoku-overflow:
+ 0;position:absolute;top:47.25%;left:46.06%;width:4.49%;height:6.5%'><span
+ style='font-family:Tahoma;font-size:156%'>&#946;</span><span style='font-family:
+ Tahoma;font-size:103%;position:relative;top:-.45em;mso-text-raise:30%'>d</span></div>
+ <div v:shape="_x0000_s40977" class=O style='mso-char-wrap:0;mso-kinsoku-overflow:
+ 0;position:absolute;top:62.75%;left:46.06%;width:4.49%;height:6.5%'><span
+ style='font-family:Tahoma;font-size:156%'>&#946;</span><span style='font-family:
+ Tahoma;font-size:103%;position:relative;top:-.45em;mso-text-raise:30%'>e</span></div>
+ <div v:shape="_x0000_s40979" class=O>
+ <div style='mso-char-wrap:0;mso-kinsoku-overflow:0;position:absolute;
+ top:72.75%;left:18.53%;width:15.54%;height:5.5%'><span style='font-family:
+ Tahoma;font-size:133%'>shared&#13;</span></div>
+ <div style='mso-char-wrap:0;mso-kinsoku-overflow:0;position:absolute;
+ top:78.25%;left:18.53%;width:18.53%;height:5.5%'><span style='font-family:
+ Tahoma;font-size:133%'>secret: &#946;</span><span style='font-family:Tahoma;
+ font-size:89%;position:relative;top:-.45em;mso-text-raise:30%'>de</span></div>
+ </div>
+ <div v:shape="_x0000_s40980" class=O>
+ <div style='mso-char-wrap:0;mso-kinsoku-overflow:0;position:absolute;
+ top:72.75%;left:67.6%;width:15.54%;height:5.5%'><span style='font-family:Tahoma;
+ font-size:133%'>shared&#13;</span></div>
+ <div style='mso-char-wrap:0;mso-kinsoku-overflow:0;position:absolute;
+ top:78.25%;left:67.6%;width:18.53%;height:5.5%'><span style='font-family:Tahoma;
+ font-size:133%'>secret: &#946;</span><span style='font-family:Tahoma;
+ font-size:89%;position:relative;top:-.45em;mso-text-raise:30%'>de</span></div>
+ </div>
+ <div v:shape="_x0000_s40981" class=O style='mso-line-spacing:"100 50 0";
+ mso-char-wrap:0;mso-kinsoku-overflow:0'><span style='position:absolute;
+ top:54.0%;left:20.22%;width:10.86%;height:5.5%'><span style='font-family:Tahoma;
+ font-size:133%'>secret </span></span><span style='position:absolute;
+ top:59.25%;left:20.22%;width:11.23%;height:5.5%'><span style='font-family:
+ Tahoma;font-size:133%'>key: d</span></span></div>
+ <div v:shape="_x0000_s40982" class=O style='mso-line-spacing:"100 50 0";
+ mso-char-wrap:0;mso-kinsoku-overflow:0'><span style='position:absolute;
+ top:54.0%;left:70.22%;width:10.86%;height:5.5%'><span style='font-family:Tahoma;
+ font-size:133%'>secret </span></span><span style='position:absolute;
+ top:59.25%;left:70.22%;width:11.04%;height:5.5%'><span style='font-family:
+ Tahoma;font-size:133%'>key: e</span></span></div>
+ <v:rect id="_x0000_s40984" style='position:absolute;left:90pt;top:192pt;
+  width:180pt;height:276pt;mso-wrap-style:none;v-text-anchor:middle' filled="f"
+  fillcolor="#00e4a8 [4]" strokecolor="black [1]">
+  <v:fill color2="white [0]"/>
+  <v:shadow color="#1c1c1c [2]"/>
+ </v:rect><v:rect id="_x0000_s40985" style='position:absolute;left:444pt;top:192pt;
+  width:180pt;height:276pt;mso-wrap-style:none;v-text-anchor:middle' filled="f"
+  fillcolor="#00e4a8 [4]" strokecolor="black [1]">
+  <v:fill color2="white [0]"/>
+  <v:shadow color="#1c1c1c [2]"/>
+ </v:rect><![if !vml]><img border=0 v:shapes="_x0000_s40984,_x0000_s40985"
+ src="slide0003_image008.gif" style='position:absolute;top:35.5%;left:12.35%;
+ width:74.53%;height:51.75%'><![endif]></p:slide></div>
+
+</body>
+
+</html>

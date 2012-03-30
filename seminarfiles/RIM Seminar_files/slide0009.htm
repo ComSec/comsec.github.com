@@ -1,0 +1,189 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:p="urn:schemas-microsoft-com:office:powerpoint"
+xmlns:oa="urn:schemas-microsoft-com:office:activation"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=PowerPoint.Slide>
+<meta name=Generator content="Microsoft PowerPoint 10">
+<link id=Main-File rel=Main-File href="../RIM%20Seminar.htm">
+<link rel=Preview href=preview.wmf>
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+p\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+v\:textbox {display:none;}
+</style>
+<![endif]-->
+<title>Gong-Harn Public-key Digital Signature Scheme</title>
+<meta name=Description content="6/2/2004: GH-DSA: Signing">
+<link rel=Stylesheet href="master04_stylesheet.css">
+<![if !ppt]>
+<style media=print>
+<!--.sld
+	{left:0px !important;
+	width:6.0in !important;
+	height:4.5in !important;
+	font-size:107% !important;}
+-->
+</style>
+<script src=script.js></script><script><!--
+if( !IsNts() ) Redirect( "PPTSld" );
+//--></script><!--[if vml]><script>g_vml = 1;
+</script><![endif]--><![endif]><o:shapelayout v:ext="edit">
+ <o:idmap v:ext="edit" data="21"/>
+ <o:regrouptable v:ext="edit">
+  <o:entry new="1" old="0"/>
+  <o:entry new="2" old="0"/>
+ </o:regrouptable>
+</o:shapelayout>
+</head>
+
+<body lang=EN-US style='margin:0px;background-color:black'
+onclick="DocumentOnClick()" onresize="_RSW()" onload="LoadSld()"
+onkeypress="_KPH()">
+
+<div id=SlideObj class=sld style='position:absolute;top:0px;left:0px;
+width:534px;height:400px;font-size:16px;background-color:white;clip:rect(0%, 101%, 101%, 0%);
+visibility:hidden'><p:slide coordsize="720,540"
+ colors="#FFFFFF,#000000,#808080,#000000,#BBE0E3,#333399,#009999,#99CC00"
+ masterhref="master04.xml">
+ <p:shaperange href="master04.xml#_x0000_s4097"/><![if !ppt]><p:shaperange
+  href="master04.xml#_x0000_s4103"/><![if !vml]><img border=0
+ v:shapes="_x0000_s4103" src="master04_image001.gif" style='position:absolute;
+ top:0%;left:0%;width:100.37%;height:21.5%'><![endif]><p:shaperange
+  href="master04.xml#_x0000_s4100"/><p:shaperange
+  href="master04.xml#_x0000_s4101"/><![endif]><p:shaperange
+  href="master04.xml#_x0000_m4098"/><v:shape id="_x0000_s21506" type="#_x0000_m4098"
+  style='position:absolute;left:36.375pt;top:0;width:647.25pt;height:111.625pt'>
+  <v:fill o:detectmouseclick="f"/>
+  <v:stroke o:forcedash="f"/>
+  <o:lock v:ext="edit" text="f"/>
+  <p:placeholder type="title"/></v:shape><p:shaperange
+  href="master04.xml#_x0000_m4099"/><v:shape id="_x0000_s21507" type="#_x0000_m4099"
+  style='position:absolute;left:36pt;top:126pt;width:9in;height:370.75pt'>
+  <v:fill o:detectmouseclick="f"/>
+  <v:stroke o:forcedash="f"/>
+  <o:lock v:ext="edit" text="f"/>
+  <p:placeholder type="body" position="1"/></v:shape>
+ <div v:shape="_x0000_s21506" class=T style='position:absolute;top:6.25%;
+ left:5.99%;width:88.01%;height:8.5%'><span style='font-size:91%'>GH-DSA:
+ Signing</span></div>
+ <div v:shape="_x0000_s21507">
+ <div class=B2 style='mso-margin-left-alt:1048;mso-text-indent-alt:760'></div>
+ <div class=B3 style='mso-margin-left-alt:1360;mso-text-indent-alt:1120'></div>
+ <div class=B4 style='mso-margin-left-alt:1672;mso-text-indent-alt:1432'></div>
+ <div class=B style='mso-line-spacing:"80 20 0";mso-margin-left-alt:240;
+ position:absolute;top:23.5%;left:5.99%;width:88.2%;height:5.25%'><span
+ style='mso-special-format:nobullet;display:none'>•</span><span
+ style='font-size:86%'>System Parameters:&#13;</span></div>
+ <div class=B1 style='mso-line-spacing:"80 20 0";mso-margin-left-alt:504;
+ position:absolute;top:28.75%;left:11.04%;width:89.51%;height:4.5%'><span
+ style='mso-special-format:nobullet;display:none'>–</span><span
+ style='font-size:83%'><i>f(x) = x</i></span><span style='font-size:55%;
+ position:relative;top:-.45em;mso-text-raise:30%'><i>3</i></span><span
+ style='font-size:83%'><i><span style='mso-spacerun:yes'> </span>– ax</i></span><span
+ style='font-size:55%;position:relative;top:-.45em;mso-text-raise:30%'><i>2</i></span><span
+ style='font-size:83%'><i><span style='mso-spacerun:yes'> </span>+ bx – 1</i></span><span
+ style='font-size:83%'>, an irreducible polynomial over GF(</span><span
+ style='font-size:83%'><i>p</i></span><span style='font-size:83%'>), &#13;</span></div>
+ <div class=B1 style='mso-line-spacing:"80 20 0";mso-margin-left-alt:504;
+ position:absolute;top:33.25%;left:11.04%;width:94.0%;height:4.5%'><span
+ style='mso-special-format:nobullet;display:none'>–</span><span
+ style='font-size:83%'>where </span><span style='font-size:83%'><i>p</i></span><span
+ style='font-size:83%'> is a prime number.<span style='mso-spacerun:yes'> 
+ </span>Period is </span><span style='font-size:83%'><i>Q </i></span><span
+ style='font-size:83%'>is a factor of </span><span style='font-size:83%'><i>p</i></span><span
+ style='font-size:55%;position:relative;top:-.45em;mso-text-raise:30%'><i>2</i></span><span
+ style='font-size:83%'><i><span style='mso-spacerun:yes'> </span>+ p + 1.&#13;</i></span></div>
+ <div class=B style='mso-line-spacing:"80 20 0";mso-margin-left-alt:240;
+ position:absolute;top:37.75%;left:5.99%;width:88.2%;height:5.25%'><span
+ style='mso-special-format:nobullet;display:none'>•</span><span
+ style='font-size:86%;display:none'>&#13;</span></div>
+ <div class=B style='mso-line-spacing:"80 20 0";mso-margin-left-alt:240;
+ position:absolute;top:43.0%;left:5.99%;width:88.2%;height:5.25%'><span
+ style='mso-special-format:nobullet;display:none'>•</span><span
+ style='font-size:86%'>Signing process:&#13;</span></div>
+ <div class=B1 style='mso-line-spacing:"80 20 0";mso-margin-left-alt:504;
+ position:absolute;top:48.25%;left:11.04%;width:83.14%;height:4.5%'><span
+ style='position:absolute;top:0%;left:4.5%;width:95.49%;height:100.0%'><span
+ style='font-size:83%'><span style='mso-special-format:"numbullet3\,1";
+ position:absolute;left:-4.71%'>1.</span></span><span style='font-size:83%'>Compute
+ public key pair (Algorithm 1).&#13;</span></span></div>
+ <div class=B1 style='mso-line-spacing:"80 20 0";mso-margin-left-alt:504'><span
+ style='position:absolute;top:52.75%;left:14.79%;width:93.82%;height:4.5%'><span
+ style='font-size:83%'><span style='mso-special-format:"numbullet3\,1";
+ position:absolute;left:-3.99%'>2.</span></span><span style='font-size:83%'>Randomly
+ choose </span><span style='font-size:83%'><i>k</i></span><span
+ style='font-size:83%'>, with 0 &lt; </span><span style='font-size:83%'><i>k</i></span><span
+ style='font-size:83%'> &lt; </span><span style='font-size:83%'><i>Q</i></span><span
+ style='font-size:83%'> and </span><span style='font-size:83%'><i>gcd(k,Q) = 1</i></span><span
+ style='font-size:83%'>.<span style='mso-spacerun:yes'>  </span>Compute </span></span><span
+ style='position:absolute;top:56.25%;left:14.79%;width:79.4%;height:4.5%'><span
+ style='font-size:83%'><i>s</i></span><span style='font-size:55%;position:relative;
+ top:.37em;mso-text-raise:-25%'><i>k</i></span><span style='font-size:83%'><i><span
+ style='mso-spacerun:yes'> </span></i></span><span style='font-size:83%'>(Algorithm
+ 1).<span style='mso-spacerun:yes'>  </span>Set </span><span style='font-size:
+ 83%'><i>r = s</i></span><span style='font-size:55%;position:relative;
+ top:.37em;mso-text-raise:-25%'><i>k</i></span><span style='font-size:83%'><span
+ style='mso-spacerun:yes'> </span>if </span><span style='font-size:83%'><i>gcd(s</i></span><span
+ style='font-size:55%;position:relative;top:.37em;mso-text-raise:-25%'><i>k</i></span><span
+ style='font-size:83%'><i>,Q) = 1</i></span><span style='font-size:83%'>.&#13;</span></span></div>
+ <div class=B1 style='mso-line-spacing:"80 20 0";mso-margin-left-alt:504'><span
+ style='position:absolute;top:60.75%;left:14.79%;width:90.63%;height:4.5%'><span
+ style='font-size:83%'><span style='mso-special-format:"numbullet3\,1";
+ position:absolute;left:-4.13%'>3.</span></span><span style='font-size:83%'>Compute
+ </span><span style='font-size:83%'><i>h = h(m)</i></span><span
+ style='font-size:83%'>, where </span><span style='font-size:83%'><i>m</i></span><span
+ style='font-size:83%'> is the message to be signed and </span></span><span
+ style='position:absolute;top:64.25%;left:14.79%;width:79.4%;height:4.5%'><span
+ style='font-size:83%'><i>h(</i></span><span style='mso-bidi-font-family:Arial;
+ font-size:83%'><i>·)</i></span><span style='mso-bidi-font-family:Arial;
+ font-size:83%'> is a hash function.&#13;</span></span></div>
+ <div class=B1 style='mso-line-spacing:"80 20 0";mso-margin-left-alt:504;
+ position:absolute;top:68.75%;left:11.04%;width:83.14%;height:4.5%'><span
+ style='position:absolute;top:0%;left:4.5%;width:95.49%;height:100.0%'><span
+ style='font-size:83%'><span style='mso-special-format:"numbullet3\,1";
+ position:absolute;left:-4.71%'>4.</span></span><span style='mso-bidi-font-family:
+ Arial;font-size:83%'>Compute </span><span style='mso-bidi-font-family:Arial;
+ font-size:83%'><i>t = k</i></span><span style='mso-bidi-font-family:Arial;
+ font-size:55%;position:relative;top:-.45em;mso-text-raise:30%'><i>-1</i></span><span
+ style='mso-bidi-font-family:Arial;font-size:83%'><i>(h - rx) mod Q.&#13;</i></span></span></div>
+ <div class=B style='mso-line-spacing:"80 20 0";mso-margin-left-alt:240;
+ position:absolute;top:73.25%;left:5.99%;width:88.2%;height:5.25%'><span
+ style='position:absolute;top:0%;left:4.67%;width:95.32%;height:100.0%'><span
+ style='font-size:86%;visibility:hidden'><span style='mso-special-format:bullet;
+ position:absolute;left:-4.89%'>•</span></span><span style='mso-bidi-font-family:
+ Arial;font-size:86%;display:none'><i>&#13;</i></span></span></div>
+ <div class=B style='mso-line-spacing:"80 20 0";mso-margin-left-alt:240'><span
+ style='position:absolute;top:78.5%;left:10.11%;width:100.74%;height:5.25%'><span
+ style='font-size:86%'><span style='mso-special-format:bullet;position:absolute;
+ left:-4.08%'>•</span></span><span style='mso-bidi-font-family:Arial;
+ font-size:86%'><i>(r, t)</i></span><span style='mso-bidi-font-family:Arial;
+ font-size:86%'> is a digital signature of the message </span><span
+ style='mso-bidi-font-family:Arial;font-size:86%'><i>m</i></span><span
+ style='mso-bidi-font-family:Arial;font-size:86%'>.<span
+ style='mso-spacerun:yes'>  </span>Alice sends </span></span><span
+ style='position:absolute;top:82.75%;left:10.11%;width:85.58%;height:5.25%'><span
+ style='mso-bidi-font-family:Arial;font-size:86%'><i>(m,r,t), (s</i></span><span
+ style='mso-bidi-font-family:Arial;font-size:57%;position:relative;top:.37em;
+ mso-text-raise:-25%'><i>x</i></span><span style='mso-bidi-font-family:Arial;
+ font-size:86%'><i>, s</i></span><span style='mso-bidi-font-family:Arial;
+ font-size:57%;position:relative;top:.37em;mso-text-raise:-25%'><i>x+1</i></span><span
+ style='mso-bidi-font-family:Arial;font-size:86%'><i>), (s</i></span><span
+ style='mso-bidi-font-family:Arial;font-size:57%;position:relative;top:.37em;
+ mso-text-raise:-25%'><i>k</i></span><span style='mso-bidi-font-family:Arial;
+ font-size:86%'><i>, s</i></span><span style='mso-bidi-font-family:Arial;
+ font-size:57%;position:relative;top:.37em;mso-text-raise:-25%'><i>k+1</i></span><span
+ style='mso-bidi-font-family:Arial;font-size:86%'><i>) </i></span><span
+ style='mso-bidi-font-family:Arial;font-size:86%'>and their duals to Bob.</span></span></div>
+ </div>
+</p:slide></div>
+
+</body>
+
+</html>

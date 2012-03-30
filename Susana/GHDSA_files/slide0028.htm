@@ -1,0 +1,210 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:p="urn:schemas-microsoft-com:office:powerpoint"
+xmlns:oa="urn:schemas-microsoft-com:office:activation"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=PowerPoint.Slide>
+<meta name=Generator content="Microsoft PowerPoint 10">
+<link id=Main-File rel=Main-File href="../GHDSA.htm">
+<link rel=Preview href=preview.wmf>
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+p\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+v\:textbox {display:none;}
+</style>
+<![endif]-->
+<title>Gong-Harn Public-key Digital Signature Scheme</title>
+<meta name=Description content="10/8/2003: Software Design">
+<link rel=Stylesheet href="master04_stylesheet.css">
+<![if !ppt]>
+<style media=print>
+<!--.sld
+	{left:0px !important;
+	width:6.0in !important;
+	height:4.5in !important;
+	font-size:107% !important;}
+-->
+</style>
+<script src=script.js></script><script><!--
+if( !IsNts() ) Redirect( "PPTSld" );
+//--></script><!--[if vml]><script>g_vml = 1;
+</script><![endif]--><![endif]><o:shapelayout v:ext="edit">
+ <o:idmap v:ext="edit" data="44"/>
+</o:shapelayout>
+</head>
+
+<body lang=EN-US style='margin:0px;background-color:black'
+onclick="DocumentOnClick()" onresize="_RSW()" onload="LoadSld()"
+onkeypress="_KPH()">
+
+<div id=SlideObj class=sld style='position:absolute;top:0px;left:0px;
+width:534px;height:400px;font-size:16px;background-color:white;clip:rect(0%, 101%, 101%, 0%);
+visibility:hidden'><p:slide coordsize="720,540"
+ colors="#FFFFFF,#000000,#808080,#000000,#BBE0E3,#333399,#009999,#99CC00"
+ masterhref="master04.xml">
+ <p:shaperange href="master04.xml#_x0000_s4097"/><![if !ppt]><p:shaperange
+  href="master04.xml#_x0000_s4103"/><![if !vml]><img border=0
+ v:shapes="_x0000_s4103" src="master04_image003.gif" style='position:absolute;
+ top:0%;left:0%;width:100.37%;height:21.5%'><![endif]><p:shaperange
+  href="master04.xml#_x0000_s4100"/><p:shaperange
+  href="master04.xml#_x0000_s4101"/><p:shaperange
+  href="master04.xml#_x0000_s4104"/><![if !vml]><img border=0
+ v:shapes="_x0000_s4104" src="master04_image004.jpg" style='position:absolute;
+ top:0%;left:1.68%;width:20.78%;height:20.75%'><![endif]><![endif]><p:shaperange
+  href="master04.xml#_x0000_m4098"/><v:shape id="_x0000_s45058" type="#_x0000_m4098"
+  style='position:absolute;left:162pt;top:0;width:558pt;height:111.625pt'>
+  <v:fill o:detectmouseclick="f"/>
+  <v:stroke o:forcedash="f"/>
+  <o:lock v:ext="edit" text="f"/>
+  <p:placeholder type="title"/></v:shape><p:shaperange
+  href="master04.xml#_x0000_m4099"/><v:shape id="_x0000_s45059" type="#_x0000_m4099"
+  style='position:absolute;left:36pt;top:126pt;width:9in;height:356.375pt'>
+  <v:fill o:detectmouseclick="f"/>
+  <v:stroke o:forcedash="f"/>
+  <o:lock v:ext="edit" text="f"/>
+  <p:placeholder type="body" position="1"/></v:shape>
+ <div v:shape="_x0000_s45058" class=T style='position:absolute;top:6.0%;
+ left:23.59%;width:75.65%;height:9.25%'>Software Design</div>
+ <div v:shape="_x0000_s45059">
+ <div class=B3 style='mso-margin-left-alt:1460;mso-text-indent-alt:1200'></div>
+ <div class=B4 style='mso-margin-left-alt:1792;mso-text-indent-alt:1532'></div>
+ <div class=B style='mso-line-spacing:"90 20 0";mso-margin-left-alt:336;
+ position:absolute;top:23.75%;left:5.99%;width:88.2%;height:5.25%'><span
+ style='position:absolute;top:0%;left:6.58%;width:93.41%;height:100.0%'><span
+ style='font-size:86%'><span style='mso-special-format:bullet;position:absolute;
+ left:-7.04%'>•</span></span><span style='font-size:86%'>Verification
+ Process:&#13;</span></span></div>
+ <div class=B1 style='mso-line-spacing:"90 20 0";mso-margin-left-alt:576;
+ position:absolute;top:29.5%;left:11.04%;width:83.14%;height:4.5%'><span
+ style='position:absolute;top:0%;left:5.85%;width:93.91%;height:100.0%'><span
+ style='font-size:83%'><span style='mso-special-format:"numbullet3\,1";
+ position:absolute;left:-6.23%'>1.</span></span><span style='font-size:83%'>Input
+ (m, r, t), (s</span><span style='font-size:55%;position:relative;top:.37em;
+ mso-text-raise:-25%'>x</span><span style='font-size:83%'>, s</span><span
+ style='font-size:55%;position:relative;top:.37em;mso-text-raise:-25%'>-x</span><span
+ style='font-size:83%'>), (s</span><span style='font-size:55%;position:relative;
+ top:.37em;mso-text-raise:-25%'>k</span><span style='font-size:83%'>, s</span><span
+ style='font-size:55%;position:relative;top:.37em;mso-text-raise:-25%'>k+1</span><span
+ style='font-size:83%'>) and its dual.&#13;</span></span></div>
+ <div class=B1 style='mso-line-spacing:"90 20 0";mso-margin-left-alt:576;
+ position:absolute;top:34.5%;left:11.04%;width:83.14%;height:4.5%'><span
+ style='position:absolute;top:0%;left:5.85%;width:93.91%;height:100.0%'><span
+ style='font-size:83%'><span style='mso-special-format:"numbullet3\,1";
+ position:absolute;left:-6.23%'>2.</span></span><span style='font-size:83%'>Compute
+ s</span><span style='font-family:Symbol;font-size:55%;position:relative;
+ top:.37em;mso-text-raise:-25%;mso-char-type:symbol'>±</span><span
+ style='font-size:55%;position:relative;top:.37em;mso-text-raise:-25%'>(k-1)</span><span
+ style='font-size:83%'>.&#13;</span></span></div>
+ <div class=B1 style='mso-line-spacing:"90 20 0";mso-margin-left-alt:576;
+ position:absolute;top:39.25%;left:11.04%;width:83.14%;height:4.5%'><span
+ style='position:absolute;top:0%;left:5.85%;width:93.91%;height:100.0%'><span
+ style='font-size:83%'><span style='mso-special-format:"numbullet3\,1";
+ position:absolute;left:-6.23%'>3.</span></span><span style='font-size:83%'>If
+ gcd(t, Q) = 1, then&#13;</span></span></div>
+ <div class=B2 style='mso-line-spacing:"90 20 0";mso-margin-left-alt:864;
+ position:absolute;top:44.25%;left:15.91%;width:78.08%;height:4.5%'><span
+ style='position:absolute;top:0%;left:6.47%;width:93.76%;height:100.0%'><span
+ style='font-size:83%'><span style='mso-special-format:"numbullet6\,1";
+ position:absolute;left:-6.9%'>i.</span></span><span style='font-size:83%'>u =
+ -r</span><span style='font-size:55%;position:relative;top:-.45em;mso-text-raise:
+ 30%'>-1</span><span style='font-size:83%'>t mod Q, v = -ht</span><span
+ style='font-size:55%;position:relative;top:-.45em;mso-text-raise:30%'>-1</span><span
+ style='font-size:83%'><span style='mso-spacerun:yes'> </span>mod Q&#13;</span></span></div>
+ <div class=B2 style='mso-line-spacing:"90 20 0";mso-margin-left-alt:864;
+ position:absolute;top:49.0%;left:15.91%;width:78.08%;height:4.5%'><span
+ style='position:absolute;top:0%;left:6.47%;width:93.76%;height:100.0%'><span
+ style='font-size:83%'><span style='mso-special-format:"numbullet6\,1";
+ position:absolute;left:-6.9%'>ii.</span></span><span style='font-size:83%'>Compute
+ s</span><span style='font-family:Symbol;font-size:55%;position:relative;
+ top:.37em;mso-text-raise:-25%;mso-char-type:symbol'>±</span><span
+ style='font-size:55%;position:relative;top:.37em;mso-text-raise:-25%'>u(k+v)</span><span
+ style='font-size:83%;display:none'>&#13;</span></span></div>
+ <div class=B2 style='mso-line-spacing:"90 20 0";mso-margin-left-alt:864;
+ position:absolute;top:54.0%;left:15.91%;width:78.08%;height:4.5%'><span
+ style='position:absolute;top:0%;left:6.47%;width:93.76%;height:100.0%'><span
+ style='font-size:83%'><span style='mso-special-format:"numbullet6\,1";
+ position:absolute;left:-6.9%'>iii.</span></span><span style='font-size:83%'>Verify
+ if </span><span style='font-size:83%'>s</span><span style='font-family:Symbol;
+ font-size:55%;position:relative;top:.37em;mso-text-raise:-25%;mso-char-type:
+ symbol'>±</span><span style='font-size:55%;position:relative;top:.37em;
+ mso-text-raise:-25%'>u(k+v)</span><span style='font-size:83%'><span
+ style='mso-spacerun:yes'> </span>= </span><span style='font-size:83%'>s</span><span
+ style='font-family:Symbol;font-size:55%;position:relative;top:.37em;
+ mso-text-raise:-25%;mso-char-type:symbol'>±</span><span style='font-size:55%;
+ position:relative;top:.37em;mso-text-raise:-25%'>x</span><span
+ style='font-size:83%;display:none'>&#13;</span></span></div>
+ <div class=B1 style='mso-line-spacing:"90 20 0";mso-margin-left-alt:576;
+ position:absolute;top:58.5%;left:11.04%;width:83.14%;height:4.75%'><span
+ style='position:absolute;top:0%;left:5.85%;width:93.91%;height:100.0%'><span
+ style='font-size:83%'><span style='mso-special-format:"numbullet3\,1";
+ position:absolute;left:-6.23%'>4.</span></span><span style='font-size:83%'>If
+ gcd(t, Q) </span><span style='font-family:Symbol;font-size:83%;mso-char-type:
+ symbol'>¹</span><span style='font-size:83%'> 1, then&#13;</span></span></div>
+ <div class=B2 style='mso-line-spacing:"90 20 0";mso-margin-left-alt:864;
+ position:absolute;top:63.75%;left:15.91%;width:78.08%;height:4.5%'><span
+ style='position:absolute;top:0%;left:6.47%;width:93.76%;height:100.0%'><span
+ style='font-size:83%'><span style='mso-special-format:"numbullet6\,1";
+ position:absolute;left:-6.9%'>i.</span></span><span style='font-size:83%'>u =
+ -r mod Q, v = -hr</span><span style='font-size:55%;position:relative;
+ top:-.45em;mso-text-raise:30%'>-1</span><span style='font-size:83%'><span
+ style='mso-spacerun:yes'> </span>mod Q&#13;</span></span></div>
+ <div class=B2 style='mso-line-spacing:"90 20 0";mso-margin-left-alt:864;
+ position:absolute;top:68.75%;left:15.91%;width:78.08%;height:4.5%'><span
+ style='position:absolute;top:0%;left:6.47%;width:93.76%;height:100.0%'><span
+ style='font-size:83%'><span style='mso-special-format:"numbullet6\,1";
+ position:absolute;left:-6.9%'>ii.</span></span><span style='font-size:83%'>Compute
+ s</span><span style='font-family:Symbol;font-size:55%;position:relative;
+ top:.37em;mso-text-raise:-25%;mso-char-type:symbol'>±</span><span
+ style='font-size:55%;position:relative;top:.37em;mso-text-raise:-25%'>u(x+v)&#13;</span></span></div>
+ <div class=B2 style='mso-line-spacing:"90 20 0";mso-margin-left-alt:864;
+ position:absolute;top:73.5%;left:15.91%;width:78.08%;height:4.5%'><span
+ style='position:absolute;top:0%;left:6.47%;width:93.76%;height:100.0%'><span
+ style='font-size:83%'><span style='mso-special-format:"numbullet6\,1";
+ position:absolute;left:-6.9%'>iii.</span></span><span style='font-size:83%'>Compute
+ s </span><span style='font-family:Symbol;font-size:55%;position:relative;
+ top:.37em;mso-text-raise:-25%;mso-char-type:symbol'>±</span><span
+ style='font-size:55%;position:relative;top:.37em;mso-text-raise:-25%'>kt&#13;</span></span></div>
+ <div class=B2 style='mso-line-spacing:"90 20 0";mso-margin-left-alt:864;
+ position:absolute;top:78.5%;left:15.91%;width:78.08%;height:4.5%'><span
+ style='position:absolute;top:0%;left:6.47%;width:93.76%;height:100.0%'><span
+ style='font-size:83%'><span style='mso-special-format:"numbullet6\,1";
+ position:absolute;left:-6.9%'>iv.</span></span><span style='font-size:83%'>Verify
+ if </span><span style='font-size:83%'>s</span><span style='font-family:Symbol;
+ font-size:55%;position:relative;top:.37em;mso-text-raise:-25%;mso-char-type:
+ symbol'>±</span><span style='font-size:55%;position:relative;top:.37em;
+ mso-text-raise:-25%'>u(x+v)</span><span style='font-size:83%'><span
+ style='mso-spacerun:yes'> </span>= </span><span style='font-size:83%'>s</span><span
+ style='font-family:Symbol;font-size:55%;position:relative;top:.37em;
+ mso-text-raise:-25%;mso-char-type:symbol'>±</span><span style='font-size:55%;
+ position:relative;top:.37em;mso-text-raise:-25%'>kt</span><span
+ style='font-size:83%;display:none'>&#13;</span></span></div>
+ <div class=B1 style='mso-line-spacing:"90 20 0";mso-margin-left-alt:576;
+ position:absolute;top:83.25%;left:11.04%;width:83.14%;height:4.5%'><span
+ style='position:absolute;top:0%;left:5.85%;width:93.91%;height:100.0%'><span
+ style='font-size:83%'><span style='mso-special-format:"numbullet3\,1";
+ position:absolute;left:-6.23%'>5.</span></span><span style='font-size:83%'>Accept
+ signature if sequence terms match&#13;</span></span></div>
+ <div class=B1 style='mso-line-spacing:"90 20 0";mso-margin-left-alt:576;
+ position:absolute;top:88.25%;left:11.04%;width:83.14%;height:4.5%'><span
+ style='position:absolute;top:0%;left:5.85%;width:93.91%;height:100.0%'><span
+ style='font-size:83%;visibility:hidden'><span style='mso-special-format:"numbullet3\,1";
+ position:absolute;left:-6.23%'>6.</span></span><span style='font-size:83%;
+ display:none'>&#13;</span></span></div>
+ <div class=B1 style='mso-line-spacing:"90 20 0";mso-margin-left-alt:576;
+ position:absolute;top:93.0%;left:11.04%;width:83.14%;height:4.5%'><span
+ style='position:absolute;top:0%;left:5.85%;width:93.91%;height:100.0%'><span
+ style='font-size:83%;visibility:hidden'><span style='mso-special-format:bullet;
+ position:absolute;left:-6.23%'>–</span></span><span style='font-size:83%;
+ mso-special-format:lastCR;display:none'>&#13;</span></span></div>
+ </div>
+</p:slide></div>
+
+</body>
+
+</html>

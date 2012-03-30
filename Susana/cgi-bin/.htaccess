@@ -1,0 +1,4 @@
+AddType application/x-httpd-cgi .cgi
+AddType application/x-httpd-cgi .pl
+
+

@@ -1,0 +1,1152 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=PowerPoint.Slide>
+<meta name=Generator content="Microsoft PowerPoint 10">
+<link id=Main-File rel=Main-File href="../GHDSA.htm">
+<link rel=Preview href=preview.wmf>
+<meta name=Robots content=NoIndex>
+<script src=script.js></script><script><!--
+if( !(IsWin("PPTOtl")||IsWin("PPTNav")||IsWin("PPTOtlNav")) )
+{
+	obj = GetObj("Main-File")
+	parent.location.href=obj.href
+}
+var gOtlHiliteClr="#ffffff",gOtlNormalClr="#000000",gOtlActiveClr="#ffff00",gSelected="",gTxtState=false,gChildEntryTable=new Array()
+function Load()
+{
+	if( IsWin("PPTOtl" ) ){ LoadOtl(); parent.gOtlLoaded=true; return }
+	if( g_supportsPPTHTML ) {
+		if( IsWin("PPTNav" ) ){ LoadNav("NavObj",UpdNav); parent.gNavLoaded=true; return }
+		if( IsWin("PPTOtlNav" ) ){ LoadNav("OtlNavObj",UpdOtlNav); parent.gOtlNavLoaded=true; return }
+	}
+}
+function Upd(){ if( IsWin("PPTNav") ) LoadNav("NavObj",UpdNav) }
+function LoadNav( oId,UpdFunc )
+{
+	document.ondragstart=CancelDrag
+	document.onselectstart=CancelDrag
+	document.body.style.margin=2
+	UpdFunc()
+	obj=document.all.item(oId)
+	obj.style.display="block"
+	obj.style.visibility="visible"
+	document.bgColor="threedface"
+	if( parent.frames["PPTNts"] )
+		notesBtn.style.display = ""
+	if( parent.gHasNarration )
+		nb_voiceBorder.style.display = ""
+}
+function LoadOtl()
+{
+	var otl=GetObj("OtlObj")
+	otl.style.display="block"
+	otl.style.visibility="visible"
+	if( gOtlActiveClr == "" ) gOtlActiveClr=document.linkColor
+	if( gOtlHiliteClr == "" ) gOtlHiliteClr=document.fgColor
+	if( gOtlNormalClr == "" )
+		gOtlNormalClr=document.bgColor
+	else
+		document.bgColor=gOtlNormalClr
+	InitArray()
+	if( ObjExists( parent.gCurSld ) ) {
+		ChangeState( parent.gCurSld,gOtlNormalClr,gOtlHiliteClr )
+		gSelected=parent.gCurSld
+	}
+	else gSelected = -1
+	UpdOtl()
+}
+function UpdOtl(){ UpdIdx(parent.gCurSld) }
+function UpdIdx( idx )
+{
+	if( gSelected != idx ) {
+		if( gSelected > 0 )
+			ChangeState( gSelected,gOtlHiliteClr,gOtlNormalClr )
+		if( ObjExists( idx ) ) {
+			gSelected = idx
+			ChangeState( gSelected,gOtlNormalClr,gOtlHiliteClr )
+		}
+		else gSelected = -1
+	}
+	if( gTxtState != parent.gOtlTxtExp ) {
+		state = "block"
+		if( !parent.gOtlTxtExp )
+			state="none"
+		for(ii=0; ii<gChildEntryTable.length; ii++) {
+			obj=gChildEntryTable[ii];
+			if( obj.id == null ) continue;
+			if( obj.id.indexOf("PPTC") >= 0 )
+				obj.style.display=state;
+		}
+		gTxtState=parent.gOtlTxtExp
+		if( ObjExists( gSelected ) )
+			ChangeState( gSelected,gOtlNormalClr,gOtlHiliteClr )
+	}
+}
+function InitArray()
+{
+	count=0
+	var list=GetTags(document,"DIV");
+	for(ii=0; ii<list.length; ii++) {
+		obj=list.item(ii)
+		if( obj.id == null ) continue
+		if( obj.id.indexOf("PPTC") >= 0 )
+			gChildEntryTable[count++]=obj
+	}
+}
+function ChangeState( idx,fgColor,bgColor )
+{
+	obj=GetObj("PPTL"+idx)
+	obj.style.color=fgColor
+	obj=GetObj("PPTP"+idx)
+	obj.style.backgroundColor=bgColor
+}
+function ChgClr( o,clr ){ if( o.id != "PPTL"+gSelected ) o.style.color=clr }
+function Over( src ){ ChgClr(GetLink(src),gOtlActiveClr) }
+function Out( src ){ ChgClr(GetLink(src),gOtlHiliteClr) }
+function Follow(src){ window.location.href = GetLink(src).href; }
+function ObjExists( ii ) { obj=GetObj("PPTP"+ii ); return( obj ) }
+function GoToSld( href ){ UpdIdx(parent.GetSldNum(href)); parent.GoToSld( href ) }
+function CancelDrag(){ window.event.cancelBubble=true;window.event.returnValue=false}
+function GetLink(src)
+{
+   if(src.tagName=="A") return src
+   else return GetTags(src,"A").item(0)
+}
+function UpdNav()
+{
+	txt = "<center>";
+	if( parent.GetHrefObj( parent.gCurSld ).mOrigVis == 1 )
+		txt += "Slide " + parent.GetCurSldNum() + " of " + parent.GetNumSlds()
+	else
+		txt += "Hidden Slide"
+	txt += "</center>";
+	nav_text.innerHTML = txt;
+	if( !parent.HasPrevSld() )
+		gBtnArr["nb_prev"].Enabled(0)
+	else
+		gBtnArr["nb_prev"].Enabled(1)
+	if( !parent.HasNextSld() )
+		gBtnArr["nb_next"].Enabled(0)
+	else
+		gBtnArr["nb_next"].Enabled(1)
+	gBtnArr["nb_nts"].SetEnabled()
+	gBtnArr["nb_nts"].SetFlag( parent.gHasNts )
+	gBtnArr["nb_sldshw"].Enabled(1)
+	gBtnArr["nb_voice"].Enabled(1)
+}
+function UpdOtlNav()
+{
+	gBtnArr["nb_otl"].SetEnabled();
+	if( parent.gOtlOpen )
+		gBtnArr["nb_otlTxt"].Enabled( true );
+	else
+		document.all.item("nb_otlTxtBorder").style.visibility = "hidden";
+}
+
+//--></script>
+<style>
+<!--.PTxt
+	{position:relative;
+	width:100%;
+	margin-top:5px;
+	padding-left:2px;
+	font-weight:bold;}
+.CTxt
+	{position:relative;
+	width:100%;
+	margin-top:5px;}
+a
+	{color:white;
+	text-decoration:none;}
+ul
+	{color:white;
+	margin-bottom:0px;
+	margin-left:20px;}
+.sldNum
+	{margin-top:5px;
+	color:white;}
+.button
+	{position:absolute;
+	width:32px;
+	height:20px;
+	border-style:solid;
+	border-width:1px;
+	border-color:threedface;}
+-->
+</style>
+</head>
+
+<body onload="Load()" style='margin:2px'>
+
+<div id=NavObj onload="Load()" onmouseover="BtnOnOver()"
+onmousedown="BtnOnDown()" onmouseout="BtnOnOut()" onmouseup="BtnOnUp()"
+onkeypress="_KPH()" style='display:none;visibility:hidden'>
+<table id="notesBtn" style='position:absolute;display:none;width:70px' align=left cellpadding=0
+ cellspacing=0>
+ <td nowrap>
+ <div id="nb_ntsElem" align=center style='position:relative;padding:3px;
+ font-family:Arial;color:buttontext;font-size:9pt'><img src="notes_flag.gif"
+ border=0 id="notes_flag" style='display:none'><span
+style='mso-spacerun:yes'>  </span>Notes</div>
+ <div title="Show/Hide Notes" id="nb_nts" style='position:absolute;top:0%;
+ left:0%;width:100%;height:100%'></div>
+ </td>
+</table>
+
+<table style='position:relative;width:70px' align=right cellpadding=0 cellspacing=0>
+ <td nowrap>
+ <div id="nb_sldshwText" title="Full
+Screen Slide Show" align=center style='position:relative;margin-left:20px;padding:3px;
+ font-family:Arial;color:buttontext;font-size:9pt;cursor:default'>Slide
+Show</div>
+ <div id="nb_sldshwBorder" title="Full Screen Slide Show" style='position:absolute;top:0%;left:0%;width:100%;height:20px'>
+ <div style='position:absolute;clip:rect(0px, 18px, 18px, 0px)'><img
+ src="buttons.gif" id="nb_sldshw" style='position:relative;left:-254px'></div>
+ </div>
+ </td>
+ <td>
+ <div id="nb_voiceBorder" style='display:none;position:absolute;top:0;left:-40px;
+ width:20px;height:20px'>
+ <div style='position:absolute;clip:rect(0px, 18px, 18px, 0px)'><img
+ src="buttons.gif" id="nb_voice" title="Pause/Play Narration" style='position:
+ relative;left:-290px'></div>
+ </div>
+ </td>
+</table>
+
+<table style='position:relative' align=center cellpadding=0 cellspacing=0>
+ <td nowrap>
+ <div id="nb_prevBorder" class=button style='left:-30px'>
+ <div style='position:absolute;clip:rect(0px, 30px, 18px, 0px)'><img
+ src="buttons.gif" id="nb_prev" title="Previous Slide" style='position:relative;
+ left:0px'></div>
+ </div>
+ <span id="nav_text" style='position:relative;top:3px;width:100px;font-family:
+ Arial;color:buttontext;font-size:9pt'></span>
+ <div id="nb_nextBorder" class=button>
+ <div style='position:absolute;clip:rect(0px, 30px, 18px, 0px)'><img
+ src="buttons.gif" id="nb_next" title="Next Slide" style='position:relative;
+ left:-90px'></div>
+ </div>
+ </td>
+</table>
+</div>
+
+<div id=OtlNavObj onload="Load()" onmouseover="BtnOnOver()"
+onmousedown="BtnOnDown()" onmouseout="BtnOnOut()" onmouseup="BtnOnUp()"
+onkeypress="_KPH()" style='display:none;visibility:hidden'>
+
+<table style='position:relative;width:70px' align=left cellpadding=0 cellspacing=0>
+ <td nowrap><div title="Show/Hide
+Outline" id="nb_otl"
+ style='position:absolute;top:0%;left:0%;width:100%;height:100%;cursor:default'>
+ <div id="nb_otlElem" align=center style='position:relative;padding:3px;font-family:Arial;
+ color:buttontext;font-size:9pt'>Outline</div></div>
+ </td>
+</table>
+
+<table style='position:relative' align=center cellpadding=0 cellspacing=0>
+ <td>
+ <div style='position:absolute;left:-18px;width:24px;height:20px;border-style:
+ solid;border-width:1px;border-color:threedface' id="nb_otlTxtBorder">
+ <div style='position:absolute;clip:rect(0px, 22px, 18px, 0px)'><img
+ src=buttons.gif id="nb_otlTxt" title="Expand/Collapse Outline"
+ style='position:relative;left:-157px'></div>
+ </div>
+ </td>
+</table>
+
+</div>
+
+<div id=OtlObj style='display:none;visibility:hidden;'>
+
+
+<table width="100%" style='font-family:Arial;font-size:9pt'>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>1</font></div>
+  </td>
+  <td width="100%">
+  <div id=PPTP1 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0001.htm');" id=PPTL1>Gong-Harn<br>
+    Digital Signature Algorithm</a></font></div>
+  <div id=PPTC1 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Susana Sin</li>
+   <li>October 7, 2003</li>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>2</font></div>
+  </td>
+  <td>
+  <div id=PPTP2 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0002.htm');" id=PPTL2>Outline</a></font></div>
+  <div id=PPTC2 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Gong-Harn Public-key Cryptosystem Overview</li>
+   <li>Third-order characteristic sequence</li>
+   <li>Reciprocal sequence</li>
+   <li>Algorithms for computing sequence terms</li>
+   <li>GH-DSA</li>
+   <li>Implementation</li>
+   <li>Remarks</li>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>3</font></div>
+  </td>
+  <td>
+  <div id=PPTP3 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0003.htm');" id=PPTL3>GH Public-key
+  Cryptosystem (GH-PKC) Overview</a></font></div>
+  <div id=PPTC3 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>GH-PKC is based on the 3-rd order LFSR sequence with particular phase.</li>
+   <li>GH Diffie-Hellman (GH-DH) key agreement protocol published in proceeding
+       of ChinaCrypto’1998.</li>
+   <li>GH-DH / GH-DSA was published in<span style='mso-spacerun:yes'> 
+       </span>proceeding of the 8<sup>th</sup> Annual Workshop on Selected
+       Areas in Cryptography, Aug 2001</li>
+   <li>Security is based on the difficulty in solving DL problem in GF(q<sup>3</sup>)
+       for q = p or q = p<sup>2</sup></li>
+   <ul>
+    <br>
+    <br>
+   </ul>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>4</font></div>
+  </td>
+  <td>
+  <div id=PPTP4 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0004.htm');" id=PPTL4>Third-Order
+  Characteristic Sequence</a></font></div>
+  <div id=PPTC4 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>An irreducible polynomial f(x) of degree 3 over GF(p), where p is a
+       prime number:</li>
+   <br>
+   <br>
+   <li>Initial State:</li>
+   <br>
+   <br>
+   <li>The sequence {s<sub>k</sub>} is called a 3<sup>rd</sup>-order
+       characteristic sequence.</li>
+   <li>Period of this sequence is:</li>
+   <br>
+   <br>
+   <li>k<sup>th</sup>-state of the LFSR is s<sub>k</sub> = (s<sub>k</sub>, s<sub>k+1</sub>,
+       s<sub>k+2</sub>)</li>
+   <br>
+   <br>
+   <br>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>5</font></div>
+  </td>
+  <td>
+  <div id=PPTP5 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0017.htm');" id=PPTL5>Reciprocal Sequence</a></font></div>
+  <div id=PPTC5 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Given</li>
+   <br>
+   <br>
+   <li>The reciprocal polynomial is:</li>
+   <br>
+   <br>
+   <li>Initial State:</li>
+   <br>
+   <br>
+   <li>Sequence generated by f<sup>-1</sup>(x) is also a 3<sup>rd</sup>-order
+       characteristic sequence</li>
+   <br>
+   <br>
+   <br>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>6</font></div>
+  </td>
+  <td>
+  <div id=PPTP6 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0015.htm');" id=PPTL6>Example, p = 5</a></font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>7</font></div>
+  </td>
+  <td>
+  <div id=PPTP7 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0005.htm');" id=PPTL7>Algorithms for Computing
+  Sequence Terms</a></font></div>
+  <div id=PPTC7 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Three algorithms for computing sequence term in a 3<sup>rd</sup> order
+       characteristic sequence:</li>
+   <ul>
+    <li>Dual-State Fast Evaluation Algorithm (DSEA)</li>
+    <ul>
+     <li>To compute the s<sub>k-1</sub> state and its dual</li>
+    </ul>
+    <li>Computation of a Previous Sequence Term</li>
+    <ul>
+     <li>To compute s <font face=Symbol><sub>±</sub></font><font face=Arial><sub>(k-1)</sub>
+         using (s<sub>k</sub>, s<sub>k+1</sub>) and it dual</font></li>
+    </ul>
+    <li>Computation of Mixed term</li>
+    <ul>
+     <li>To compute s<font face=Symbol><sub>±</sub></font><font face=Arial><sub>u(k+v)</sub></font></li>
+    </ul>
+   </ul>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>8</font></div>
+  </td>
+  <td>
+  <div id=PPTP8 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0014.htm');" id=PPTL8>The DSEA Algorithm</a></font></div>
+  <div id=PPTC8 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Binary rep of k:</li>
+   <br>
+   <br>
+   <li>Let		and</li>
+   <li>For k<sub>j</sub> = 0	For k<sub>j</sub> = 1</li>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <li>Interchange a and b and find the (s<sub>t’+1</sub>, s<sub>t’</sub> , s<sub>t’-1</sub>)
+       terms in sequence generated by the reciprocal polynomial which are the
+       (s<sub>-(t’+1)</sub>, s<sub>-t’</sub> , s<sub>-(t’-1)</sub>) terms in
+       the original sequence</li>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>9</font></div>
+  </td>
+  <td>
+  <div id=PPTP9 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0007.htm');" id=PPTL9>Computation of Previous
+  Sequence Term</a></font></div>
+  <div id=PPTC9 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>The 3<sup>rd</sup> order characteristic sequence has properties of
+       duality and redundancy.</li>
+   <li>Three elements in any state of the sequence are not independent.</li>
+   <li>If any two consecutive elements are known in the sequence, the third
+       remaining one can be uniquely determined.</li>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>10</font></div>
+  </td>
+  <td>
+  <div id=PPTP10 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0018.htm');" id=PPTL10>Computation of Previous
+  Sequence Term</a></font></div>
+  <div id=PPTC10 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Given (s<sub>k</sub>, s<sub>k+1</sub>) and its dual</li>
+   <li>Let</li>
+   <br>
+   <br>
+   <li>Then s<font face=Symbol><sub>±</sub></font><font face=Arial><sub>(k-1)</sub>
+       can be computed by:</font></li>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>11</font></div>
+  </td>
+  <td>
+  <div id=PPTP11 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0026.htm');" id=PPTL11>Computation of Previous
+  Sequence Term</a></font></div>
+  <div id=PPTC11 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Consider delta:</li>
+   <br>
+   <br>
+   <li>When delta equals zero,</li>
+   <br>
+   <br>
+   <li>Programs written in c++ and Maple are used to compute the value of delta
+       for all sequence terms generated by all irreducible polynomial over
+       GF(p) for prime p between 5 and 127.</li>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>12</font></div>
+  </td>
+  <td>
+  <div id=PPTP12 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0027.htm');" id=PPTL12>Computation of Previous
+  Sequence Term</a></font></div>
+  <div id=PPTC12 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>It is found that for any prime p,</li>
+   <br>
+   <br>
+   <li>ie, if k equals to either p-1 or p, the product s<sub>k+1</sub>s<sub>-(k+1)</sub>
+       equals to a*b for any prime p.<span style='mso-spacerun:yes'> 
+       </span>This restriction is added to the signing key selection.</li>
+   <li>If either a or b is zero, k will be more likely yield a zero delta.<span
+       style='mso-spacerun:yes'>  </span>Both a and b should be chosen as
+       non-zero integers.</li>
+   <li>As p increases, the percentage of delta that equals zero decreases.</li>
+   <li>With the additional restrictions on a and b and the additional rules on
+       k, it is reasonable to reduce bandwidth usage as a way of minimizing
+       cost.</li>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>13</font></div>
+  </td>
+  <td>
+  <div id=PPTP13 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0008.htm');" id=PPTL13>Computation of Mixed
+  Term s<font face=Symbol><sub>±</sub></font><font face=Arial><sub>u(k+v)</sub>
+  with Known s<sub>k-1</sub> State</font></a></font></div>
+  <div id=PPTC13 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>This algorithm is used to compute mixed terms s<font face=Symbol><sub>±</sub></font><font
+       face=Arial><sub>u(k+v)</sub> with known (s<sub>k-1</sub>, s<sub>k</sub>,
+       s<sub>k+1</sub>) and its dual.</font></li>
+   <li>The procedure is as follows:</li>
+   <ul>
+    <li>Compute the sequence terms s<font face=Symbol><sub>±</sub></font><font
+        face=Arial><sub>(k+v)</sub></font></li>
+    <li>Construct another irreducible polynomial as:</li>
+    <br>
+    <br>
+    <li>Compute the <font face=Symbol>±</font><font face=Arial>u<sup>th</sup>
+        term of sequence generate by g(x)</font></li>
+   </ul>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>14</font></div>
+  </td>
+  <td>
+  <div id=PPTP14 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0019.htm');" id=PPTL14>Computation of s<font
+  face=Symbol><sub>±</sub></font><font face=Arial><sub>(k+v)</sub></font></a></font></div>
+  <div id=PPTC14 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>s<font face=Symbol><sub>±</sub></font><font face=Arial><sub>(k+v)</sub>
+       terms cannot be computed using the DSEA algorithm</font></li>
+   <li>Instead, use a general result for LFSR sequence:</li>
+   <ul>
+    <br>
+    <br>
+   </ul>
+   <li>	Transitional Matrix =	, State Matrix =</li>
+   <br>
+   <br>
+   <li></li>
+   <li></li>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>15</font></div>
+  </td>
+  <td>
+  <div id=PPTP15 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0020.htm');" id=PPTL15>Computation of s<font
+  face=Symbol><sub>±</sub></font><font face=Arial><sub>(k+v)</sub></font></a></font></div>
+  <div id=PPTC15 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Two properties:</li>
+   <ul>
+    <li></li>
+    <li><span style='mso-spacerun:yes'> </span>		if</li>
+   </ul>
+   <br>
+   <li>If	, then</li>
+   <br>
+   <br>
+   <br>
+   <li>	where</li>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>16</font></div>
+  </td>
+  <td>
+  <div id=PPTP16 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0022.htm');" id=PPTL16>Computation of s<font
+  face=Symbol><sub>±</sub></font><font face=Arial><sub>(k+v)</sub></font></a></font></div>
+  <div id=PPTC16 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Procedure for finding s<sub>(k+v)</sub> term using s<sub>k-1</sub> state</li>
+   <ul>
+    <li>Construct Matrix M<sub>0</sub> and compute M<sub>0</sub><sup>-1</sup></li>
+    <li>Compute (s<sub>v-1</sub>, s<sub>v</sub>, s<sub>v+1</sub>) terms
+        generated by f(x) using DSEA algorithm</li>
+    <li>Compute s<sub>v-2</sub> and s<sub>v+2</sub> terms and construct Matrix
+        M<sub>v</sub></li>
+    <li>Compute s<sub>(k+v)</sub> term by:</li>
+    <br>
+    <br>
+    <li></li>
+    <li>	In particular, the s<sub>k+v</sub> term is equal to s<sub>k-1</sub>
+        multiplied by the middle column of</li>
+   </ul>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>17</font></div>
+  </td>
+  <td>
+  <div id=PPTP17 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0021.htm');" id=PPTL17>Computation of s<font
+  face=Symbol><sub>±</sub></font><font face=Arial><sub>(k+v)</sub></font></a></font></div>
+  <div id=PPTC17 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Consider M<sub>0</sub>:</li>
+   <br>
+   <br>
+   <br>
+   <br>
+   <li>Determinant of M<sub>0</sub> is:</li>
+   <br>
+   <br>
+   <li>It depends only on a and b.<span style='mso-spacerun:yes'>  </span>By
+       choosing a and b correspondingly, det(M<sub>0</sub>) can be guaranteed
+       to be non-zero.</li>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>18</font></div>
+  </td>
+  <td>
+  <div id=PPTP18 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0009.htm');" id=PPTL18>GH-DSA</a></font></div>
+  <div id=PPTC18 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>ElGamal-like signature algorithm</li>
+   <br>
+   <br>
+   <li>System Public Parameters:</li>
+   <ul>
+    <li>Irreducible polynomial f(x) = x<sup>3</sup> – ax<sup>2</sup> + bx – 1
+        over GF(p), where p is a prime number, with period Q</li>
+   </ul>
+   <li>Alice:</li>
+   <ul>
+    <li>Private Key: Choose x, with 0 &lt; x &lt; Q and gcd(x, Q) = 1</li>
+    <li>Public Key: The s<font face=Symbol><sub>±</sub></font><font face=Arial><sub>x</sub>
+        terms generate by f(x)</font></li>
+   </ul>
+   <br>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>19</font></div>
+  </td>
+  <td>
+  <div id=PPTP19 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0023.htm');" id=PPTL19>GH-DSA: Signing Process</a></font></div>
+  <div id=PPTC19 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Signing Process:</li>
+   <ul>
+    <li>Randomly choose k, with 0 &lt; k &lt; Q and gcd(k,Q) = 1.<span
+        style='mso-spacerun:yes'>  </span>Use DSEA algorithm to compute (s<sub>k-1</sub>,
+        s<sub>k</sub>, s<sub>k+1</sub>) and its dual such that gcd(s<sub>k</sub>,
+        Q) = 1.<span style='mso-spacerun:yes'>  </span>r = s<sub>k</sub></li>
+    <li>Compute h=h(m), where h() is a hash function</li>
+    <li>Solve for t in the signing equation: h <font face=Symbol>º</font><font
+        face=Arial> xr + kt mod Q </font><font face=Symbol>Þ</font><font
+        face=Arial> t </font><font face=Symbol>º</font><font face=Arial> k<sup>-1</sup>(h
+        - rx) mod Q</font></li>
+   </ul>
+   <li>(r, t) is a digital signature of the message m.<span
+       style='mso-spacerun:yes'>  </span>Alice sends Bob (m, r, t) together
+       with (s<sub>k</sub>, s<sub>k+1</sub>) and its dual.</li>
+   <ul>
+    <br>
+    <br>
+   </ul>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>20</font></div>
+  </td>
+  <td>
+  <div id=PPTP20 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0024.htm');" id=PPTL20>GH-DSA: Verification
+  Process</a></font></div>
+  <div id=PPTC20 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Signing Equation h <font face=Symbol>º</font><font face=Arial> xr + kt
+       mod Q</font></li>
+   <li>But, Bob can verify Sequence Terms</li>
+   <li>Verification Process:</li>
+   <ul>
+    <li>Compute s<font face=Symbol><sub>±</sub></font><font face=Arial><sub>(k-1)</sub>
+        using (s<sub>k</sub>, s<sub>k+1</sub>) and its dual</font></li>
+    <li>If gcd(t, Q) = 1 <font face=Symbol>Þ</font><font face=Arial> Case 1,
+        else </font><font face=Symbol>Þ</font><font face=Arial> Case 2</font></li>
+   </ul>
+   <li>Case 1:</li>
+   <ul>
+    <li>Compute u = -r<sup>-1</sup>t mod Q, v = -ht<sup>-1</sup> mod Q</li>
+    <li>Compute mixed terms s<font face=Symbol><sub>±</sub></font><font
+        face=Arial><sub>u(k+v)</sub></font></li>
+    <li>Verify sequence terms</li>
+    <br>
+    <br>
+    <br>
+   </ul>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>21</font></div>
+  </td>
+  <td>
+  <div id=PPTP21 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0025.htm');" id=PPTL21>GH-DSA: Verification
+  Process</a></font></div>
+  <div id=PPTC21 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Case 2:</li>
+   <ul>
+    <li>Compute u = -r mod Q, v = -hr<sup>-1</sup> mod Q</li>
+    <li>Compute mixed terms s<font face=Symbol><sub>±</sub></font><font
+        face=Arial><sub>u(x+v)</sub></font></li>
+    <li>Compute s<font face=Symbol><sub>±</sub></font><font face=Arial><sub>kt</sub></font></li>
+    <li>Verify sequence terms</li>
+    <br>
+    <br>
+    <br>
+    <br>
+   </ul>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>22</font></div>
+  </td>
+  <td>
+  <div id=PPTP22 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0011.htm');" id=PPTL22>Software Design</a></font></div>
+  <div id=PPTC22 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Signing Process:</li>
+   <ul>
+    <li>Input private key x.<span style='mso-spacerun:yes'>  </span>Compute (s<sub>x</sub>,
+        s<sub>-x</sub>).</li>
+    <li>Input signing key k.<span style='mso-spacerun:yes'>  </span>Compute (s<sub>k-1</sub>,
+        s<sub>k</sub>, s<sub>k+1</sub>) and it dual.<span
+        style='mso-spacerun:yes'>  </span>If gcd(s<sub>k</sub>, Q) <font
+        face=Symbol>¹</font><font face=Arial> 1, prompt user to choose another
+        k.</font></li>
+    <li>If delta = 0, prompt user to pick another k.</li>
+    <li>Input message m to be signed.<span style='mso-spacerun:yes'> 
+        </span>Assume h = m.</li>
+    <li>r = s<sub>k</sub>, Compute t.</li>
+    <li>If t = 0, prompt user to choose another k.</li>
+    <li>Output (s<sub>x</sub>, s<sub>-x</sub>), (m, r, t), (s<sub>k</sub>, s<sub>k+1</sub>)
+        and its dual</li>
+    <br>
+    <br>
+    <br>
+   </ul>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>23</font></div>
+  </td>
+  <td>
+  <div id=PPTP23 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0028.htm');" id=PPTL23>Software Design</a></font></div>
+  <div id=PPTC23 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Verification Process:</li>
+   <ul>
+    <li>Input (m, r, t), (s<sub>x</sub>, s<sub>-x</sub>), (s<sub>k</sub>, s<sub>k+1</sub>)
+        and its dual.</li>
+    <li>Compute s<font face=Symbol><sub>±</sub></font><font face=Arial><sub>(k-1)</sub>.</font></li>
+    <li>If gcd(t, Q) = 1, then</li>
+    <ul>
+     <li>u = -r<sup>-1</sup>t mod Q, v = -ht<sup>-1</sup> mod Q</li>
+     <li>Compute s<font face=Symbol><sub>±</sub></font><font face=Arial><sub>u(k+v)</sub></font></li>
+     <li>Verify if s<font face=Symbol><sub>±</sub></font><font face=Arial><sub>u(k+v)</sub>
+         = s</font><font face=Symbol><sub>±</sub></font><font face=Arial><sub>x</sub></font></li>
+    </ul>
+    <li>If gcd(t, Q) <font face=Symbol>¹</font><font face=Arial> 1, then</font></li>
+    <ul>
+     <li>u = -r mod Q, v = -hr<sup>-1</sup> mod Q</li>
+     <li>Compute s<font face=Symbol><sub>±</sub></font><font face=Arial><sub>u(x+v)</sub></font></li>
+     <li>Compute s <font face=Symbol><sub>±</sub></font><font face=Arial><sub>kt</sub></font></li>
+     <li>Verify if s<font face=Symbol><sub>±</sub></font><font face=Arial><sub>u(x+v)</sub>
+         = s</font><font face=Symbol><sub>±</sub></font><font face=Arial><sub>kt</sub></font></li>
+    </ul>
+    <li>Accept signature if sequence terms match</li>
+    <br>
+    <br>
+    <br>
+   </ul>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>24</font></div>
+  </td>
+  <td>
+  <div id=PPTP24 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0010.htm');" id=PPTL24>Design Issues</a></font></div>
+  <div id=PPTC24 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Storage requirement for recursive iteration in DSEA algorithm</li>
+   <ul>
+    <li>Only six sequence terms need to be kept after each iteration.</li>
+   </ul>
+   <li>Delta cannot be zero</li>
+   <ul>
+    <li>k cannot be either p - 1 or p</li>
+    <li>Both a and b should be non-zero integers</li>
+   </ul>
+   <li>Invertible Matrix M<sub>0</sub></li>
+   <ul>
+    <li>This can be guaranteed by choosing a and b correspondingly such that
+        det(M<sub>0</sub>) <font face=Symbol>¹</font><font face=Arial> 0.</font></li>
+    <br>
+    <br>
+   </ul>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>25</font></div>
+  </td>
+  <td>
+  <div id=PPTP25 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0012.htm');" id=PPTL25>Testing</a></font></div>
+  <div id=PPTC25 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Toy Case</li>
+   <li>Real System</li>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>26</font></div>
+  </td>
+  <td>
+  <div id=PPTP26 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0029.htm');" id=PPTL26>Testing – Toy Case</a></font></div>
+  <div id=PPTC26 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>An irreducible polynomial f(x) over a small field is used to make it
+       possible to verify all the sequence term computations including the ones
+       in the intermediate steps.</li>
+   <li>Irreducible polynomial f(x) over GF(5):</li>
+   <br>
+   <br>
+   <li>Period of this sequence, Q:</li>
+   <br>
+   <br>
+   <br>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>27</font></div>
+  </td>
+  <td>
+  <div id=PPTP27 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0031.htm');" id=PPTL27>Testing – Toy Case</a></font></div>
+  <div id=PPTC27 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>All sequence terms are compared to the sequence terms generated by the
+       recursive formula:</li>
+   <br>
+   <br>
+   <br>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>28</font></div>
+  </td>
+  <td>
+  <div id=PPTP28 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0030.htm');" id=PPTL28>Testing – Real System</a></font></div>
+  <div id=PPTC28 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Implement GH-PKC over GF(p)</li>
+   <li>For 1024-bit security level, a 341-bit p is used.</li>
+   <li>Parameters are chosen as:</li>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>29</font></div>
+  </td>
+  <td>
+  <div id=PPTP29 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0032.htm');" id=PPTL29>Testing – Real System</a></font></div>
+  <div id=PPTC29 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>NTL library is used in the implementation to handle the large numbers in
+       c++.</li>
+   <li>It is not practical to verify all the generated sequence terms as they
+       are too big!</li>
+   <li>Instead, two copies of the program are executed at the same time to
+       simulate two users, Alice and Bob, to make sure the generated shared key
+       pair is the same and the message can be successfully signed and
+       verified.</li>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>30</font></div>
+  </td>
+  <td>
+  <div id=PPTP30 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0013.htm');" id=PPTL30>Remarks</a></font></div>
+  <div id=PPTC30 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>The GH-DH key agreement protocol and the signature generation in the
+       GH-DSA scheme are successfully implemented in c++ and are tested
+       thoroughly.</li>
+   <li>The implementation of signature verification is still in progress.</li>
+   <li>Several restrictions on system parameters and signing key selection are
+       added to the system to increase system efficiency.</li>
+   <li>Implement GH-PKC on constrained devices, such as blackberry, to analyze
+       performance.</li>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>31</font></div>
+  </td>
+  <td>
+  <div id=PPTP31 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0033.htm');" id=PPTL31>References</a></font></div>
+  <div id=PPTC31 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Papers on GH-PKC:</li>
+   <ul>
+    <li>G. Gong and L. Harn, A new approach for public key distribution, Proceedings
+        of&nbsp; China-Crypto'98, May 1998, Chengdu, China</li>
+    <li>G. Gong and L. Harn, The GH public-key cryptosystems, the Proceedings
+        of the 8<sup>th</sup> Annual Workshop on Selected Areas in
+        Cryptography, Toronto, Aug 16-18, 2001</li>
+   </ul>
+   <li>NTL Library is available for download at:</li>
+   <ul>
+    <li>www.shoup.net/ntl</li>
+   </ul>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+</table>
+
+
+
+</div>
+
+<div style='display:none'><a href=master03.htm></a><a href=master03.xml></a><a
+href=preview.wmf></a><a href=master05.htm></a><a href=master05.xml></a><a
+href="master05_image001.jpg"></a><a href=master04.htm></a><a href=master04.xml></a><a
+href=master02.htm></a><a href=pres.xml></a><a href=slide0001.htm></a><a
+href="master05_background.gif"></a><a href="master05_image002.jpg"></a><a
+href=slide0002.htm></a><a href="master04_image003.gif"></a><a
+href="master04_image004.jpg"></a><a href=slide0003.htm></a><a
+href=slide0004.htm></a><a href="slide0004_image005.wmz"></a><a
+href=oledata.mso></a><a href="slide0004_image006.gif"></a><a
+href="slide0004_image007.wmz"></a><a href="slide0004_image008.gif"></a><a
+href="slide0004_image009.wmz"></a><a href="slide0004_image010.gif"></a><a
+href=slide0017.htm></a><a href="slide0017_image011.wmz"></a><a
+href="slide0017_image012.gif"></a><a href="slide0017_image013.wmz"></a><a
+href="slide0017_image014.gif"></a><a href="slide0017_image015.gif"></a><a
+href=slide0015.htm></a><a href="slide0015_image016.emz"></a><a
+href="slide0015_image017.gif"></a><a href="slide0015_image018.emz"></a><a
+href="slide0015_image019.gif"></a><a href="slide0015_image020.emz"></a><a
+href="slide0015_image021.emz"></a><a href="slide0015_image022.gif"></a><a
+href="slide0015_image023.emz"></a><a href="slide0015_image024.gif"></a><a
+href=slide0005.htm></a><a href=slide0014.htm></a><a
+href="slide0014_image025.wmz"></a><a href="slide0014_image026.gif"></a><a
+href="slide0014_image027.wmz"></a><a href="slide0014_image028.gif"></a><a
+href="slide0014_image029.wmz"></a><a href="slide0014_image030.gif"></a><a
+href="slide0014_image031.wmz"></a><a href="slide0014_image032.gif"></a><a
+href="slide0014_image033.wmz"></a><a href="slide0014_image034.gif"></a><a
+href="slide0014_image035.gif"></a><a href="slide0014_image036.gif"></a><a
+href="slide0014_image037.gif"></a><a href="slide0014_image038.gif"></a><a
+href="slide0014_image039.gif"></a><a href="slide0014_image040.gif"></a><a
+href="slide0014_image041.gif"></a><a href="slide0014_image042.gif"></a><a
+href=slide0007.htm></a><a href="slide0007_image043.gif"></a><a
+href="slide0007_image044.jpg"></a><a href="slide0007_image045.jpg"></a><a
+href="slide0007_image046.gif"></a><a href="slide0007_image047.gif"></a><a
+href=slide0018.htm></a><a href="slide0018_image048.wmz"></a><a
+href="slide0018_image049.gif"></a><a href="slide0018_image050.wmz"></a><a
+href="slide0018_image051.gif"></a><a href="slide0018_image052.wmz"></a><a
+href="slide0018_image053.gif"></a><a href="slide0018_image054.gif"></a><a
+href=slide0026.htm></a><a href="slide0026_image055.wmz"></a><a
+href="slide0026_image056.gif"></a><a href="slide0026_image057.wmz"></a><a
+href="slide0026_image058.gif"></a><a href=slide0027.htm></a><a
+href="slide0027_image059.wmz"></a><a href="slide0027_image060.gif"></a><a
+href=slide0008.htm></a><a href="slide0008_image061.wmz"></a><a
+href="slide0008_image062.gif"></a><a href=slide0019.htm></a><a
+href="slide0019_image063.wmz"></a><a href="slide0019_image064.wmz"></a><a
+href="slide0019_image065.wmz"></a><a href="slide0019_image066.gif"></a><a
+href=slide0020.htm></a><a href="slide0020_image067.wmz"></a><a
+href="slide0020_image068.gif"></a><a href="slide0020_image069.wmz"></a><a
+href="slide0020_image070.gif"></a><a href="slide0020_image071.wmz"></a><a
+href="slide0020_image072.gif"></a><a href="slide0020_image073.wmz"></a><a
+href="slide0020_image074.wmz"></a><a href="slide0020_image075.wmz"></a><a
+href="slide0020_image076.gif"></a><a href=slide0022.htm></a><a
+href="slide0022_image077.wmz"></a><a href="slide0022_image078.gif"></a><a
+href="slide0022_image079.wmz"></a><a href="slide0022_image080.gif"></a><a
+href="slide0022_image081.gif"></a><a href=slide0021.htm></a><a
+href="slide0021_image082.wmz"></a><a href="slide0021_image083.gif"></a><a
+href="slide0021_image084.wmz"></a><a href="slide0021_image085.gif"></a><a
+href=slide0009.htm></a><a href="slide0009_image086.jpg"></a><a
+href="slide0009_image087.jpg"></a><a href="slide0009_image088.jpg"></a><a
+href="slide0009_image089.gif"></a><a href=slide0023.htm></a><a
+href="slide0023_image090.jpg"></a><a href="slide0023_image091.jpg"></a><a
+href=slide0024.htm></a><a href="slide0024_image092.wmz"></a><a
+href="slide0024_image093.gif"></a><a href="slide0024_image094.wmz"></a><a
+href="slide0024_image095.gif"></a><a href="slide0024_image096.gif"></a><a
+href=slide0025.htm></a><a href="slide0025_image097.wmz"></a><a
+href="slide0025_image098.gif"></a><a href="slide0025_image099.wmz"></a><a
+href="slide0025_image100.gif"></a><a href=slide0011.htm></a><a
+href="slide0011_image101.gif"></a><a href="slide0011_image102.gif"></a><a
+href=slide0028.htm></a><a href=slide0010.htm></a><a href=slide0012.htm></a><a
+href=slide0029.htm></a><a href="slide0029_image103.wmz"></a><a
+href="slide0029_image104.gif"></a><a href="slide0029_image105.wmz"></a><a
+href="slide0029_image106.gif"></a><a href=slide0031.htm></a><a
+href="slide0031_image107.wmz"></a><a href="slide0031_image108.gif"></a><a
+href=slide0030.htm></a><a href="slide0030_image109.wmz"></a><a
+href="slide0030_image110.gif"></a><a href=slide0032.htm></a><a
+href=slide0013.htm></a><a href=slide0033.htm></a><a
+href="master03_stylesheet.css"></a><a href="master04_stylesheet.css"></a><a
+href=script.js></a><a href="../GHDSA.htm"></a><a href=fullscreen.htm></a><a
+href=buttons.gif></a><a href=frame.htm></a><a href=outline.htm></a></div>
+
+</body>
+
+</html>

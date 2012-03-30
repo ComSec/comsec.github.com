@@ -1,0 +1,731 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:p="urn:schemas-microsoft-com:office:powerpoint"
+xmlns:oa="urn:schemas-microsoft-com:office:activation"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=PowerPoint.Slide>
+<meta name=Generator content="Microsoft PowerPoint 10">
+<link id=Main-File rel=Main-File href="../security_adhoc.htm">
+<link rel=Preview href=preview.wmf>
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+p\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+v\:textbox {display:none;}
+</style>
+<![endif]-->
+<title>Ad Hoc Network Security</title>
+<meta name=Description content="9/24/2004:  Pre-Authentication Cost">
+<link rel=Stylesheet href="master32_stylesheet.css">
+<!--[if gte IE 5]>
+<object id=MSOANIM classid="CLSID:A4639D2F-774E-11D3-A490-00C04F6843FB"></object>
+<object id=MSOTIME classid="CLSID:A4639D29-774E-11D3-A490-00C04F6843FB"></object>
+<![endif]-->
+<![if !ppt]>
+
+<bgsound id=pptSound>
+
+<style media=print>
+<!--.sld
+	{left:0px !important;
+	width:6.0in !important;
+	height:4.5in !important;
+	font-size:107% !important;}
+-->
+</style>
+<style>
+<!--
+oa\:* { BEHAVIOR: url(#MSOANIM#ANIM) url(#MSOTIME#TIME) }
+oa\:par,oa\:seq,oa\:iterate { BEHAVIOR:url(#MSOTIME) }
+oa\:video,oa\:audio {BEHAVIOR:url(#MSOTIME) url(#MSOTIME#MEDIA) }
+-->
+</style>
+<script src=script.js></script><script><!--
+if( !IsNts() ) Redirect( "PPTSld" );
+//--></script><script><!--
+g_animItemsToHide=new Array("_x0000_s171011_318_340","_x0000_s171011_287_318","_x0000_s171011_103_154","_x0000_s171011_231_287","_x0000_s171011_196_231","_x0000_s171011_154_196","_x0000_s171011_93_103","_x0000_s171063","_x0000_s171060","_x0000_s171059","_x0000_s171066","_x0000_s171062_AllText","_x0000_s171062","_x0000_s171065","_x0000_s171068_AllText","_x0000_s171068","_x0000_s171058","_x0000_s171057","_x0000_s171061_AllText","_x0000_s171061","_x0000_s171067_AllText","_x0000_s171067","_x0000_s171053","_x0000_s171056_AllText","_x0000_s171056","_x0000_s171052","_x0000_s171064","_x0000_s171055_AllText","_x0000_s171055","_x0000_s171050","_x0000_s171049","_x0000_s171054_AllText","_x0000_s171054","_x0000_s171051","_x0000_s171048","_x0000_s171080_AllText","_x0000_s171080","_x0000_s171079_AllText","_x0000_s171079","_x0000_s171047");
+g_animEffectTimings=new Array(0.0,0.1,0.1,0.1,0.1,0.1,0.1);
+g_animSlideTime=138.368;
+
+//--></script><!--[if vml]><script>g_vml = 1;
+</script><![endif]--><![endif]><p:slidetransition advancetime="138368"
+ flag="1025"/><o:shapelayout v:ext="edit">
+ <o:idmap v:ext="edit" data="167"/>
+</o:shapelayout>
+</head>
+
+<body lang=EN-US style='margin:0px;background-color:black'
+onclick="DocumentOnClick()" onresize="_RSW()" onload="LoadSld()"
+onkeypress="_KPH()" oa:clockstart="onstart">
+
+<div id=SlideObj class=sld style='position:absolute;top:0px;left:0px;
+width:534px;height:400px;font-size:16px;background-color:white;clip:rect(0%, 101%, 101%, 0%);
+visibility:hidden'><p:slide coordsize="720,540"
+ colors="#FFFFFF,#000000,#666600,#999900,#99CC00,#CCCC66,#FFCC00,#CC9900"
+ masterhref="master32.xml">
+ <p:shaperange href="master32.xml#_x0000_s75777"/><![if !ppt]><p:shaperange
+  href="master32.xml#_x0000_s75781"/>
+ <div v:shape="_x0000_s75781" class=O>
+ <div style='text-align:right;position:absolute;top:91.75%;left:72.65%;
+ width:21.53%;height:2.5%'><span style='font-family:Verdana;mso-ascii-font-family:
+ Verdana;font-size:56%;color:blue;mso-field-code:meta16'>25</span><span
+ style='font-family:Verdana;mso-ascii-font-family:Verdana;font-size:56%;
+ color:blue;mso-special-format:lastCR;display:none'>&#13;</span></div>
+ </div>
+ <p:shaperange href="master32.xml#_x0000_s75782"/><![if !vml]><img border=0
+ v:shapes="_x0000_s75782,_x0000_s75783,_x0000_s75784"
+ src="master32_image005.gif" style='position:absolute;top:0%;left:0%;
+ width:2.8%;height:100.5%'><![endif]><p:shaperange
+  href="master32.xml#_x0000_s75785"/><![if !vml]><img border=0
+ v:shapes="_x0000_s75785" src="master32_image006.gif" style='position:absolute;
+ top:18.25%;left:4.11%;width:90.44%;height:1.0%'><![endif]><![endif]><p:shaperange
+  href="master32.xml#_x0000_m75778"/><v:shape id="_x0000_s171010" type="#_x0000_m75778"
+  style='position:absolute;left:31.125pt;top:26.25pt;width:640.75pt;height:66.75pt'
+  o:userdrawn="f">
+  <v:fill o:detectmouseclick="f"/>
+  <v:stroke o:forcedash="f"/>
+  <o:lock v:ext="edit" text="f"/>
+  <p:placeholder type="title"/></v:shape>
+ <div v:shape="_x0000_s171010" class=T style='text-align:left;position:absolute;
+ top:7.25%;left:5.24%;width:87.07%;height:9.5%'><span style='font-family:Garamond;
+ mso-ascii-font-family:Garamond'><span
+ style='mso-spacerun:yes'> </span>Pre-Authentication Cost</span></div>
+ <v:rect id="_x0000_s171047" style='position:absolute;left:388.375pt;top:20.5pt;
+  width:323.25pt;height:187.125pt;mso-wrap-style:none;v-text-anchor:middle'
+  fillcolor="white [0]" stroked="f" strokeweight="1.75pt">
+  <v:shadow color="#660 [2]"/>
+  <p:animation number="2" delay="0" type="object" effect="cut"
+   direction="noBlack" flag="16384"/></v:rect><![if !vml]><img border=0
+ v:shapes="_x0000_s171047" src="slide0055_image086.gif" style='position:absolute;
+ top:3.75%;left:53.93%;width:45.13%;height:35.0%'><![endif]><v:oval id="_x0000_s171048"
+  style='position:absolute;left:433.75pt;top:77.25pt;width:34pt;height:22.625pt;
+  mso-wrap-style:none;v-text-anchor:middle' fillcolor="red">
+  <v:shadow color="#660 [2]"/>
+  <p:animation number="5" delay="0" type="object" effect="cut"
+   direction="noBlack" flag="16388"/></v:oval><![if !vml]><img border=0
+ v:shapes="_x0000_s171048" src="slide0055_image087.gif" style='position:absolute;
+ top:14.25%;left:60.11%;width:5.05%;height:4.75%'><![endif]><v:oval id="_x0000_s171049"
+  style='position:absolute;left:450.75pt;top:133.75pt;width:22.75pt;height:17pt;
+  mso-wrap-style:none;v-text-anchor:middle' fillcolor="#3c3">
+  <v:shadow color="#660 [2]"/>
+  <p:animation number="8" delay="0" type="object" effect="cut"
+   direction="noBlack" flag="16388"/></v:oval><![if !vml]><img border=0
+ v:shapes="_x0000_s171049" src="slide0055_image088.gif" style='position:absolute;
+ top:24.75%;left:62.54%;width:3.55%;height:3.75%'><![endif]><v:oval id="_x0000_s171050"
+  style='position:absolute;left:507.375pt;top:105.375pt;width:22.75pt;height:17pt;
+  mso-wrap-style:none;v-text-anchor:middle' fillcolor="#3c3">
+  <v:shadow color="#660 [2]"/>
+  <p:animation number="9" delay="0" type="object" effect="cut"
+   direction="noBlack" flag="16388"/></v:oval><![if !vml]><img border=0
+ v:shapes="_x0000_s171050" src="slide0055_image089.gif" style='position:absolute;
+ top:19.5%;left:70.41%;width:3.55%;height:3.75%'><![endif]><v:oval id="_x0000_s171051"
+  style='position:absolute;left:643.625pt;top:71.625pt;width:34.125pt;height:22.75pt;
+  mso-wrap-style:none;v-text-anchor:middle' fillcolor="blue">
+  <v:shadow color="#660 [2]"/>
+  <p:animation number="6" delay="0" type="object" effect="cut"
+   direction="noBlack" flag="16388"/></v:oval><![if !vml]><img border=0
+ v:shapes="_x0000_s171051" src="slide0055_image090.gif" style='position:absolute;
+ top:13.25%;left:89.32%;width:5.24%;height:4.75%'><![endif]><v:oval id="_x0000_s171052"
+  style='position:absolute;left:564.125pt;top:145.125pt;width:22.75pt;height:17pt;
+  mso-wrap-style:none;v-text-anchor:middle' fillcolor="#3c3">
+  <v:shadow color="#660 [2]"/>
+  <p:animation number="13" delay="0" type="object" effect="cut"
+   direction="noBlack" flag="16388"/></v:oval><![if !vml]><img border=0
+ v:shapes="_x0000_s171052" src="slide0055_image091.gif" style='position:absolute;
+ top:26.75%;left:78.27%;width:3.55%;height:3.75%'><![endif]><v:oval id="_x0000_s171053"
+  style='position:absolute;left:632.125pt;top:133.75pt;width:22.75pt;height:17pt;
+  mso-wrap-style:none;v-text-anchor:middle' fillcolor="#3c3">
+  <v:shadow color="#660 [2]"/>
+  <p:animation number="15" delay="0" type="object" effect="cut"
+   direction="noBlack" flag="16388"/></v:oval><![if !vml]><img border=0
+ v:shapes="_x0000_s171053" src="slide0055_image092.gif" style='position:absolute;
+ top:24.75%;left:87.82%;width:3.55%;height:3.75%'><![endif]><v:shapetype id="_x0000_t202"
+  coordsize="21600,21600" o:spt="202" path="m,l,21600r21600,l21600,xe">
+  <v:stroke joinstyle="miter"/>
+  <v:path gradientshapeok="t" o:connecttype="rect"/>
+ </v:shapetype><v:shape id="_x0000_s171054" type="#_x0000_t202" style='position:absolute;
+  left:456.5pt;top:105.375pt;width:22.625pt;height:31.25pt' filled="f"
+  fillcolor="#9cf" stroked="f">
+  <v:shadow color="#660 [2]"/>
+  <v:textbox style='mso-fit-shape-to-text:t'/>
+  <p:animation number="7" delay="0" type="object" effect="cut"
+   direction="noBlack" flag="4"/></v:shape>
+ <div id="_x0000_s171054_AllText" v:shape="_x0000_s171054" class=O
+ style='position:absolute;top:20.5%;left:64.41%;width:1.31%;height:4.5%;
+ white-space:nowrap'>
+ <div style='mso-line-spacing:"100 50 0";position:absolute;top:0%;left:0%;
+ width:100.0%;height:100.0%'><span style='font-size:111%;color:black'>i</span></div>
+ </div>
+ <v:shape id="_x0000_s171055" type="#_x0000_t202" style='position:absolute;
+  left:513.25pt;top:79.875pt;width:50.875pt;height:31.25pt' filled="f"
+  fillcolor="#9cf" stroked="f">
+  <v:shadow color="#660 [2]"/>
+  <v:textbox style='mso-fit-shape-to-text:t'/>
+  <p:animation number="10" delay="0" type="object" effect="cut"
+   direction="noBlack" flag="4"/></v:shape>
+ <div id="_x0000_s171055_AllText" v:shape="_x0000_s171055" class=O
+ style='position:absolute;top:15.75%;left:72.28%;width:5.24%;height:4.5%;
+ white-space:nowrap'>
+ <div style='mso-line-spacing:"100 50 0";position:absolute;top:0%;left:0%;
+ width:100.0%;height:100.0%'><span style='font-size:111%;color:black'>j</span></div>
+ </div>
+ <v:shape id="_x0000_s171056" type="#_x0000_t202" style='position:absolute;
+  left:569.75pt;top:116.75pt;width:22.625pt;height:31.25pt' filled="f"
+  fillcolor="#9cf" stroked="f">
+  <v:shadow color="#660 [2]"/>
+  <v:textbox style='mso-fit-shape-to-text:t'/>
+  <p:animation number="14" delay="0" type="object" effect="cut"
+   direction="noBlack" flag="4"/></v:shape>
+ <div id="_x0000_s171056_AllText" v:shape="_x0000_s171056" class=O
+ style='position:absolute;top:22.5%;left:80.14%;width:1.31%;height:4.5%;
+ white-space:nowrap'>
+ <div style='mso-line-spacing:"100 50 0";position:absolute;top:0%;left:0%;
+ width:100.0%;height:100.0%'><span style='font-size:111%;color:black'>l</span></div>
+ </div>
+ <v:line id="_x0000_s171057" style='position:absolute' from="445pt,94.125pt"
+  to="456.375pt,133.75pt" strokecolor="red" strokeweight="2pt">
+  <v:stroke endarrow="block"/>
+  <v:shadow color="#660 [2]"/>
+  <p:animation number="18" delay="0" type="object" effect="cut"
+   direction="noBlack" flag="16388"/></v:line><![if !vml]><img border=0
+ v:shapes="_x0000_s171057" src="slide0055_image093.gif" style='position:absolute;
+ top:17.25%;left:61.61%;width:2.62%;height:8.25%'><![endif]><v:line id="_x0000_s171058"
+  style='position:absolute;flip:y' from="473.375pt,116.75pt" to="507.375pt,139.375pt"
+  strokecolor="red" strokeweight="2pt">
+  <v:stroke endarrow="block"/>
+  <v:shadow color="#660 [2]"/>
+  <p:animation number="19" delay="0" type="object" effect="cut"
+   direction="noBlack" flag="16388"/></v:line><![if !vml]><img border=0
+ v:shapes="_x0000_s171058" src="slide0055_image094.gif" style='position:absolute;
+ top:21.0%;left:65.54%;width:5.61%;height:5.5%'><![endif]><v:line id="_x0000_s171059"
+  style='position:absolute;flip:y' from="586.75pt,145.125pt" to="632.125pt,150.75pt"
+  strokecolor="blue" strokeweight="2pt">
+  <v:stroke endarrow="block"/>
+  <v:shadow color="#660 [2]"/>
+  <p:animation number="24" delay="0" type="object" effect="cut"
+   direction="noBlack" flag="16388"/></v:line><![if !vml]><img border=0
+ v:shapes="_x0000_s171059" src="slide0055_image095.gif" style='position:absolute;
+ top:26.0%;left:81.27%;width:6.92%;height:2.5%'><![endif]><v:line id="_x0000_s171060"
+  style='position:absolute;flip:y' from="649.125pt,94.125pt" to="660.5pt,133.75pt"
+  strokecolor="blue" strokeweight="1.5pt">
+  <v:stroke endarrow="block"/>
+  <v:shadow color="#660 [2]"/>
+  <p:animation number="25" delay="0" type="object" effect="cut"
+   direction="noBlack" flag="17412"/></v:line><![if !vml]><img border=0
+ v:shapes="_x0000_s171060" src="slide0055_image096.gif" style='position:absolute;
+ top:17.0%;left:90.07%;width:2.62%;height:8.25%'><![endif]><v:shape id="_x0000_s171061"
+  type="#_x0000_t202" style='position:absolute;left:388.375pt;top:26.75pt;
+  width:141.75pt;height:50.5pt' filled="f" fillcolor="#9c0 [4]" stroked="f"
+  strokecolor="black [1]">
+  <v:fill color2="white [0]"/>
+  <v:shadow color="#660 [2]"/>
+  <v:textbox style='mso-fit-shape-to-text:t'/>
+  <p:animation number="17" delay="0" type="object" effect="cut"
+   direction="noBlack" flag="0"/></v:shape>
+ <div id="_x0000_s171061_AllText" v:shape="_x0000_s171061" class=O
+ style='position:absolute;top:5.75%;left:54.86%;width:20.97%;height:8.0%;
+ white-space:nowrap'>
+ <div style='mso-line-spacing:"100 50 0"'><span style='position:absolute;
+ top:0%;left:0%;width:100.0%;height:50.0%'><span style='color:red'><b>A’s
+ Out-bound </b></span></span><span style='position:absolute;top:50.0%;
+ left:0%;width:84.82%;height:50.0%'><span style='color:red'><b>list {I,j,k}</b></span></span></div>
+ </div>
+ <v:shape id="_x0000_s171062" type="#_x0000_t202" style='position:absolute;
+  left:581.125pt;top:21.125pt;width:141.75pt;height:50.5pt' filled="f"
+  fillcolor="#9cf" stroked="f">
+  <v:shadow color="#660 [2]"/>
+  <v:textbox style='mso-fit-shape-to-text:t'/>
+  <p:animation number="22" delay="0" type="object" effect="cut"
+   direction="noBlack" flag="0"/></v:shape>
+ <div id="_x0000_s171062_AllText" v:shape="_x0000_s171062" class=O
+ style='position:absolute;top:4.75%;left:81.64%;width:18.53%;height:8.0%;
+ white-space:nowrap'>
+ <div style='mso-line-spacing:"100 50 0"'><span style='position:absolute;
+ top:0%;left:0%;width:100.0%;height:50.0%'><span style='color:blue'><b>B’s
+ In-bound </b></span></span><span style='position:absolute;top:50.0%;
+ left:0%;width:95.95%;height:50.0%'><span style='color:blue'><b>list {k,l,m}</b></span></span></div>
+ </div>
+ <v:oval id="_x0000_s171063" style='position:absolute;left:501.75pt;top:150.75pt;
+  width:45.375pt;height:39.75pt;mso-wrap-style:none;v-text-anchor:middle'
+  fillcolor="yellow">
+  <v:stroke dashstyle="dash"/>
+  <v:shadow color="#660 [2]"/>
+  <p:animation number="26" delay="0" type="object" effect="cut"
+   direction="noBlack" flag="17408"/></v:oval><![if !vml]><img border=0
+ v:shapes="_x0000_s171063" src="slide0055_image097.gif" style='position:absolute;
+ top:27.75%;left:69.66%;width:6.74%;height:8.0%'><![endif]><v:oval id="_x0000_s171064"
+  style='position:absolute;left:513.125pt;top:162.125pt;width:22.75pt;height:17pt;
+  mso-wrap-style:none;v-text-anchor:middle' fillcolor="#3c3">
+  <v:shadow color="#660 [2]"/>
+  <p:animation number="11" delay="0" type="object" effect="cut"
+   direction="noBlack" flag="16388"/></v:oval><![if !vml]><img border=0
+ v:shapes="_x0000_s171064" src="slide0055_image098.gif" style='position:absolute;
+ top:30.0%;left:71.16%;width:3.55%;height:3.75%'><![endif]><v:line id="_x0000_s171065"
+  style='position:absolute' from="518.75pt,122.375pt" to="524.375pt,162.125pt"
+  strokecolor="red" strokeweight="2pt">
+  <v:stroke endarrow="block"/>
+  <v:shadow color="#660 [2]"/>
+  <p:animation number="21" delay="0" type="object" effect="cut"
+   direction="noBlack" flag="17412"/></v:line><![if !vml]><img border=0
+ v:shapes="_x0000_s171065" src="slide0055_image099.gif" style='position:absolute;
+ top:22.5%;left:71.91%;width:1.87%;height:8.25%'><![endif]><v:line id="_x0000_s171066"
+  style='position:absolute;flip:y' from="535.75pt,156.5pt" to="564.125pt,167.75pt"
+  strokecolor="blue" strokeweight="2pt">
+  <v:stroke endarrow="block"/>
+  <v:shadow color="#660 [2]"/>
+  <p:animation number="23" delay="0" type="object" effect="cut"
+   direction="noBlack" flag="16388"/></v:line><![if !vml]><img border=0
+ v:shapes="_x0000_s171066" src="slide0055_image100.gif" style='position:absolute;
+ top:28.25%;left:74.34%;width:4.68%;height:3.5%'><![endif]><v:shape id="_x0000_s171067"
+  type="#_x0000_t202" style='position:absolute;left:626.5pt;top:105.375pt;
+  width:22.625pt;height:31.25pt' filled="f" fillcolor="#9cf" stroked="f">
+  <v:shadow color="#660 [2]"/>
+  <v:textbox style='mso-fit-shape-to-text:t'/>
+  <p:animation number="16" delay="0" type="object" effect="cut"
+   direction="noBlack" flag="1028"/></v:shape>
+ <div id="_x0000_s171067_AllText" v:shape="_x0000_s171067" class=O
+ style='position:absolute;top:20.5%;left:88.01%;width:2.99%;height:4.5%;
+ white-space:nowrap'>
+ <div style='mso-line-spacing:"100 50 0";position:absolute;top:0%;left:0%;
+ width:100.0%;height:100.0%'><span style='font-size:111%;color:black'>m</span></div>
+ </div>
+ <v:shape id="_x0000_s171068" type="#_x0000_t202" style='position:absolute;
+  left:518.75pt;top:133.75pt;width:22.625pt;height:31.25pt' filled="f"
+  fillcolor="#9cf" stroked="f">
+  <v:shadow color="#660 [2]"/>
+  <v:textbox style='mso-fit-shape-to-text:t'/>
+  <p:animation number="12" delay="0" type="object" effect="cut"
+   direction="noBlack" flag="4"/></v:shape>
+ <div id="_x0000_s171068_AllText" v:shape="_x0000_s171068" class=O
+ style='position:absolute;top:25.75%;left:73.03%;width:1.87%;height:4.5%;
+ white-space:nowrap'>
+ <div style='mso-line-spacing:"100 50 0";position:absolute;top:0%;left:0%;
+ width:100.0%;height:100.0%'><span style='font-size:111%;color:black'>k</span></div>
+ </div>
+ <v:shape id="_x0000_s171079" type="#_x0000_t202" style='position:absolute;
+  left:436.25pt;top:71.625pt;width:31.5pt;height:31.25pt' filled="f"
+  fillcolor="#9cf" stroked="f">
+  <v:shadow color="#660 [2]"/>
+  <v:textbox style='mso-fit-shape-to-text:t'/>
+  <p:animation number="3" delay="0" type="object" effect="cut"
+   direction="noBlack" flag="4"/></v:shape>
+ <div id="_x0000_s171079_AllText" v:shape="_x0000_s171079" class=O
+ style='position:absolute;top:14.25%;left:61.61%;width:2.62%;height:4.5%;
+ white-space:nowrap'>
+ <div style='mso-line-spacing:"100 50 0";position:absolute;top:0%;left:0%;
+ width:100.0%;height:100.0%'><span style='font-size:111%;color:white;
+ mso-color-index:0'><b>A</b></span></div>
+ </div>
+ <v:shape id="_x0000_s171080" type="#_x0000_t202" style='position:absolute;
+  left:643.625pt;top:68.625pt;width:34.125pt;height:31.25pt' filled="f"
+  fillcolor="#9cf" stroked="f">
+  <v:shadow color="#660 [2]"/>
+  <v:textbox style='mso-fit-shape-to-text:t'/>
+  <p:animation number="4" delay="0" type="object" effect="cut"
+   direction="noBlack" flag="4"/></v:shape>
+ <div id="_x0000_s171080_AllText" v:shape="_x0000_s171080" class=O
+ style='position:absolute;top:13.75%;left:90.44%;width:2.8%;height:4.5%;
+ white-space:nowrap'>
+ <div style='text-align:center;mso-line-spacing:"100 50 0";position:absolute;
+ top:0%;left:0%;width:100.0%;height:100.0%'><span style='font-size:111%;
+ color:white;mso-color-index:0'><b>B</b></span></div>
+ </div>
+ <p:shaperange href="master32.xml#_x0000_m75779"/><v:shape id="_x0000_s171011"
+  type="#_x0000_m75779" style='position:absolute;left:36pt;top:105.625pt;
+  width:9in;height:391.125pt' o:userdrawn="f">
+  <v:fill o:detectmouseclick="f"/>
+  <v:stroke o:forcedash="f"/>
+  <o:lock v:ext="edit" text="f"/>
+  <p:placeholder type="body" position="1"/><p:animation number="27" delay="0"
+   type="object" effect="cut" direction="noBlack" flag="16384"/></v:shape>
+ <div v:shape="_x0000_s171011" style='position:absolute;top:20.25%;left:5.99%;
+ width:99.81%;height:62.5%'>
+ <div class=B style='position:absolute;top:0%;left:0%;width:88.36%;height:10.4%'><span
+ style='position:absolute;top:0%;left:4.24%;width:95.75%;height:100.0%'><span
+ class=BB style='position:absolute;left:-4.43%;top:.3em'>p</span><span
+ style='font-family:Verdana;mso-ascii-font-family:Verdana'>Hubaux et. al
+ scheme&#13;</span></span></div>
+ <div class=B1 style='position:absolute;top:11.6%;left:5.06%;width:83.3%;
+ height:9.19%'><span style='position:absolute;top:0%;left:3.6%;width:96.17%;
+ height:100.0%'><span class=B1B style='position:absolute;left:-3.74%;
+ top:.3em'>n</span><span style='font-family:Verdana;mso-ascii-font-family:Verdana'>PGP-like&#13;</span></span></div>
+ <div class=B1><span style='position:absolute;top:21.6%;left:8.06%;width:86.67%;
+ height:9.19%'><span class=B1B style='position:absolute;left:-3.46%;top:.3em'>n</span><span
+ style='font-family:Verdana;mso-ascii-font-family:Verdana'>Every node stores
+ out- and<span style='mso-tab-count:3;width:30.14%'> </span><span
+ style='mso-spacerun:yes'>   </span></span></span><span style='position:absolute;
+ top:30.4%;left:8.06%;width:80.11%;height:9.19%'><span style='font-family:Verdana;
+ mso-ascii-font-family:Verdana'>in-bound list of certificates &#13;</span></span></div>
+ <div id="_x0000_s171011_93_103" class=B1 style='position:absolute;top:40.4%;
+ left:5.06%;width:83.3%;height:9.19%;white-space:nowrap'><span
+ style='position:absolute;top:0%;left:3.6%;width:96.17%;height:100.0%'><span
+ class=B1B style='position:absolute;left:-3.74%;top:.3em'>n</span><span
+ style='font-family:Verdana;mso-ascii-font-family:Verdana'>Comments:&#13;</span></span></div>
+ <div id="_x0000_s171011_103_154" class=B2 style='position:absolute;top:50.4%;
+ left:9.94%;width:86.86%;height:7.6%;white-space:nowrap'><span
+ style='position:absolute;top:0%;left:3.02%;width:97.19%;height:100.0%'><span
+ class=B2B style='position:absolute;left:-3.11%;top:.49em'>p</span><span
+ style='font-family:Verdana;mso-ascii-font-family:Verdana'>Cheap set-up phase,
+ cost controlled by node itself&#13;</span></span></div>
+ <div id="_x0000_s171011_154_196" class=B2 style='position:absolute;top:58.8%;
+ left:9.94%;width:78.23%;height:7.6%;white-space:nowrap'><span
+ style='position:absolute;top:0%;left:3.35%;width:96.88%;height:100.0%'><span
+ class=B2B style='position:absolute;left:-3.46%;top:.49em'>p</span><span
+ style='font-family:Verdana;mso-ascii-font-family:Verdana'><i>A</i></span><span
+ style='font-family:Verdana;mso-ascii-font-family:Verdana'> needs to verify
+ more than 1 certificate&#13;</span></span></div>
+ <div id="_x0000_s171011_196_231" class=B2 style='position:absolute;top:67.59%;
+ left:9.94%;width:78.23%;height:7.6%;white-space:nowrap'><span
+ style='position:absolute;top:0%;left:3.35%;width:96.88%;height:100.0%'><span
+ class=B2B style='position:absolute;left:-3.46%;top:.49em'>p</span><span
+ style='font-family:Verdana;mso-ascii-font-family:Verdana'>Performance depends
+ on path length&#13;</span></span></div>
+ <div id="_x0000_s171011_231_287" class=B3 style='position:absolute;top:76.0%;
+ left:15.0%;width:84.8%;height:6.8%;white-space:nowrap'><span style='position:
+ absolute;top:0%;left:3.09%;width:97.12%;height:100.0%'><span class=B3B
+ style='position:absolute;left:-3.18%'>§</span><span style='font-family:Verdana;
+ mso-ascii-font-family:Verdana'>network structure, # of nodes, # of stored
+ certificates&#13;</span></span></div>
+ <div id="_x0000_s171011_287_318" class=B2 style='position:absolute;top:83.6%;
+ left:9.94%;width:78.23%;height:7.6%;white-space:nowrap'><span
+ style='position:absolute;top:0%;left:3.35%;width:96.88%;height:100.0%'><span
+ class=B2B style='position:absolute;left:-3.46%;top:.49em'>p</span><span
+ style='font-family:Verdana;mso-ascii-font-family:Verdana'>Requires large
+ number of nodes&#13;</span></span></div>
+ <div id="_x0000_s171011_318_340" class=B2 style='position:absolute;top:92.4%;
+ left:9.94%;width:78.23%;height:7.6%;white-space:nowrap'><span
+ style='position:absolute;top:0%;left:3.35%;width:96.88%;height:100.0%'><span
+ class=B2B style='position:absolute;left:-3.46%;top:.49em'>p</span><span
+ style='font-family:Verdana;mso-ascii-font-family:Verdana'>Requires large
+ memory</span></span></div>
+ </div>
+</p:slide></div>
+
+<p:animation number="-773135013"/><oa:par id="TimeNode0" dur="indefinite"
+ restart="never" p:nodeType="timingRoot">
+ <oa:seq id="TimeNode1" dur="indefinite" prev="document.onpptprev"
+  next="document.onpptnext" concurrent="enabled" nextAction="seek"
+  p:nodeType="mainSeq">
+  <oa:par id="TimeNode2" begin="indefinite" fill="hold">
+   <oa:par id="TimeNode3" begin="0.0" fill="hold">
+    <oa:par id="TimeNode4" o:presetID="ppt_1" o:presetClass="entrance"
+     o:presetSubType="0x0" begin="0.0" fill="hold" p:nodeType="clickEffect">
+     <oa:set id="TimeNode5" begin="0.0" dur="0.001" fill="hold"
+      targetElement="_x0000_s171047" attributeName="style.visibility"
+      to="visible"/>
+    </oa:par>
+    <oa:par id="TimeNode6" o:presetID="ppt_1" o:presetClass="entrance"
+     o:presetSubType="0x0" begin="0.0" fill="hold" o:groupID="0"
+     p:nodeType="withEffect">
+     <oa:set id="TimeNode7" begin="0.0" dur="0.001" fill="hold"
+      targetElement="_x0000_s171079" attributeName="style.visibility"
+      to="visible"/>
+    </oa:par>
+    <![if !ppt]><oa:par id="TimeNode8" o:presetID="ppt_1" o:presetClass="entrance"
+     o:presetSubType="0x0" begin="0.0" fill="hold" p:nodeType="withEffect">
+     <oa:set id="TimeNode9" begin="0.0" dur="0.001" fill="hold"
+      targetElement="_x0000_s171079_AllText" attributeName="style.visibility"
+      to="visible"/>
+    </oa:par>
+    <![endif]><oa:par id="TimeNode10" o:presetID="ppt_1" o:presetClass="entrance"
+     o:presetSubType="0x0" begin="0.0" fill="hold" o:groupID="0"
+     p:nodeType="withEffect">
+     <oa:set id="TimeNode11" begin="0.0" dur="0.001" fill="hold"
+      targetElement="_x0000_s171080" attributeName="style.visibility"
+      to="visible"/>
+    </oa:par>
+    <![if !ppt]><oa:par id="TimeNode12" o:presetID="ppt_1"
+     o:presetClass="entrance" o:presetSubType="0x0" begin="0.0" fill="hold"
+     p:nodeType="withEffect">
+     <oa:set id="TimeNode13" begin="0.0" dur="0.001" fill="hold"
+      targetElement="_x0000_s171080_AllText" attributeName="style.visibility"
+      to="visible"/>
+    </oa:par>
+    <![endif]><oa:par id="TimeNode14" o:presetID="ppt_1" o:presetClass="entrance"
+     o:presetSubType="0x0" begin="0.0" fill="hold" p:nodeType="withEffect">
+     <oa:set id="TimeNode15" begin="0.0" dur="0.001" fill="hold"
+      targetElement="_x0000_s171048" attributeName="style.visibility"
+      to="visible"/>
+    </oa:par>
+    <oa:par id="TimeNode16" o:presetID="ppt_1" o:presetClass="entrance"
+     o:presetSubType="0x0" begin="0.0" fill="hold" p:nodeType="withEffect">
+     <oa:set id="TimeNode17" begin="0.0" dur="0.001" fill="hold"
+      targetElement="_x0000_s171051" attributeName="style.visibility"
+      to="visible"/>
+    </oa:par>
+    <oa:par id="TimeNode18" o:presetID="ppt_1" o:presetClass="entrance"
+     o:presetSubType="0x0" begin="0.0" fill="hold" o:groupID="0"
+     p:nodeType="withEffect">
+     <oa:set id="TimeNode19" begin="0.0" dur="0.001" fill="hold"
+      targetElement="_x0000_s171054" attributeName="style.visibility"
+      to="visible"/>
+    </oa:par>
+    <![if !ppt]><oa:par id="TimeNode20" o:presetID="ppt_1"
+     o:presetClass="entrance" o:presetSubType="0x0" begin="0.0" fill="hold"
+     p:nodeType="withEffect">
+     <oa:set id="TimeNode21" begin="0.0" dur="0.001" fill="hold"
+      targetElement="_x0000_s171054_AllText" attributeName="style.visibility"
+      to="visible"/>
+    </oa:par>
+    <![endif]><oa:par id="TimeNode22" o:presetID="ppt_1" o:presetClass="entrance"
+     o:presetSubType="0x0" begin="0.0" fill="hold" p:nodeType="withEffect">
+     <oa:set id="TimeNode23" begin="0.0" dur="0.001" fill="hold"
+      targetElement="_x0000_s171049" attributeName="style.visibility"
+      to="visible"/>
+    </oa:par>
+    <oa:par id="TimeNode24" o:presetID="ppt_1" o:presetClass="entrance"
+     o:presetSubType="0x0" begin="0.0" fill="hold" p:nodeType="withEffect">
+     <oa:set id="TimeNode25" begin="0.0" dur="0.001" fill="hold"
+      targetElement="_x0000_s171050" attributeName="style.visibility"
+      to="visible"/>
+    </oa:par>
+    <oa:par id="TimeNode26" o:presetID="ppt_1" o:presetClass="entrance"
+     o:presetSubType="0x0" begin="0.0" fill="hold" o:groupID="0"
+     p:nodeType="withEffect">
+     <oa:set id="TimeNode27" begin="0.0" dur="0.001" fill="hold"
+      targetElement="_x0000_s171055" attributeName="style.visibility"
+      to="visible"/>
+    </oa:par>
+    <![if !ppt]><oa:par id="TimeNode28" o:presetID="ppt_1"
+     o:presetClass="entrance" o:presetSubType="0x0" begin="0.0" fill="hold"
+     p:nodeType="withEffect">
+     <oa:set id="TimeNode29" begin="0.0" dur="0.001" fill="hold"
+      targetElement="_x0000_s171055_AllText" attributeName="style.visibility"
+      to="visible"/>
+    </oa:par>
+    <![endif]><oa:par id="TimeNode30" o:presetID="ppt_1" o:presetClass="entrance"
+     o:presetSubType="0x0" begin="0.0" fill="hold" p:nodeType="withEffect">
+     <oa:set id="TimeNode31" begin="0.0" dur="0.001" fill="hold"
+      targetElement="_x0000_s171064" attributeName="style.visibility"
+      to="visible"/>
+    </oa:par>
+    <oa:par id="TimeNode32" o:presetID="ppt_1" o:presetClass="entrance"
+     o:presetSubType="0x0" begin="0.0" fill="hold" o:groupID="0"
+     p:nodeType="withEffect">
+     <oa:set id="TimeNode33" begin="0.0" dur="0.001" fill="hold"
+      targetElement="_x0000_s171068" attributeName="style.visibility"
+      to="visible"/>
+    </oa:par>
+    <![if !ppt]><oa:par id="TimeNode34" o:presetID="ppt_1"
+     o:presetClass="entrance" o:presetSubType="0x0" begin="0.0" fill="hold"
+     p:nodeType="withEffect">
+     <oa:set id="TimeNode35" begin="0.0" dur="0.001" fill="hold"
+      targetElement="_x0000_s171068_AllText" attributeName="style.visibility"
+      to="visible"/>
+    </oa:par>
+    <![endif]><oa:par id="TimeNode36" o:presetID="ppt_1" o:presetClass="entrance"
+     o:presetSubType="0x0" begin="0.0" fill="hold" p:nodeType="withEffect">
+     <oa:set id="TimeNode37" begin="0.0" dur="0.001" fill="hold"
+      targetElement="_x0000_s171052" attributeName="style.visibility"
+      to="visible"/>
+    </oa:par>
+    <oa:par id="TimeNode38" o:presetID="ppt_1" o:presetClass="entrance"
+     o:presetSubType="0x0" begin="0.0" fill="hold" o:groupID="0"
+     p:nodeType="withEffect">
+     <oa:set id="TimeNode39" begin="0.0" dur="0.001" fill="hold"
+      targetElement="_x0000_s171056" attributeName="style.visibility"
+      to="visible"/>
+    </oa:par>
+    <![if !ppt]><oa:par id="TimeNode40" o:presetID="ppt_1"
+     o:presetClass="entrance" o:presetSubType="0x0" begin="0.0" fill="hold"
+     p:nodeType="withEffect">
+     <oa:set id="TimeNode41" begin="0.0" dur="0.001" fill="hold"
+      targetElement="_x0000_s171056_AllText" attributeName="style.visibility"
+      to="visible"/>
+    </oa:par>
+    <![endif]><oa:par id="TimeNode42" o:presetID="ppt_1" o:presetClass="entrance"
+     o:presetSubType="0x0" begin="0.0" fill="hold" p:nodeType="withEffect">
+     <oa:set id="TimeNode43" begin="0.0" dur="0.001" fill="hold"
+      targetElement="_x0000_s171053" attributeName="style.visibility"
+      to="visible"/>
+    </oa:par>
+    <oa:par id="TimeNode44" o:presetID="ppt_1" o:presetClass="entrance"
+     o:presetSubType="0x0" begin="0.0" fill="hold" o:groupID="0"
+     p:nodeType="withEffect">
+     <oa:set id="TimeNode45" begin="0.0" dur="0.001" fill="hold"
+      targetElement="_x0000_s171067" attributeName="style.visibility"
+      to="visible"/>
+    </oa:par>
+    <![if !ppt]><oa:par id="TimeNode46" o:presetID="ppt_1"
+     o:presetClass="entrance" o:presetSubType="0x0" begin="0.0" fill="hold"
+     p:nodeType="withEffect">
+     <oa:set id="TimeNode47" begin="0.0" dur="0.001" fill="hold"
+      targetElement="_x0000_s171067_AllText" attributeName="style.visibility"
+      to="visible"/>
+    </oa:par>
+    <![endif]></oa:par>
+  </oa:par>
+  <oa:par id="TimeNode48" begin="indefinite" fill="hold">
+   <oa:par id="TimeNode49" begin="0.0" fill="hold">
+    <oa:par id="TimeNode50" o:presetID="ppt_1" o:presetClass="entrance"
+     o:presetSubType="0x0" begin="0.0" fill="hold" o:groupID="0"
+     p:nodeType="clickEffect">
+     <oa:set id="TimeNode51" begin="0.0" dur="0.001" fill="hold"
+      targetElement="_x0000_s171061" attributeName="style.visibility"
+      to="visible"/>
+    </oa:par>
+    <![if !ppt]><oa:par id="TimeNode52" o:presetID="ppt_1"
+     o:presetClass="entrance" o:presetSubType="0x0" begin="0.0" fill="hold"
+     p:nodeType="withEffect">
+     <oa:set id="TimeNode53" begin="0.0" dur="0.001" fill="hold"
+      targetElement="_x0000_s171061_AllText" attributeName="style.visibility"
+      to="visible"/>
+    </oa:par>
+    <![endif]><oa:par id="TimeNode54" o:presetID="ppt_1" o:presetClass="entrance"
+     o:presetSubType="0x0" begin="0.0" fill="hold" p:nodeType="withEffect">
+     <oa:set id="TimeNode55" begin="0.0" dur="0.001" fill="hold"
+      targetElement="_x0000_s171057" attributeName="style.visibility"
+      to="visible"/>
+    </oa:par>
+    <oa:par id="TimeNode56" o:presetID="ppt_1" o:presetClass="entrance"
+     o:presetSubType="0x0" begin="0.0" fill="hold" p:nodeType="withEffect">
+     <oa:set id="TimeNode57" begin="0.0" dur="0.001" fill="hold"
+      targetElement="_x0000_s171058" attributeName="style.visibility"
+      to="visible"/>
+    </oa:par>
+    <oa:par id="TimeNode58" o:presetID="ppt_1" o:presetClass="entrance"
+     o:presetSubType="0x0" begin="0.0" fill="hold" o:groupID="1"
+     p:nodeType="withEffect">
+     <oa:set id="TimeNode59" begin="0.0" dur="0.001" fill="hold"
+      targetElement="_x0000_s171068" attributeName="style.visibility"
+      to="visible"/>
+    </oa:par>
+    <![if !ppt]><oa:par id="TimeNode60" o:presetID="ppt_1"
+     o:presetClass="entrance" o:presetSubType="0x0" begin="0.0" fill="hold"
+     p:nodeType="withEffect">
+     <oa:set id="TimeNode61" begin="0.0" dur="0.001" fill="hold"
+      targetElement="_x0000_s171068_AllText" attributeName="style.visibility"
+      to="visible"/>
+    </oa:par>
+    <![endif]><oa:par id="TimeNode62" o:presetID="ppt_1" o:presetClass="entrance"
+     o:presetSubType="0x0" begin="0.0" fill="hold" p:nodeType="withEffect">
+     <oa:set id="TimeNode63" begin="0.0" dur="0.001" fill="hold"
+      targetElement="_x0000_s171065" attributeName="style.visibility"
+      to="visible"/>
+    </oa:par>
+   </oa:par>
+  </oa:par>
+  <oa:par id="TimeNode64" begin="indefinite" fill="hold">
+   <oa:par id="TimeNode65" begin="0.0" fill="hold">
+    <oa:par id="TimeNode66" o:presetID="ppt_1" o:presetClass="entrance"
+     o:presetSubType="0x0" begin="0.0" fill="hold" o:groupID="0"
+     p:nodeType="clickEffect">
+     <oa:set id="TimeNode67" begin="0.0" dur="0.001" fill="hold"
+      targetElement="_x0000_s171062" attributeName="style.visibility"
+      to="visible"/>
+    </oa:par>
+    <![if !ppt]><oa:par id="TimeNode68" o:presetID="ppt_1"
+     o:presetClass="entrance" o:presetSubType="0x0" begin="0.0" fill="hold"
+     p:nodeType="withEffect">
+     <oa:set id="TimeNode69" begin="0.0" dur="0.001" fill="hold"
+      targetElement="_x0000_s171062_AllText" attributeName="style.visibility"
+      to="visible"/>
+    </oa:par>
+    <![endif]><oa:par id="TimeNode70" o:presetID="ppt_1" o:presetClass="entrance"
+     o:presetSubType="0x0" begin="0.0" fill="hold" p:nodeType="withEffect">
+     <oa:set id="TimeNode71" begin="0.0" dur="0.001" fill="hold"
+      targetElement="_x0000_s171066" attributeName="style.visibility"
+      to="visible"/>
+    </oa:par>
+    <oa:par id="TimeNode72" o:presetID="ppt_1" o:presetClass="entrance"
+     o:presetSubType="0x0" begin="0.0" fill="hold" p:nodeType="withEffect">
+     <oa:set id="TimeNode73" begin="0.0" dur="0.001" fill="hold"
+      targetElement="_x0000_s171059" attributeName="style.visibility"
+      to="visible"/>
+    </oa:par>
+    <oa:par id="TimeNode74" o:presetID="ppt_1" o:presetClass="entrance"
+     o:presetSubType="0x0" begin="0.0" fill="hold" p:nodeType="withEffect">
+     <oa:set id="TimeNode75" begin="0.0" dur="0.001" fill="hold"
+      targetElement="_x0000_s171060" attributeName="style.visibility"
+      to="visible"/>
+    </oa:par>
+   </oa:par>
+  </oa:par>
+  <oa:par id="TimeNode76" begin="indefinite" fill="hold">
+   <oa:par id="TimeNode77" begin="0.0" fill="hold">
+    <oa:par id="TimeNode78" o:presetID="ppt_1" o:presetClass="entrance"
+     o:presetSubType="0x0" begin="0.0" fill="hold" p:nodeType="clickEffect">
+     <oa:set id="TimeNode79" begin="0.0" dur="0.001" fill="hold"
+      targetElement="_x0000_s171063" attributeName="style.visibility"
+      to="visible"/>
+    </oa:par>
+   </oa:par>
+  </oa:par>
+  <oa:par id="TimeNode80" begin="indefinite" fill="hold">
+   <oa:par id="TimeNode81" begin="0.0" fill="hold">
+    <oa:par id="TimeNode82" o:presetID="ppt_1" o:presetClass="entrance"
+     o:presetSubType="0x0" begin="0.0" fill="hold" p:nodeType="clickEffect">
+     <oa:set id="TimeNode83" begin="0.0" dur="0.001" fill="hold"
+      targetElement="_x0000_s171011_93_103" attributeName="style.visibility"
+      to="visible"/>
+    </oa:par>
+    <oa:par id="TimeNode84" o:presetID="ppt_1" o:presetClass="entrance"
+     o:presetSubType="0x0" begin="0.0" fill="hold" p:nodeType="withEffect">
+     <oa:set id="TimeNode85" begin="0.0" dur="0.001" fill="hold"
+      targetElement="_x0000_s171011_154_196" attributeName="style.visibility"
+      to="visible"/>
+    </oa:par>
+    <oa:par id="TimeNode86" o:presetID="ppt_1" o:presetClass="entrance"
+     o:presetSubType="0x0" begin="0.0" fill="hold" p:nodeType="withEffect">
+     <oa:set id="TimeNode87" begin="0.0" dur="0.001" fill="hold"
+      targetElement="_x0000_s171011_196_231" attributeName="style.visibility"
+      to="visible"/>
+    </oa:par>
+    <oa:par id="TimeNode88" o:presetID="ppt_1" o:presetClass="entrance"
+     o:presetSubType="0x0" begin="0.0" fill="hold" p:nodeType="withEffect">
+     <oa:set id="TimeNode89" begin="0.0" dur="0.001" fill="hold"
+      targetElement="_x0000_s171011_231_287" attributeName="style.visibility"
+      to="visible"/>
+    </oa:par>
+    <oa:par id="TimeNode90" o:presetID="ppt_1" o:presetClass="entrance"
+     o:presetSubType="0x0" begin="0.0" fill="hold" p:nodeType="withEffect">
+     <oa:set id="TimeNode91" begin="0.0" dur="0.001" fill="hold"
+      targetElement="_x0000_s171011_103_154" attributeName="style.visibility"
+      to="visible"/>
+    </oa:par>
+    <oa:par id="TimeNode92" o:presetID="ppt_1" o:presetClass="entrance"
+     o:presetSubType="0x0" begin="0.0" fill="hold" p:nodeType="withEffect">
+     <oa:set id="TimeNode93" begin="0.0" dur="0.001" fill="hold"
+      targetElement="_x0000_s171011_287_318" attributeName="style.visibility"
+      to="visible"/>
+    </oa:par>
+    <oa:par id="TimeNode94" o:presetID="ppt_1" o:presetClass="entrance"
+     o:presetSubType="0x0" begin="0.0" fill="hold" p:nodeType="withEffect">
+     <oa:set id="TimeNode95" begin="0.0" dur="0.001" fill="hold"
+      targetElement="_x0000_s171011_318_340" attributeName="style.visibility"
+      to="visible"/>
+    </oa:par>
+   </oa:par>
+  </oa:par>
+ </oa:seq>
+</oa:par>
+<![if ppt]>
+<oa:buildParagraph targetElement="_x0000_s171054" groupID="0" build="asAWhole"
+ buildLevel="1" reverse="false" buildAdvance="onclick" userSetAnimBgd="false"/><oa:buildParagraph
+ targetElement="_x0000_s171055" groupID="0" build="asAWhole" buildLevel="1"
+ reverse="false" buildAdvance="onclick" userSetAnimBgd="false"/><oa:buildParagraph
+ targetElement="_x0000_s171056" groupID="0" build="asAWhole" buildLevel="1"
+ reverse="false" buildAdvance="onclick" userSetAnimBgd="false"/><oa:buildParagraph
+ targetElement="_x0000_s171061" groupID="0" build="asAWhole" buildLevel="1"
+ reverse="false" buildAdvance="onclick" userSetAnimBgd="false"/><oa:buildParagraph
+ targetElement="_x0000_s171062" groupID="0" build="asAWhole" buildLevel="1"
+ reverse="false" buildAdvance="onclick" userSetAnimBgd="false"/><oa:buildParagraph
+ targetElement="_x0000_s171067" groupID="0" build="asAWhole" buildLevel="1"
+ reverse="false" buildAdvance="onclick" userSetAnimBgd="false"/><oa:buildParagraph
+ targetElement="_x0000_s171068" groupID="0" build="asAWhole" buildLevel="1"
+ reverse="false" buildAdvance="onclick" userSetAnimBgd="false"/><oa:buildParagraph
+ targetElement="_x0000_s171068" groupID="1" build="asAWhole" buildLevel="1"
+ reverse="false" buildAdvance="onclick" userSetAnimBgd="false"/><oa:buildParagraph
+ targetElement="_x0000_s171079" groupID="0" build="asAWhole" buildLevel="1"
+ reverse="false" buildAdvance="onclick" userSetAnimBgd="false"/><oa:buildParagraph
+ targetElement="_x0000_s171080" groupID="0" build="asAWhole" buildLevel="1"
+ reverse="false" buildAdvance="onclick" userSetAnimBgd="false"/>
+<![endif]>
+</body>
+
+</html>
