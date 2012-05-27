@@ -81,8 +81,7 @@ a.detail:active{font-size:13px;color:#666;text-decoration:underline;border:none;
 	margin-top:25px;
 	}
 .imgblank2{
-	width:360px;
-	height:486;
+    width: 512px;
 	padding:3px;
 	border:1px solid #999;
 	line-height:0px;
