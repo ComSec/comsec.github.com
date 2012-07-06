@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1" />
+<meta name="Description" content="A free open source web design by Christina Chun.  Free for anyone to use as long as credits are intact. " />
+<meta name="Keywords" content="Open source web design by Christina Chunopen source web design,, christina chun, christinachun.com, www.christinachun.com" />
+<meta name="Copyright" content="Christina Chun" />
+<meta name="Designed By" content="ChristinaChun.com" />
+<meta name="Language" content="English" />
+<title>Red Hot Chili</title>
+
+<!-- All Images Created And Copyrighted By Christina Chun Unless Noted Otherwise.  All rights Reserved. -->
+
+<style type="text/css" title="layout" media="screen"> @import url("style.css"); </style>
+
+</head>
+
+<body>
+<div id="container">
+	<div class="contentheader"></div>		
+		<div class="maincontainer">
+			<div id="menu">
+				<div id="nav"><a href="#" title="Home">Home</a> | <a href="#" title="People">People</a> | <a href="#" title="Research">Research</a> | <a href="#" title="Industry Partners">Industry Partners</a> | <a href="#" title="HQPs">HQPs</a> | <a href="#" title="Publications">Publications</a> | <a href="#" title="Links">Links</a></div>
+			</div>
+				<div class="content">
+				<hr /><br />
+<img src="images/5chili.gif" class="floatright" width="300" height="225" alt="5Chili" />
+<p>This template is based off of my old website design.  Pretty simple.  My old site used blue and I had my logo in the header.  I decided to change it and base it off of a hot chili pepper, don't ask why.  The images are from <a href="http://www.sxc.hu/">stock.xchng</a> and are royalty free.  
+<br /><br />Since re-designing my site I thought I would share this as an open source web design for everyone.  Don't e-mail me asking why I didn't use nifty corners.  It's just how the design was made at the time (when nifty corners weren't around).  My designs are meant to be simple and helpful to those who need a quick and easy solution to a web design.  <br /><br />The markup is Valid XHTML 1.0 Strict and the CSS is also Valid.  I would appreciate anyone who uses this template to please keep the footer link intact as it provides a way for me to track who uses my designs and also helps others find my other open source templates.</p>
+				</div>
+		</div>
+</div>
+			<div class="bottom"></div>
+			<div class="footer">
+			Designed By <a href="http://www.christinachun.com" title="Christina Chun - Digital Artist &amp; Web Designer">Christina Chun</a> &copy; 2005-2006</div>
+			<div class="valid">
+			<a href="http://validator.w3.org/check?uri=referer" title="Valid"><img src="images/valid.gif" width="35" height="65" alt="Valid" /></a>
+			</div>
+</body>
+</html>
