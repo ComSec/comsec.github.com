@@ -34,6 +34,11 @@ a, a.active, a:visited, a:hover {color: #57068c;}
     height: 55px;
 }
 
+#uw-logo {
+    width: 300px;
+    float: left;
+}
+
 #uw-search {
     float: right;
     text-transform: uppercase;
