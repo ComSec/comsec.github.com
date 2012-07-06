@@ -11,9 +11,11 @@
         <div class="container" id="wrapper">
             <div id="header">
                 <div id="uw-header">
-                    <a id="uwlogo" href="http://uwaterloo.ca/" target="_blank">
-                        <img alt="University of Waterloo" src="img/uwlogo.png">
-                    </a>
+                    <div id="uw-logo">
+                        <a href="http://uwaterloo.ca/" target="_blank">
+                            <img alt="University of Waterloo" src="img/uwlogo.png">
+                        </a>
+                    </div>
                     <div id="uw-search">
                         <form action="http://uwaterloo.ca/search/" method="get" title="search">
                             <div>
@@ -33,19 +35,16 @@
             <div id="main" class="row">
                 <div id="content" class="span9">
                     <div id="content-wrapper">
-                        <!--h1>Research Projects</h1-->
+                        <!-- <h1>Research Projects</h1> -->
 
                         <!-- OpenECC -->
-                        <a name="openecc"></a>
-                        <h2>OpenECC -- An Open Source Library for Elliptic Curve Cryptosystem</h2>
+                        <h2 id="openecc">OpenECC -- An Open Source Library for Elliptic Curve Cryptosystem</h2>
                                 <h3>Introduction</h3>
-                                <p>
-                                OpenECC is a software package that implements ECC-based protocols for Zigbee Smart Energy 1.x and 1.2 applications. It provides an implicit certificate scheme (ECQV), a key exchange protocol (ECMQV), and a digital signature scheme (ECDSA).<br />
+                                <p>OpenECC is a software package that implements ECC-based protocols for Zigbee Smart Energy 1.x and 1.2 applications. It provides an implicit certificate scheme (ECQV), a key exchange protocol (ECMQV), and a digital signature scheme (ECDSA).<br />
                                 <br />
                                 OpenECC is intended for Zigbee platforms based on ARM Cortex-M3 processors. The current version is implemented in C and takes into account both speed and memory optimization techniques. OpenECC supports SECG recommended 163-bit and 233-bit Koblitz curve sect163k1 and sect233k1.<br />
                                 <br />
-                                For questions please contact Dr. Xinxin Fan at <a href="mailto:fan@openecc.org">fan@openecc.org</a>.
-                                </p>
+                                For questions please contact Dr. Xinxin Fan at <a href="mailto:fan@openecc.org">fan@openecc.org</a>.</p>
 
                                 <h3>Download</h3>
                                 <p>You can visit our project website at <a href="http://openecc.org">http://openecc.org</a> for downloading the source code.</p>
@@ -54,37 +53,17 @@
                                 <pre>Copyright 2012 Xinxin Fan &lt;fan@openecc.org&gt;
 All rights reserved.
 
-Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions
-are met:
-- Redistributions of source code must retain the above copyright 
-  notice, this list of conditions and the following disclaimer.
-- Redistributions in binary form must reproduce the above copyright   
-  notice, this list of conditions and the following disclaimer in
-  the documentation and/or other materials provided with the
-  distribution.
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+- Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+- Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
 
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS 
-"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT 
-LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS 
-FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE 
-COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, 
-INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, 
-BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; 
-LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER 
-CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT 
-LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN 
-ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE 
-POSSIBILITY OF SUCH DAMAGE.</pre>
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</pre>
 
                                 <!-- Privacy Protection and Authentication Mechanisms for Radio Frequency Identification Systems -->
-                                <a name="rfidauth"></a>
-                                <h2>Privacy Protection and Authentication Mechanisms for RFID Systems</h2>
+                                <h2 id="rfidauth">Privacy Protection and Authentication Mechanisms for RFID Systems</h2>
                                 <h3>Introduction</h3>
-                                <p>
-                                Radio frequency identification (RFID) is a technology for the automated identification of physical entities using radio frequency transmissions. Typically, RFID systems consist of RFID devices or so called tags, RFID readers or interrogators, and backend networks. An RFID tag is a simple and low-cost electronic device (transponder) that is attached to a physical object for wireless data transmission. It transmits data over the air in response to interrogation by an RFID reader. An RFID reader is a more powerful device (transceiver) that can queue data stored in tags. Multiple readers can then connect to a network that acts as a data processing subsystem and database. In the past ten years, RFID systems have gained popularity in many applications, such as supply chain management, library systems, e-passports, contactless cards (e.g., proximity cards, automated toll-payment transponders, and payment tokens), identification systems, and human implantation (such as medical-record indexing, and physical access control). Future applications could include smart appliances, shopping, and medication compliance monitoring. RFID is one of the most promising technologies in the field of ubiquitous and pervasive computing. Many new applications can be created by embedding an object with RFID tags. However, the rapid development of RFID systems raises serious privacy and security concerns that could prevent the benefits of RFID technology from being fully utilized. <br /><br />
-                                The concerns about RFID systems arise from a) privacy concerns of users about clandestine physical tracking and inventorying of tags; b) authentication problems from counterfeit or cloned tags; and c) communication attacks: jamming, traffic analysis, spoofing, eavesdropping, relay or man-in-the-middle attacks, denial of service attacks, and side-channel attacks, all of which are easy to launch for both RFID tags and readers. Overcoming these concerns will be a significant challenge, because RFID tags do not have sufficient computational power and memory capacity to support standard cryptographic primitives.
-                                </p>
+                                <p>Radio frequency identification (RFID) is a technology for the automated identification of physical entities using radio frequency transmissions. Typically, RFID systems consist of RFID devices or so called tags, RFID readers or interrogators, and backend networks. An RFID tag is a simple and low-cost electronic device (transponder) that is attached to a physical object for wireless data transmission. It transmits data over the air in response to interrogation by an RFID reader. An RFID reader is a more powerful device (transceiver) that can queue data stored in tags. Multiple readers can then connect to a network that acts as a data processing subsystem and database. In the past ten years, RFID systems have gained popularity in many applications, such as supply chain management, library systems, e-passports, contactless cards (e.g., proximity cards, automated toll-payment transponders, and payment tokens), identification systems, and human implantation (such as medical-record indexing, and physical access control). Future applications could include smart appliances, shopping, and medication compliance monitoring. RFID is one of the most promising technologies in the field of ubiquitous and pervasive computing. Many new applications can be created by embedding an object with RFID tags. However, the rapid development of RFID systems raises serious privacy and security concerns that could prevent the benefits of RFID technology from being fully utilized. <br /><br />
+                                The concerns about RFID systems arise from a) privacy concerns of users about clandestine physical tracking and inventorying of tags; b) authentication problems from counterfeit or cloned tags; and c) communication attacks: jamming, traffic analysis, spoofing, eavesdropping, relay or man-in-the-middle attacks, denial of service attacks, and side-channel attacks, all of which are easy to launch for both RFID tags and readers. Overcoming these concerns will be a significant challenge, because RFID tags do not have sufficient computational power and memory capacity to support standard cryptographic primitives.</p>
                                 <h3>Research Topics</h3>
                                 <ul>
                                     <li>Physical layer assisted privacy protection in RFID systems</li>
@@ -92,12 +71,9 @@ POSSIBILITY OF SUCH DAMAGE.</pre>
                                 </ul>
 
                                 <!-- Physical Layer Security in Wireless Networks -->
-                                <a name="phylaysec"></a>
-                                <h2>Physical Layer Security in Wireless Networks</h2>
+                                <h2 id="phylaysec">Physical Layer Security in Wireless Networks</h2>
                                 <h3>Introduction</h3>
-                                <p>
-                                The physical-layer security under the information-theoretic (perfect) security models can get exponentially close to perfect secrecy in theory. However, the information-theoretic security is an average-information measure. The system can be designed and tuned for a specific level of security¡ªe.g., with very high probability a block is secure, but it may not be able to guarantee security with probability 1. So any deployment of a physical-layer security protocol in a classical system would be part of a ¡°layered security¡± solution where security is provided at a number of different layers, each with a specific goal in mind. The physical-layer security can provide an additional layer of security for wireless networks. We investigate  a novel MIMO aided security scheme. By exploiting an extra dimension provided by MIMO systems for adding artificial noise to the transmission process, which let the attacker¡¯s signal be a degraded version of the legitimate receiver¡¯s signal, the physical-layer security is enhanced as a result. We also investigate  a novel framework for Physical layer Assisted message Authentication (PAA) under public key infrastructure (PKI) in wireless communication networks.
-                                </p>
+                                <p>The physical-layer security under the information-theoretic (perfect) security models can get exponentially close to perfect secrecy in theory. However, the information-theoretic security is an average-information measure. The system can be designed and tuned for a specific level of security¡ªe.g., with very high probability a block is secure, but it may not be able to guarantee security with probability 1. So any deployment of a physical-layer security protocol in a classical system would be part of a ¡°layered security¡± solution where security is provided at a number of different layers, each with a specific goal in mind. The physical-layer security can provide an additional layer of security for wireless networks. We investigate  a novel MIMO aided security scheme. By exploiting an extra dimension provided by MIMO systems for adding artificial noise to the transmission process, which let the attacker¡¯s signal be a degraded version of the legitimate receiver¡¯s signal, the physical-layer security is enhanced as a result. We also investigate  a novel framework for Physical layer Assisted message Authentication (PAA) under public key infrastructure (PKI) in wireless communication networks.</p>
                                 <h3>Research Topics</h3>
                                 <ul>
                                     <li>Finding practical method to build the wire-tap channel model for multiple input multiple output (MIMO) and single input single output (SISO) system.</li>
@@ -106,34 +82,27 @@ POSSIBILITY OF SUCH DAMAGE.</pre>
                                 </ul>
 
                                 <!-- Securing Wireless Sensor Networks -->
-                                <a name="wsnsec"></a>
-                                <h2>Securing Wireless Sensor Networks</h2>
+                                <h2 id="wsnsec">Securing Wireless Sensor Networks</h2>
                                 <h3>Introduction</h3>
-                                <p>
-                                Wireless sensor networks (WSNs) are innovative networks consisting of a large number of distributed, autonomous, low-power, low-cost, sensor nodes which cooperatively collect information through infrastructureless wireless networks, as illustrated in Figure 1. There are numerous applications for wireless sensor networks, and security is vital for many of them. However, WSNs suffer from many constraints, including low computation capability, small memory, limited energy resources, susceptibility to physical capture, and the lack of infrastructure, all of which impose unique security challenges and make innovative approaches desirable. 
+                                <p>Wireless sensor networks (WSNs) are innovative networks consisting of a large number of distributed, autonomous, low-power, low-cost, sensor nodes which cooperatively collect information through infrastructureless wireless networks, as illustrated in Figure 1. There are numerous applications for wireless sensor networks, and security is vital for many of them. However, WSNs suffer from many constraints, including low computation capability, small memory, limited energy resources, susceptibility to physical capture, and the lack of infrastructure, all of which impose unique security challenges and make innovative approaches desirable.</p>
                                 <div class="figure">
                                     <img src="img/WSNs.jpeg" alt="" />
                                     <div class="caption">Figure 1: Wireless Sensor Networks</div>
                                 </div>
                                 <h3>Preliminary Results</h3>
-                                <p>
-                                <em>Random Key Distribution for WSNs</em><br/>
+                                <p><em>Random Key Distribution for WSNs</em><br/>
                                 Key establishment is one of most important building blocks for security services. Currently random key predistribution approaches are prevalent in wireless sensor network. We design a new key predistribution protocol which combines basic random key predistribution with multi-hash chain mechanism. Comprehensive analysis shows that its security performance outweighs that of original scheme, with reasonable tradeoff of a few hash operations. <br /><br />
                                 <em>Mutual Entity Authentication in WSNs</em><br/>
-                                Mutual entity authentication plays a significant role in achieving many security goals of wireless sensor networks.  We developed a mutual entity authentication framework for wireless sensor networks. This framework is basically flexible combination sets of two previous elegant one-way authentication protocols---HB+ and HB#, with significant enhancements in terms of infeasibility of storage/communication requirement and extension to mutual authentication. <br /><br />
+                                Mutual entity authentication plays a significant role in achieving many security goals of wireless sensor networks.  We developed a mutual entity authentication framework for wireless sensor networks. This framework is basically flexible combination sets of two previous elegant one-way authentication protocols---HB+ and HB#, with significant enhancements in terms of infeasibility of storage/communication requirement and extension to mutual authentication.<br /><br />
                                 <em>Node Clone Detection</em><br/>
-                                Sensor nodes lack tamper-resistant hardware and are subject to the node clone attack.  We introduce two approaches to detect the attack distributively. One is based on Distributed Hash Table (DHT). A Chord overlay network is built upon the sensor network, and provides the key-based routing, caching, and checking facilities for our protocol. A deterministic witness and additional memory-efficient, potential witnesses assure the good security properties. Furthermore, the mechanism of  random round seeds limits the adversary's ability to conceal the clone by compromising witness nodes. The other is an innovative randomly directed exploration protocol, which does not demand any strong assumptions and is highly practical in the general sensor network applications. <br /><br />
-                                </p>
+                                Sensor nodes lack tamper-resistant hardware and are subject to the node clone attack.  We introduce two approaches to detect the attack distributively. One is based on Distributed Hash Table (DHT). A Chord overlay network is built upon the sensor network, and provides the key-based routing, caching, and checking facilities for our protocol. A deterministic witness and additional memory-efficient, potential witnesses assure the good security properties. Furthermore, the mechanism of  random round seeds limits the adversary's ability to conceal the clone by compromising witness nodes. The other is an innovative randomly directed exploration protocol, which does not demand any strong assumptions and is highly practical in the general sensor network applications.<br /><br /></p>
 
 
                                 <!-- Security in Ad Hoc Networks -->
-                                <a name="adhoc"></a>
-                                <h2>Security in Ad Hoc Networks</h2>
+                                <h2 id="adhoc">Security in Ad Hoc Networks</h2>
                                 <h3>Motivation</h3>
-                                <p>
-                                Recently many people in the media, industry, and academia are talking about ubiquitous computing and ad hoc networking, but it seems that everybody has a different understanding of the topic. Some people associate ad hoc networks with Personal Area Networks (PANs), as for instance wireless communications among PDA's, cellular phones, and laptops using the Bluetooth protocol, whereas others might imagine military applications, such as exploring enemy territory by the use of sensor networks. The number of applications are countless.<br /><br />
-                                So what are ad hoc networks? What is their infrastructure? What are their properties? What are the applications of such networks and do those applications require the implementation of any security? All these questions have not been sufficiently answered yet. Clear definitions of architecture, properties, and security requirements can still not be found in the literature. Although some applications are already implemented, the desired security properties have still not been completely achieved.
-                                </p>
+                                <p>Recently many people in the media, industry, and academia are talking about ubiquitous computing and ad hoc networking, but it seems that everybody has a different understanding of the topic. Some people associate ad hoc networks with Personal Area Networks (PANs), as for instance wireless communications among PDA's, cellular phones, and laptops using the Bluetooth protocol, whereas others might imagine military applications, such as exploring enemy territory by the use of sensor networks. The number of applications are countless.<br /><br />
+                                So what are ad hoc networks? What is their infrastructure? What are their properties? What are the applications of such networks and do those applications require the implementation of any security? All these questions have not been sufficiently answered yet. Clear definitions of architecture, properties, and security requirements can still not be found in the literature. Although some applications are already implemented, the desired security properties have still not been completely achieved.</p>
                                 <h3>Introduction</h3>
                                 <p>With the increasing number of applications that involve wireless communication among mobile devices, the demand for implementing security in such systems becomes inevitable. Networks that consists of mobile devices that spontaneously form a wireless network are usually referred to as ad hoc networks.</p>
                                 We believe that there are four main security problems that need to be dealt with in ad hoc networks:
@@ -146,15 +115,13 @@ POSSIBILITY OF SUCH DAMAGE.</pre>
                                 <p>The primary focus of our research is on authentication and key establishment protocols that are applicable in ad hoc networks. The constrained devices, the lack of infrastructure, and other special properties of ad hoc networks make achieving those security properties a challenging task.</p>
 
                                 <!-- Sequences for Communication Systems -->
-                                <a name="sequences"></a>
-                                <h2>Sequences for Communication Systems</h2>
+                                <h2 id="sequences">Sequences for Communication Systems</h2>
                                 <ul>
-                                    <li>For details, please see the poster [<a href="pdf/sequence_poster.pdf" target="_blank">PDF</a>].</li>
+                                    <li>For details, please see the poster [<a href="download/sequence_poster.pdf" target="_blank">PDF</a>].</li>
                                 </ul>
 
                                 <!-- WG Stream Cipher -->
-                                <a name="wg"></a>
-                                <h2>WG Stream Cipher</h2>
+                                <h2 id="wg">WG Stream Cipher</h2>
                                 <h3>Abstract</h3>
                                 <p>We propose a new synchronous stream cipher, called WG cipher. The cipher is based on WG (Welch-Gong) transformations. The WG cipher has been designed to produce keystream with guaranteed randomness properties, i.e., balance, long period, large and exact linear complexity, 3-level additive autocorrelation, and ideal 2-level multiplicative autocorrelation. It is resistant to Time/Memory/Data tradeoff attacks, algebraic attacks and correlation attacks. The cipher can be implemented with a small amount of hardware.</p>
                                 <div class="figure">
@@ -173,19 +140,17 @@ POSSIBILITY OF SUCH DAMAGE.</pre>
 
 
                                 <!-- Proxy Assisted Security Service (PASS) -->
-                                <a name="proxy"></a>
-                                <h2>Proxy Assisted Security Service (PASS)</h2>
+                                <h2 id="proxy">Proxy Assisted Security Service (PASS)</h2>
                                 <h3>Abstract</h3>
-                                <p>
-                                Current authentication technologies are commonly based asymmetric encryption techniques such as digital signatures. To be able to employ these techniques requires a significant amount of computing resources, which are uncommon to many lightweight mobile devices such as cell phones and personal digital assistants (PDAs). It is therefore currently infeasible or uneconomical to implement mutual authentication services between these devices. A new protocol called &#8220;Controlled Proxy-Assisted Secure End-to-End Communication Protocol&#8221; was proposed by Professor Hung-Yu Lin to solve the problem. The goal of a Fourth Year Design Project at UW of Jimmy Choi, Kenneth Choi, Kenric Li, and Truman Ng supervised by Prof. Guang Gong, was to build a secure communication system that employs such proxy-assisted protocol as illustrated in Figure 4.
+                                <p>Current authentication technologies are commonly based asymmetric encryption techniques such as digital signatures. To be able to employ these techniques requires a significant amount of computing resources, which are uncommon to many lightweight mobile devices such as cell phones and personal digital assistants (PDAs). It is therefore currently infeasible or uneconomical to implement mutual authentication services between these devices. A new protocol called &#8220;Controlled Proxy-Assisted Secure End-to-End Communication Protocol&#8221; was proposed by Professor Hung-Yu Lin to solve the problem. The goal of a Fourth Year Design Project at UW of Jimmy Choi, Kenneth Choi, Kenric Li, and Truman Ng supervised by Prof. Guang Gong, was to build a secure communication system that employs such proxy-assisted protocol as illustrated in Figure 4.</p>
                                 <div class="figure">
                                     <img src="img/pass.jpeg" alt="" />
                                     <div class="caption">Figure 4: Mutual authentication between mobile stations using security proxies.</div>
                                 </div>
+                                
                                 <h3>Introduction</h3>
-                                <p>
-                                A new protocol called "Controlled Proxy-Assisted Secure End-to-End Communication Protocol" was proposed by Professor Hung-Yu Lin to solve the problem. This protocol removes the computing requirement that imposes on mobile devices by introducing an entity called the Security Proxy. The significance of the Security Proxy is that it has the computing resources to perform asymmetric authentication very fast. Thus the hard computatio steps are shifted from very constrained devices (the mobile stations) to a more powerful trusted server (security proxie). When mobile users want to establish a secure session, the Security Proxy performs the mutual authentication for the mobile devices and enables them to establish a session key. The session key is then used to encrypt all further communications between the mobile station for the period of one sessio nusing symmetric and thus cheap encryption schemes.
-                                </p>
+                                <p>A new protocol called "Controlled Proxy-Assisted Secure End-to-End Communication Protocol" was proposed by Professor Hung-Yu Lin to solve the problem. This protocol removes the computing requirement that imposes on mobile devices by introducing an entity called the Security Proxy. The significance of the Security Proxy is that it has the computing resources to perform asymmetric authentication very fast. Thus the hard computatio steps are shifted from very constrained devices (the mobile stations) to a more powerful trusted server (security proxie). When mobile users want to establish a secure session, the Security Proxy performs the mutual authentication for the mobile devices and enables them to establish a session key. The session key is then used to encrypt all further communications between the mobile station for the period of one sessio nusing symmetric and thus cheap encryption schemes.</p>
+                                
                                 <h3>Implementation</h3>
                                 <p>The proxy assisted protocol can be implemented in many different languages using different SDKs. In the fourth year project the students concluded to use .Net framework and Windows Networking SDK to implement the server part and to use Microsoft SQL for the database.The architecture of the components is shown in Figure 5. The implementation was successfully demonstrated on the 4th year design symposium on 2 mobile clients in 2 PDAs.</p>
                                 <div class="figure">
@@ -200,23 +165,21 @@ POSSIBILITY OF SUCH DAMAGE.</pre>
 
 
                                 <!-- Gong-Harn Public-key Cryptosystem (GH-PKC) Software Implementation -->
-                                <a name="gh"></a>
-                                <h2>Gong-Harn Public-key Cryptosystem (GH-PKC) Software Implementation</h2>
+                                <h2 id="gh">Gong-Harn Public-key Cryptosystem (GH-PKC) Software Implementation</h2>
                                 <h3>Abstract</h3>
-                                <p>
-                                With the emergence of the 3G (third-generation) networks for mobile communications, data security becomes even more important. Designing cryptosystems that meet both the power contraints and computing constraints of mobile units is very challenging. The GH-PKC reduces the size of the modulus and speeds up the computations of the same degree of security as existing cryptosystems. Our research focus is on software implementation of the GH-PKC and analysis on its performance over the existing cryptosystems.
-                                </p>
+                                <p>With the emergence of the 3G (third-generation) networks for mobile communications, data security becomes even more important. Designing cryptosystems that meet both the power contraints and computing constraints of mobile units is very challenging. The GH-PKC reduces the size of the modulus and speeds up the computations of the same degree of security as existing cryptosystems. Our research focus is on software implementation of the GH-PKC and analysis on its performance over the existing cryptosystems.</p>
+                                
                                 <h3>Introduction</h3>
-                                <p>
-                                The GH Public-key Cryptosystem (GH-PKC) was developed by G. Gong and L. Harn in 1999. This cryptosystem is based on the third-order linear feedback shift register (LFSR) sequences with a particular phase. Such a particular LSFR sequences are called a characteristic sequence. The elements of the sequences are taken from a finite field GF(q). The security of GH-PKS is based on the difficult of the solving discrete logrithm in the extension GF(q3) of GF(q).<br /><br />
+                                <p>The GH Public-key Cryptosystem (GH-PKC) was developed by G. Gong and L. Harn in 1999. This cryptosystem is based on the third-order linear feedback shift register (LFSR) sequences with a particular phase. Such a particular LSFR sequences are called a characteristic sequence. The elements of the sequences are taken from a finite field GF(q). The security of GH-PKS is based on the difficult of the solving discrete logrithm in the extension GF(q3) of GF(q).<br />
+                                <br />
                                 The part of the GH Diffie-Hellman (GH-DH) key agreement protocol was published in the proceddings of ChinaCrypto'1998 and the GH-DH together with the GH-RSA type was published in the November 1999 issue of IEEE Transactions on Information Theory.<br /><br />
                                 Two important features of the GH-PKC:</p>
                                 <ul>
                                     <li>GH-PKC has the same modular size as the  elliptic curve public-key system while achieving the same 1024 bit security level for <em>q = p<sup>2</sup></em> .</li>
                                     <li>GH-PKC can be resistant to power analysis attack and timer analysis attack without increasing  cost of computation.</li>
                                 </ul>
-                                <p>The XTR, presented at Crypto'2000 by  Lenstra and  Verheul, is a special case of the  special type of characteristic sequences when <em>q = p<sup>2</sup></em>.
-                                </p>
+                                <p>The XTR, presented at Crypto'2000 by  Lenstra and  Verheul, is a special case of the  special type of characteristic sequences when <em>q = p<sup>2</sup></em>.</p>
+                                
                                 <h3>Some papers and slides on the GH-PKCS</h3>
                                 <ul>
                                     <li>S. Sin, Software Implementation of Gong-Harn Public-key Cryptosystem and Analysis, Master's Thesis, April 2004, Waterloo, University of Waterloo, supervised by G. Gong, <a href="download/SoftwareImplementationGHPKC.pdf" target="_blank">Thesis</a> (Appendices are removed)</li>
