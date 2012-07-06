@@ -1,1 +1,0 @@
-http://comsec.uwaterloo.ca
