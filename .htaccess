@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} !^comsec.uwaterloo.ca$ [NC]
+RewriteRule (.*)$ http://comsec.uwaterloo.ca/$1 [R=301,L]
